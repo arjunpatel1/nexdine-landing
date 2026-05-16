@@ -40,6 +40,11 @@ const features = [
     desc: 'Visual drag-and-drop floor plans with live occupancy, reservations, and merge/split.',
   },
   {
+    icon: Map,
+    title: 'Smart Table Selection',
+    desc: 'Visual table grid with real-time status, capacity display, and one-tap selection.',
+  },
+  {
     icon: BarChart3,
     title: 'Analytics Dashboard',
     desc: 'Live sales metrics, inventory forecasts, staff performance, and customer insights.',

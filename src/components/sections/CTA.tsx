@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { ArrowRight, Sparkles } from 'lucide-react'
 
-const DEMO_URL = 'https://demo-nexdine.myteknoland.com'
+import { DEMO_URL } from '@/lib/config'
 
 export default function CTA() {
   return (

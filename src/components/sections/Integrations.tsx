@@ -376,7 +376,7 @@ export default function Integrations() {
             <Zap className="h-4 w-4 text-orange-500" />
             Aggregator Integrations
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight mb-6">
             One Platform. <span className="gradient-text">Every Channel.</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">

@@ -9,6 +9,12 @@ import {
   Star, ClipboardList, RefreshCw, AlertTriangle, CheckCircle2,
 } from 'lucide-react'
 import Link from 'next/link'
+import PosBillingAnimation from '@/components/animations/PosBillingAnimation'
+import QrOrderingAnimation from '@/components/animations/QrOrderingAnimation'
+import TableSelectAnimation from '@/components/animations/TableSelectAnimation'
+import RestaurantMapAnimation from '@/components/animations/RestaurantMapAnimation'
+import OrderServerAnimation from '@/components/animations/OrderServerAnimation'
+import WaiterSubmitAnimation from '@/components/animations/WaiterSubmitAnimation'
 
 const features = [
   {
@@ -74,6 +80,22 @@ const features = [
     color: 'from-amber-500 to-orange-400',
     bgGlow: 'bg-amber-500/10',
     mockup: 'table',
+  },
+  {
+    icon: Map,
+    title: 'Smart Table Selection',
+    shortDesc: 'Visual table grid with real-time status, capacity display, and one-tap selection.',
+    fullDesc: 'Your hosts and waiters see every table at a glance — green for available, red for occupied, orange for reserved. Tap to select, view capacity, and instantly assign orders to the right table. No more pen-and-paper table tracking.',
+    details: [
+      { icon: Map, label: 'Color-coded grid: available, occupied, reserved at a glance' },
+      { icon: Users, label: 'Capacity display: 2-top, 4-top, 6-top, 8-top layouts' },
+      { icon: Zap, label: 'One-tap selection with instant POS assignment' },
+      { icon: CalendarDays, label: 'Reservation overlay: see upcoming bookings per table' },
+    ],
+    stats: { label: 'Table assignment speed', value: '5x faster' },
+    color: 'from-emerald-500 to-teal-500',
+    bgGlow: 'bg-emerald-500/10',
+    mockup: 'tableselect',
   },
   {
     icon: BarChart3,
@@ -193,100 +215,13 @@ function Mockup({ type }: { type: string }) {
   const renderContent = () => {
     switch (type) {
       case 'pos':
-        return (
-          <div className="space-y-3">
-            <div className="flex items-center justify-between mb-3">
-              <div className="h-3 w-24 bg-muted-foreground/20 rounded" />
-              <div className="h-6 w-16 bg-green-500/20 rounded-md flex items-center justify-center">
-                <span className="text-[10px] text-green-400 font-semibold">Open</span>
-              </div>
-            </div>
-            <div className="grid grid-cols-3 gap-2">
-              {['Burger', 'Pizza', 'Pasta', 'Salad', 'Steak', 'Sushi'].map((item, i) => (
-                <div key={item} className={`rounded-lg p-2 text-center border ${i === 1 ? 'border-primary/50 bg-primary/10' : 'border-border bg-muted/30'}`}>
-                  <div className="h-6 w-6 mx-auto mb-1 rounded bg-gradient-to-br from-orange-500/20 to-amber-500/20" />
-                  <span className="text-[10px]">{item}</span>
-                </div>
-              ))}
-            </div>
-            <div className="rounded-lg border border-border bg-muted/30 p-3">
-              <div className="flex justify-between text-xs mb-2">
-                <span>Cart (3)</span>
-                <span className="font-bold">$47.97</span>
-              </div>
-              <div className="h-7 rounded-md bg-primary/80 flex items-center justify-center">
-                <span className="text-[10px] font-semibold text-white">Pay Now</span>
-              </div>
-            </div>
-          </div>
-        )
+        return <PosBillingAnimation />
       case 'qr':
-        return (
-          <div className="space-y-3">
-            <div className="h-24 rounded-lg border border-border bg-white p-4 flex flex-col items-center justify-center">
-              <div className="h-12 w-12 border-2 border-emerald-500 rounded-lg grid grid-cols-4 gap-0.5 p-1">
-                {Array.from({ length: 16 }).map((_, i) => (
-                  <div key={i} className={`${Math.random() > 0.5 ? 'bg-emerald-500' : 'bg-transparent'} rounded-[1px]`} />
-                ))}
-              </div>
-              <span className="text-[10px] text-muted-foreground mt-1">Table 12</span>
-            </div>
-            <div className="text-center">
-              <p className="text-xs font-semibold">Scan to Order</p>
-              <p className="text-[10px] text-muted-foreground">No app download needed</p>
-            </div>
-            <div className="flex gap-2 justify-center">
-              {['Menu', 'Cart', 'Pay'].map((tab) => (
-                <div key={tab} className={`px-2 py-1 rounded text-[10px] ${tab === 'Menu' ? 'bg-emerald-500/20 text-emerald-400' : 'bg-muted'}`}>{tab}</div>
-              ))}
-            </div>
-          </div>
-        )
+        return <QrOrderingAnimation />
       case 'kds':
-        return (
-          <div className="space-y-2">
-            <div className="flex gap-2 mb-2">
-              {['Grill', 'Fryer', 'Salad'].map((station) => (
-                <div key={station} className={`px-2 py-1 rounded text-[10px] ${station === 'Grill' ? 'bg-orange-500/20 text-orange-400' : 'bg-muted'}`}>{station}</div>
-              ))}
-            </div>
-            {[
-              { item: '2x Ribeye Steak', time: '04:32', status: 'cooking', color: 'text-yellow-400' },
-              { item: '1x Caesar Salad', time: '01:15', status: 'ready', color: 'text-green-400' },
-              { item: '3x Fish & Chips', time: '06:42', status: 'overdue', color: 'text-red-400' },
-            ].map((order) => (
-              <div key={order.item} className="flex items-center justify-between rounded-lg border border-border bg-muted/30 p-2">
-                <span className="text-[10px]">{order.item}</span>
-                <span className={`text-[10px] font-mono font-bold ${order.color}`}>{order.time}</span>
-              </div>
-            ))}
-          </div>
-        )
+        return <OrderServerAnimation />
       case 'table':
-        return (
-          <div className="space-y-2">
-            <div className="grid grid-cols-4 gap-2">
-              {Array.from({ length: 12 }).map((_, i) => {
-                const statuses = ['available', 'available', 'occupied', 'available', 'reserved', 'available', 'occupied', 'available', 'available', 'occupied', 'available', 'reserved']
-                const status = statuses[i]
-                return (
-                  <div key={i} className={`aspect-square rounded-lg flex items-center justify-center text-[10px] font-bold border-2 ${
-                    status === 'occupied' ? 'border-red-500/40 bg-red-500/10 text-red-400' :
-                    status === 'reserved' ? 'border-yellow-500/40 bg-yellow-500/10 text-yellow-400' :
-                    'border-green-500/40 bg-green-500/10 text-green-400'
-                  }`}>
-                    T{i + 1}
-                  </div>
-                )
-              })}
-            </div>
-            <div className="flex justify-center gap-3 mt-2">
-              <div className="flex items-center gap-1"><div className="h-2 w-2 rounded-full bg-green-400" /><span className="text-[10px]">Free</span></div>
-              <div className="flex items-center gap-1"><div className="h-2 w-2 rounded-full bg-red-400" /><span className="text-[10px]">Busy</span></div>
-              <div className="flex items-center gap-1"><div className="h-2 w-2 rounded-full bg-yellow-400" /><span className="text-[10px]">Reserved</span></div>
-            </div>
-          </div>
-        )
+        return <RestaurantMapAnimation />
       case 'analytics':
         return (
           <div className="space-y-3">
@@ -381,32 +316,9 @@ function Mockup({ type }: { type: string }) {
           </div>
         )
       case 'mobile':
-        return (
-          <div className="space-y-3">
-            <div className="rounded-lg border border-border bg-muted/30 p-3">
-              <div className="flex items-center justify-between mb-2">
-                <span className="text-[10px] font-semibold">Table 8</span>
-                <span className="text-[9px] text-green-400">Active</span>
-              </div>
-              <div className="space-y-1">
-                {['Grilled Salmon', 'Caesar Salad', 'Iced Tea'].map((item) => (
-                  <div key={item} className="flex items-center justify-between text-[10px]">
-                    <span>{item}</span>
-                    <span className="text-muted-foreground">1x</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div className="grid grid-cols-2 gap-2">
-              <div className="rounded-lg bg-primary/80 p-2 text-center">
-                <span className="text-[10px] font-semibold text-white">Fire Order</span>
-              </div>
-              <div className="rounded-lg border border-border p-2 text-center">
-                <span className="text-[10px]">Add Item</span>
-              </div>
-            </div>
-          </div>
-        )
+        return <WaiterSubmitAnimation />
+      case 'tableselect':
+        return <TableSelectAnimation />
       case 'feedback':
         return (
           <div className="space-y-2">
@@ -506,7 +418,7 @@ export default function FeatureShowcase() {
           </p>
         </motion.div>
 
-        <div className="space-y-32">
+        <div className="space-y-16 lg:space-y-32">
           {features.map((feature, index) => {
             const isEven = index % 2 === 0
             return (

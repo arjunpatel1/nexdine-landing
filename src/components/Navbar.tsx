@@ -5,8 +5,8 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X, ChevronDown } from 'lucide-react'
 import Link from 'next/link'
 
-const DEMO_URL = 'https://demo-nexdine.myteknoland.com'
 import Logo from '@/components/Logo'
+import { DEMO_URL } from '@/lib/config'
 
 const navLinks = [
   { label: 'Home', href: '/' },

@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { Check, Sparkles } from 'lucide-react'
 
-const DEMO_URL = 'https://demo-nexdine.myteknoland.com'
+import { DEMO_URL } from '@/lib/config'
 
 const plans = [
   {
@@ -90,7 +90,7 @@ export default function Pricing() {
               transition={{ delay: i * 0.1 }}
               className={`relative rounded-2xl border p-8 ${
                 plan.popular
-                  ? 'border-primary bg-primary/5 scale-105 shadow-xl shadow-primary/10'
+                  ? 'border-primary bg-primary/5 md:scale-105 shadow-xl shadow-primary/10'
                   : 'border-border bg-card'
               }`}
             >

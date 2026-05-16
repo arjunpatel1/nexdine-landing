@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -15,7 +15,8 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: 'NexDine' }],
   icons: {
-    icon: '/favicon.svg',
+    icon: [{ url: '/favicon.svg', type: 'image/svg+xml' }],
+    apple: [{ url: '/favicon.svg', type: 'image/svg+xml' }],
   },
   openGraph: {
     title: 'NexDine - Enterprise Restaurant Management Platform',
@@ -23,6 +24,12 @@ export const metadata: Metadata = {
       'Transform your restaurant operations with the most advanced POS and management ecosystem.',
     type: 'website',
   },
+}
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  themeColor: '#030712',
 }
 
 export default function RootLayout({

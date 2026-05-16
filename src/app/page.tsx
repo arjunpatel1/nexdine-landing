@@ -6,7 +6,6 @@ import ServiceExplainer from '@/components/sections/ServiceExplainer'
 import Workflow from '@/components/sections/Workflow'
 import BeforeAfter from '@/components/sections/BeforeAfter'
 import Stats from '@/components/sections/Stats'
-import Testimonials from '@/components/sections/Testimonials'
 import Pricing from '@/components/sections/Pricing'
 import CTA from '@/components/sections/CTA'
 import Integrations from '@/components/sections/Integrations'
@@ -22,7 +21,6 @@ export default function Home() {
       <Workflow />
       <BeforeAfter />
       <Stats />
-      <Testimonials />
       <Pricing />
       <CTA />
     </PageWrapper>
