@@ -6,6 +6,8 @@ import Navbar from './Navbar'
 import Footer from './Footer'
 import WhatsAppButton from './WhatsAppButton'
 import LogoLoader from './LogoLoader'
+import CookieConsent from './CookieConsent'
+import LiveChat from './LiveChat'
 
 export default function PageWrapper({ children }: { children: React.ReactNode }) {
   const [loading, setLoading] = useState(true)
@@ -42,6 +44,8 @@ export default function PageWrapper({ children }: { children: React.ReactNode })
       </main>
       <Footer />
       <WhatsAppButton />
+      <LiveChat />
+      <CookieConsent />
     </>
   )
 }

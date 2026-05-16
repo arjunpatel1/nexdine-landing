@@ -7,6 +7,9 @@ import Workflow from '@/components/sections/Workflow'
 import BeforeAfter from '@/components/sections/BeforeAfter'
 import Stats from '@/components/sections/Stats'
 import Pricing from '@/components/sections/Pricing'
+import Comparison from '@/components/sections/Comparison'
+import FAQ from '@/components/sections/FAQ'
+import Newsletter from '@/components/sections/Newsletter'
 import CTA from '@/components/sections/CTA'
 import Integrations from '@/components/sections/Integrations'
 
@@ -22,6 +25,9 @@ export default function Home() {
       <BeforeAfter />
       <Stats />
       <Pricing />
+      <Comparison />
+      <FAQ />
+      <Newsletter />
       <CTA />
     </PageWrapper>
   )

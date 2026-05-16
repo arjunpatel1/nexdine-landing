@@ -19,28 +19,25 @@ const footerGroups = [
   {
     title: 'Company',
     links: [
-      { label: 'About Us', href: '#' },
-      { label: 'Careers', href: '#' },
-      { label: 'Blog', href: '#' },
-      { label: 'Press Kit', href: '#' },
+      { label: 'About Us', href: '/contact' },
+      { label: 'Careers', href: '/contact' },
+      { label: 'Blog', href: '/contact' },
     ],
   },
   {
     title: 'Resources',
     links: [
-      { label: 'Documentation', href: '#' },
-      { label: 'API Reference', href: '#' },
-      { label: 'Help Center', href: '#' },
-      { label: 'Community', href: '#' },
+      { label: 'Documentation', href: '/contact' },
+      { label: 'Help Center', href: '/contact' },
+      { label: 'Contact Support', href: '/contact' },
     ],
   },
   {
     title: 'Legal',
     links: [
-      { label: 'Privacy Policy', href: '#' },
-      { label: 'Terms of Service', href: '#' },
-      { label: 'Cookie Policy', href: '#' },
-      { label: 'Security', href: '#' },
+      { label: 'Privacy Policy', href: '/contact' },
+      { label: 'Terms of Service', href: '/contact' },
+      { label: 'Cookie Policy', href: '/contact' },
     ],
   },
 ]
