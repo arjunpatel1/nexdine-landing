@@ -1,8 +1,8 @@
 'use client'
 
+import { CheckCircle, Clock, Loader2, Mail, MapPin, MessageCircle, Phone, Send } from 'lucide-react'
 import { useState } from 'react'
 import PageWrapper from '@/components/PageWrapper'
-import { Mail, Phone, MapPin, Clock, MessageCircle, Send, Loader2, CheckCircle } from 'lucide-react'
 
 const CONTACT = {
   email: 'info@myteknoland.net',
@@ -11,7 +11,7 @@ const CONTACT = {
   address: '1/1, Bangalore Main Road, Rayachoty',
 }
 
-export default function ContactPage() {
+export default function ContactPage () {
   const [form, setForm] = useState({
     firstName: '',
     lastName: '',
@@ -23,7 +23,7 @@ export default function ContactPage() {
   const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle')
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setForm((f) => ({ ...f, [e.target.name]: e.target.value }))
+    setForm(f => ({ ...f, [e.target.name]: e.target.value }))
   }
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -42,7 +42,7 @@ export default function ContactPage() {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
-            authkey: authKey,
+            'authkey': authKey,
           },
           body: JSON.stringify({
             to: CONTACT.phoneRaw,
@@ -207,22 +207,26 @@ export default function ContactPage() {
                   disabled={status === 'sending'}
                   className="w-full rounded-full bg-primary py-3 text-sm font-semibold text-primary-foreground hover:opacity-90 transition-opacity flex items-center justify-center gap-2 disabled:opacity-60"
                 >
-                  {status === 'sending' ? (
-                    <>
-                      <Loader2 className="h-4 w-4 animate-spin" />
-                      Sending...
-                    </>
-                  ) : status === 'sent' ? (
-                    <>
-                      <CheckCircle className="h-4 w-4" />
-                      Sent!
-                    </>
-                  ) : (
-                    <>
-                      <Send className="h-4 w-4" />
-                      Schedule Demo
-                    </>
-                  )}
+                  {status === 'sending'
+                    ? (
+                        <>
+                          <Loader2 className="h-4 w-4 animate-spin" />
+                          Sending...
+                        </>
+                      )
+                    : (status === 'sent'
+                        ? (
+                            <>
+                              <CheckCircle className="h-4 w-4" />
+                              Sent!
+                            </>
+                          )
+                        : (
+                            <>
+                              <Send className="h-4 w-4" />
+                              Schedule Demo
+                            </>
+                          ))}
                 </button>
                 {status === 'sent' && (
                   <p className="text-center text-sm text-green-500">
@@ -234,7 +238,7 @@ export default function ContactPage() {
 
             {/* Contact Info */}
             <div className="space-y-6">
-              {contactCards.map((item) => {
+              {contactCards.map(item => {
                 const Card = (
                   <div className="flex items-start gap-4 rounded-xl border border-border bg-card p-6">
                     <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary flex-shrink-0">
@@ -247,13 +251,15 @@ export default function ContactPage() {
                     </div>
                   </div>
                 )
-                return item.href ? (
-                  <a key={item.title} href={item.href} target={item.href.startsWith('http') ? '_blank' : undefined} rel="noopener noreferrer">
-                    {Card}
-                  </a>
-                ) : (
-                  <div key={item.title}>{Card}</div>
-                )
+                return item.href
+                  ? (
+                      <a key={item.title} href={item.href} target={item.href.startsWith('http') ? '_blank' : undefined} rel="noopener noreferrer">
+                        {Card}
+                      </a>
+                    )
+                  : (
+                      <div key={item.title}>{Card}</div>
+                    )
               })}
 
               {/* WhatsApp CTA */}

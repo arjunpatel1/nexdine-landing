@@ -1,8 +1,8 @@
 'use client'
 
-import { useState, useRef, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
-import { MessageSquare, X, Send, Bot, User } from 'lucide-react'
+import { AnimatePresence, motion } from 'framer-motion'
+import { Bot, MessageSquare, Send, User, X } from 'lucide-react'
+import { useEffect, useRef, useState } from 'react'
 
 interface Message {
   id: number
@@ -27,14 +27,16 @@ const botResponses: Record<string, string> = {
     'Yes! Every plan includes a 14-day free trial with full feature access. No credit card required. Would you like me to connect you with the team to get started?',
   'talk to sales':
     'Our sales team is available. You can reach them directly on WhatsApp using the green chat button, or leave your email and we will contact you within 24 hours.',
-  default:
+  'default':
     'Thanks for reaching out! For detailed assistance, please use the WhatsApp button or email us at support@myteknoland.com. Our team typically responds within a few hours.',
 }
 
-function getBotReply(text: string): string {
+function getBotReply (text: string): string {
   const lower = text.toLowerCase()
   for (const key of Object.keys(botResponses)) {
-    if (key === 'default') continue
+    if (key === 'default') {
+      continue
+    }
     if (lower.includes(key) || key.includes(lower)) {
       return botResponses[key]
     }
@@ -42,12 +44,12 @@ function getBotReply(text: string): string {
   return botResponses.default
 }
 
-export default function LiveChat() {
+export default function LiveChat () {
   const [open, setOpen] = useState(false)
   const [messages, setMessages] = useState<Message[]>([
     {
       id: 0,
-      text: "Hi there! Welcome to NexDine. How can I help you today?",
+      text: 'Hi there! Welcome to NexDine. How can I help you today?',
       sender: 'bot',
       time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
     },
@@ -61,10 +63,12 @@ export default function LiveChat() {
   }, [messages, typing])
 
   const sendMessage = (text: string) => {
-    if (!text.trim()) return
+    if (!text.trim()) {
+      return
+    }
     const now = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
     const userMsg: Message = { id: Date.now(), text, sender: 'user', time: now }
-    setMessages((prev) => [...prev, userMsg])
+    setMessages(prev => [...prev, userMsg])
     setInput('')
     setTyping(true)
 
@@ -75,7 +79,7 @@ export default function LiveChat() {
         sender: 'bot',
         time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
       }
-      setMessages((prev) => [...prev, reply])
+      setMessages(prev => [...prev, reply])
       setTyping(false)
     }, 800)
   }
@@ -134,7 +138,7 @@ export default function LiveChat() {
 
             {/* Messages */}
             <div className="flex-1 overflow-y-auto p-4 space-y-3">
-              {messages.map((msg) => (
+              {messages.map(msg => (
                 <div
                   key={msg.id}
                   className={`flex gap-2 ${msg.sender === 'user' ? 'justify-end' : 'justify-start'}`}
@@ -184,7 +188,7 @@ export default function LiveChat() {
 
             {/* Quick Replies */}
             <div className="px-4 pb-2 flex flex-wrap gap-1.5">
-              {quickReplies.map((reply) => (
+              {quickReplies.map(reply => (
                 <button
                   key={reply}
                   onClick={() => sendMessage(reply)}
@@ -203,7 +207,7 @@ export default function LiveChat() {
               <input
                 type="text"
                 value={input}
-                onChange={(e) => setInput(e.target.value)}
+                onChange={e => setInput(e.target.value)}
                 placeholder="Type a message..."
                 className="flex-1 rounded-xl border border-border bg-background px-3 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary transition-all"
               />

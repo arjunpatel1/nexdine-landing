@@ -1,8 +1,8 @@
 import PageWrapper from '@/components/PageWrapper'
-import Pricing from '@/components/sections/Pricing'
 import CTA from '@/components/sections/CTA'
+import Pricing from '@/components/sections/Pricing'
 
-export default function PricingPage() {
+export default function PricingPage () {
   return (
     <PageWrapper>
       <div className="pt-24 pb-12">

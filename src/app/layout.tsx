@@ -6,38 +6,38 @@ const structuredData = {
   '@graph': [
     {
       '@type': 'SoftwareApplication',
-      name: 'NexDine',
-      applicationCategory: 'BusinessApplication',
-      operatingSystem: 'Any',
-      offers: {
+      'name': 'NexDine',
+      'applicationCategory': 'BusinessApplication',
+      'operatingSystem': 'Any',
+      'offers': {
         '@type': 'Offer',
-        price: '3999',
-        priceCurrency: 'INR',
-        priceValidUntil: '2026-12-31',
+        'price': '3999',
+        'priceCurrency': 'INR',
+        'priceValidUntil': '2026-12-31',
       },
-      aggregateRating: {
+      'aggregateRating': {
         '@type': 'AggregateRating',
-        ratingValue: '4.8',
-        reviewCount: '124',
+        'ratingValue': '4.8',
+        'reviewCount': '124',
       },
-      description:
+      'description':
         'The all-in-one POS, inventory, CRM, and operations platform for modern restaurants. QR ordering, KDS, WhatsApp automation, and multi-branch management.',
-      url: 'https://nexdine.myteknoland.com',
-      image: 'https://nexdine.myteknoland.com/og-image.png',
+      'url': 'https://nexdine.myteknoland.com',
+      'image': 'https://nexdine.myteknoland.com/og-image.png',
     },
     {
       '@type': 'Organization',
-      name: 'NexDine',
-      url: 'https://nexdine.myteknoland.com',
-      logo: 'https://nexdine.myteknoland.com/favicon.svg',
-      sameAs: [
+      'name': 'NexDine',
+      'url': 'https://nexdine.myteknoland.com',
+      'logo': 'https://nexdine.myteknoland.com/favicon.svg',
+      'sameAs': [
         'https://twitter.com/nexdine',
         'https://linkedin.com/company/nexdine',
       ],
-      parentOrganization: {
+      'parentOrganization': {
         '@type': 'Organization',
-        name: 'Myteknoland',
-        url: 'https://myteknoland.com',
+        'name': 'Myteknoland',
+        'url': 'https://myteknoland.com',
       },
     },
   ],
@@ -74,7 +74,7 @@ export const viewport: Viewport = {
   themeColor: '#030712',
 }
 
-export default function RootLayout({
+export default function RootLayout ({
   children,
 }: {
   children: React.ReactNode

@@ -1,13 +1,13 @@
 'use client'
 
-import { useRef } from 'react'
 import { motion } from 'framer-motion'
+import { ArrowRight, Clock, Play, Sparkles, TrendingUp, Users } from 'lucide-react'
 import Link from 'next/link'
-import { ArrowRight, Play, Sparkles, TrendingUp, Users, Clock } from 'lucide-react'
+import { useRef } from 'react'
 
 import { DEMO_URL } from '@/lib/config'
 
-export default function Hero() {
+export default function Hero () {
   const containerRef = useRef<HTMLDivElement>(null)
 
   return (
@@ -33,7 +33,7 @@ export default function Hero() {
 
       {/* Floating Particles */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[...Array(20)].map((_, i) => (
+        {Array.from({ length: 20 }).map((_, i) => (
           <motion.div
             key={i}
             className="absolute h-1 w-1 rounded-full bg-primary/30"
@@ -74,7 +74,8 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.15, ease: 'easeOut' }}
           className="text-4xl sm:text-5xl md:text-7xl font-bold tracking-tight text-balance mb-6"
         >
-          The Future of{' '}
+          The Future of
+          {' '}
           <span className="gradient-text">Restaurant</span>
           <br />
           Management is Here
@@ -87,11 +88,23 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.25, ease: 'easeOut' }}
           className="mx-auto max-w-3xl text-lg sm:text-xl text-muted-foreground mb-10 leading-relaxed"
         >
-          NexDine unifies <strong className="text-foreground">POS</strong>,{' '}
-          <strong className="text-foreground">QR Ordering</strong>,{' '}
-          <strong className="text-foreground">Kitchen Display</strong>,{' '}
-          <strong className="text-foreground">CRM</strong>, and{' '}
-          <strong className="text-foreground">Analytics</strong> into one powerful platform trusted by thousands of restaurants worldwide.
+          NexDine unifies
+          {' '}
+          <strong className="text-foreground">POS</strong>
+          ,
+          {' '}
+          <strong className="text-foreground">QR Ordering</strong>
+          ,
+          {' '}
+          <strong className="text-foreground">Kitchen Display</strong>
+          ,
+          {' '}
+          <strong className="text-foreground">CRM</strong>
+          , and
+          {' '}
+          <strong className="text-foreground">Analytics</strong>
+          {' '}
+          into one powerful platform trusted by thousands of restaurants worldwide.
         </motion.p>
 
         {/* Quick Stats */}
@@ -105,7 +118,7 @@ export default function Hero() {
             { icon: TrendingUp, label: '2,000+ Restaurants' },
             { icon: Users, label: '15M+ Orders Processed' },
             { icon: Clock, label: '99.9% Uptime' },
-          ].map((stat) => (
+          ].map(stat => (
             <div key={stat.label} className="flex items-center gap-2 text-sm text-muted-foreground">
               <stat.icon className="h-4 w-4 text-primary" />
               <span>{stat.label}</span>
@@ -161,7 +174,7 @@ export default function Hero() {
             <div className="p-4 sm:p-6 grid grid-cols-12 gap-4">
               {/* Sidebar */}
               <div className="hidden sm:flex col-span-2 flex-col gap-3">
-                {[...Array(6)].map((_, i) => (
+                {Array.from({ length: 6 }).map((_, i) => (
                   <div key={i} className={`h-8 rounded-lg ${i === 0 ? 'bg-primary/20' : 'bg-muted'} flex items-center px-3`}>
                     <div className={`h-2 w-2 rounded-full ${i === 0 ? 'bg-primary' : 'bg-muted-foreground/30'}`} />
                   </div>
@@ -176,7 +189,7 @@ export default function Hero() {
                     { label: 'Orders', value: '1,284', change: '+8%' },
                     { label: 'Customers', value: '892', change: '+15%' },
                     { label: 'Avg Order', value: '$19.10', change: '+3%' },
-                  ].map((stat) => (
+                  ].map(stat => (
                     <div key={stat.label} className="rounded-xl border border-border bg-muted/30 p-3">
                       <p className="text-xs text-muted-foreground mb-1">{stat.label}</p>
                       <div className="flex items-end justify-between">
@@ -216,14 +229,19 @@ export default function Hero() {
                       { id: '#ORD-2841', status: 'Cooking', time: '2m ago' },
                       { id: '#ORD-2840', status: 'Ready', time: '5m ago' },
                       { id: '#ORD-2839', status: 'Served', time: '8m ago' },
-                    ].map((order) => (
+                    ].map(order => (
                       <div key={order.id} className="flex items-center justify-between py-2 border-b border-border/50 last:border-0">
                         <span className="text-sm">{order.id}</span>
                         <span className={`text-xs px-2 py-0.5 rounded-full ${
-                          order.status === 'Cooking' ? 'bg-yellow-500/10 text-yellow-500' :
-                          order.status === 'Ready' ? 'bg-blue-500/10 text-blue-500' :
-                          'bg-green-500/10 text-green-500'
-                        }`}>{order.status}</span>
+                          order.status === 'Cooking'
+                            ? 'bg-yellow-500/10 text-yellow-500'
+                            : (order.status === 'Ready'
+                                ? 'bg-blue-500/10 text-blue-500'
+                                : 'bg-green-500/10 text-green-500')
+                        }`}
+                        >
+                          {order.status}
+                        </span>
                         <span className="text-xs text-muted-foreground">{order.time}</span>
                       </div>
                     ))}

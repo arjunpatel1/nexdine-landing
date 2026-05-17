@@ -1,11 +1,11 @@
 'use client'
 
-import { useRef } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import {
-  ScanLine, Smartphone, ChefHat, Bell, CreditCard, Smile,
-  ArrowRight, CheckCircle2, Circle
+  ArrowRight, Bell, CheckCircle2, ChefHat, Circle, CreditCard,
+  ScanLine, Smartphone, Smile,
 } from 'lucide-react'
+import { useRef } from 'react'
 
 const steps = [
   {
@@ -64,7 +64,7 @@ const steps = [
   },
 ]
 
-function StepConnector({ active }: { active: boolean }) {
+function StepConnector ({ active }: { active: boolean }) {
   return (
     <div className="hidden lg:flex flex-col items-center py-2">
       <div className={`w-0.5 h-16 rounded-full transition-all duration-700 ${active ? 'bg-gradient-to-b from-primary to-primary/30' : 'bg-border'}`} />
@@ -72,7 +72,7 @@ function StepConnector({ active }: { active: boolean }) {
   )
 }
 
-export default function ServiceExplainer() {
+export default function ServiceExplainer () {
   const containerRef = useRef<HTMLDivElement>(null)
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -129,7 +129,10 @@ export default function ServiceExplainer() {
                     <div className={`flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br ${step.color} shadow-lg`}>
                       <step.icon className="h-6 w-6 text-white" />
                     </div>
-                    <span className={`text-sm font-bold ${step.textColor}`}>Step {String(index + 1).padStart(2, '0')}</span>
+                    <span className={`text-sm font-bold ${step.textColor}`}>
+                      Step
+                      {String(index + 1).padStart(2, '0')}
+                    </span>
                   </div>
 
                   <h3 className="text-xl sm:text-2xl font-bold mb-3">{step.title}</h3>
@@ -168,7 +171,7 @@ export default function ServiceExplainer() {
                   whileHover={{ scale: 1.03, rotate: isLeft ? 1 : -1 }}
                   transition={{ duration: 0.3 }}
                 >
-                  <div className={`rounded-2xl border border-border bg-card p-6 shadow-xl relative overflow-hidden`}>
+                  <div className="rounded-2xl border border-border bg-card p-6 shadow-xl relative overflow-hidden">
                     <div className={`absolute -top-10 -right-10 h-32 w-32 rounded-full ${step.bgColor} blur-2xl`} />
                     <div className="relative">
                       <StepVisual index={index} />
@@ -184,15 +187,15 @@ export default function ServiceExplainer() {
   )
 }
 
-function StepVisual({ index }: { index: number }) {
+function StepVisual ({ index }: { index: number }) {
   switch (index) {
-    case 0:
+    case 0: {
       return (
         <div className="flex flex-col items-center py-4">
           <div className="h-32 w-32 rounded-2xl border-4 border-emerald-500/30 bg-white p-4 shadow-lg">
             <div className="h-full w-full grid grid-cols-5 gap-1">
               {Array.from({ length: 25 }).map((_, i) => (
-                <div key={i} className={`rounded-sm ${[0,1,2,4,5,6,10,12,14,15,16,18,20,22,24].includes(i) ? 'bg-emerald-500' : 'bg-transparent'}`} />
+                <div key={i} className={`rounded-sm ${[0, 1, 2, 4, 5, 6, 10, 12, 14, 15, 16, 18, 20, 22, 24].includes(i) ? 'bg-emerald-500' : 'bg-transparent'}`} />
               ))}
             </div>
           </div>
@@ -200,7 +203,8 @@ function StepVisual({ index }: { index: number }) {
           <p className="text-xs text-muted-foreground">Scan with any camera app</p>
         </div>
       )
-    case 1:
+    }
+    case 1: {
       return (
         <div className="space-y-2 py-2">
           <div className="flex items-center gap-3 p-2 rounded-lg bg-muted/30 border border-border">
@@ -229,7 +233,8 @@ function StepVisual({ index }: { index: number }) {
           </div>
         </div>
       )
-    case 2:
+    }
+    case 2: {
       return (
         <div className="space-y-2 py-2">
           <div className="flex items-center justify-between p-2 rounded-lg bg-orange-500/10 border border-orange-500/20">
@@ -255,7 +260,8 @@ function StepVisual({ index }: { index: number }) {
           </div>
         </div>
       )
-    case 3:
+    }
+    case 3: {
       return (
         <div className="flex flex-col items-center py-4">
           <div className="w-full max-w-[200px] rounded-xl border border-border bg-muted/30 p-3">
@@ -274,7 +280,8 @@ function StepVisual({ index }: { index: number }) {
           </div>
         </div>
       )
-    case 4:
+    }
+    case 4: {
       return (
         <div className="flex flex-col items-center py-4">
           <div className="w-full max-w-[220px] rounded-xl border border-border bg-card p-4">
@@ -287,13 +294,14 @@ function StepVisual({ index }: { index: number }) {
           </div>
         </div>
       )
-    case 5:
+    }
+    case 5: {
       return (
         <div className="space-y-3 py-2">
           <div className="rounded-lg border border-border bg-muted/30 p-3">
             <p className="text-xs font-semibold mb-1">How was your experience?</p>
             <div className="flex gap-1">
-              {[1,2,3,4,5].map((star) => (
+              {[1, 2, 3, 4, 5].map(star => (
                 <div key={star} className={`h-6 w-6 rounded flex items-center justify-center text-xs ${star <= 4 ? 'bg-yellow-500/20 text-yellow-500' : 'bg-muted'}`}>★</div>
               ))}
             </div>
@@ -304,7 +312,9 @@ function StepVisual({ index }: { index: number }) {
           </div>
         </div>
       )
-    default:
+    }
+    default: {
       return null
+    }
   }
 }

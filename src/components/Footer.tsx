@@ -1,8 +1,8 @@
 'use client'
 
-import Link from 'next/link'
 import { motion } from 'framer-motion'
-import { Twitter, Linkedin, Github, Youtube } from 'lucide-react'
+import { Github, Linkedin, Twitter, Youtube } from 'lucide-react'
+import Link from 'next/link'
 import Logo from '@/components/Logo'
 
 const footerGroups = [
@@ -42,7 +42,7 @@ const footerGroups = [
   },
 ]
 
-export default function Footer() {
+export default function Footer () {
   return (
     <footer className="border-t border-border bg-background">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
@@ -70,11 +70,11 @@ export default function Footer() {
           </div>
 
           {/* Links */}
-          {footerGroups.map((group) => (
+          {footerGroups.map(group => (
             <div key={group.title}>
               <h3 className="text-sm font-semibold mb-3">{group.title}</h3>
               <ul className="space-y-2">
-                {group.links.map((link) => (
+                {group.links.map(link => (
                   <li key={link.label}>
                     <Link
                       href={link.href}
@@ -91,7 +91,8 @@ export default function Footer() {
 
         <div className="mt-16 pt-8 border-t border-border flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm text-muted-foreground">
-            &copy; 2026 NexDine. All rights reserved. A{' '}
+            &copy; 2026 NexDine. All rights reserved. A
+            {' '}
             <a
               href="https://myteknoland.com"
               target="_blank"
@@ -99,7 +100,8 @@ export default function Footer() {
               className="hover:text-foreground transition-colors underline underline-offset-2"
             >
               Myteknoland
-            </a>{' '}
+            </a>
+            {' '}
             Product.
           </p>
           <div className="flex items-center gap-6">

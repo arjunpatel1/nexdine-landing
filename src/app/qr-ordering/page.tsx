@@ -1,6 +1,6 @@
 import PageWrapper from '@/components/PageWrapper'
 
-export default function QROrderingPage() {
+export default function QROrderingPage () {
   return (
     <PageWrapper>
       <div className="pt-24 pb-16">
@@ -19,7 +19,7 @@ export default function QROrderingPage() {
               { step: '01', title: 'Scan QR Code', desc: 'Place a unique QR code on each table. Customers scan with their native camera app.' },
               { step: '02', title: 'Browse & Order', desc: 'A beautiful, responsive menu opens instantly. Customers add items and customize.' },
               { step: '03', title: 'Kitchen Receives', desc: 'Orders flow straight to the KDS. No waiter intervention needed for standard orders.' },
-            ].map((item) => (
+            ].map(item => (
               <div key={item.step} className="relative rounded-2xl border border-border bg-card p-8">
                 <span className="text-5xl font-bold text-primary/10">{item.step}</span>
                 <h3 className="text-xl font-semibold mt-4 mb-2">{item.title}</h3>

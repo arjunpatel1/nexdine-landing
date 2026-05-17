@@ -3,7 +3,7 @@ interface LogoProps {
   className?: string
 }
 
-export default function Logo({ size = 36, className = '' }: LogoProps) {
+export default function Logo ({ size = 36, className = '' }: LogoProps) {
   return (
     <svg
       width={size}

@@ -1,8 +1,8 @@
 'use client'
 
-import { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
 import { ChevronDown, HelpCircle } from 'lucide-react'
+import { useState } from 'react'
 
 const faqs = [
   {
@@ -42,7 +42,7 @@ const faqs = [
   },
 ]
 
-export default function FAQ() {
+export default function FAQ () {
   const [openIndex, setOpenIndex] = useState<number | null>(0)
 
   return (
@@ -123,12 +123,12 @@ export default function FAQ() {
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'FAQPage',
-            mainEntity: faqs.map((f) => ({
+            'mainEntity': faqs.map(f => ({
               '@type': 'Question',
-              name: f.question,
-              acceptedAnswer: {
+              'name': f.question,
+              'acceptedAnswer': {
                 '@type': 'Answer',
-                text: f.answer,
+                'text': f.answer,
               },
             })),
           }),

@@ -1,8 +1,8 @@
 'use client'
 
-import { useState, useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
-import { X, Check, Clock, AlertTriangle, Users, TrendingUp } from 'lucide-react'
+import { AlertTriangle, Check, Clock, TrendingUp, Users, X } from 'lucide-react'
+import { useRef, useState } from 'react'
 
 const comparisons = [
   {
@@ -25,7 +25,7 @@ const comparisons = [
   },
 ]
 
-export default function BeforeAfter() {
+export default function BeforeAfter () {
   const [activeTab, setActiveTab] = useState(0)
   const ref = useRef(null)
   const inView = useInView(ref, { once: true })

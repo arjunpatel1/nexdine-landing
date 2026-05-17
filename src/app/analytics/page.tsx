@@ -1,6 +1,6 @@
 import PageWrapper from '@/components/PageWrapper'
 
-export default function AnalyticsPage() {
+export default function AnalyticsPage () {
   return (
     <PageWrapper>
       <div className="pt-24 pb-16">
@@ -20,7 +20,7 @@ export default function AnalyticsPage() {
               { label: 'Orders', value: '8,420', change: '+12%' },
               { label: 'Avg Ticket', value: '$14.78', change: '+5%' },
               { label: 'Stock Alert', value: '3 items', change: 'low' },
-            ].map((stat) => (
+            ].map(stat => (
               <div key={stat.label} className="rounded-xl border border-border bg-card p-5">
                 <p className="text-sm text-muted-foreground mb-1">{stat.label}</p>
                 <div className="flex items-end justify-between">
@@ -49,7 +49,7 @@ export default function AnalyticsPage() {
                     className="w-full rounded-t-lg bg-gradient-to-t from-orange-500/30 to-orange-500/80 min-h-[4px]"
                     style={{ height: `${h}%` }}
                   />
-                  <span className="text-[10px] text-muted-foreground">{['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][i]}</span>
+                  <span className="text-[10px] text-muted-foreground">{['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'][i]}</span>
                 </div>
               ))}
             </div>

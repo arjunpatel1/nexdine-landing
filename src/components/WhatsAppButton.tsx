@@ -5,7 +5,7 @@ import { MessageCircle } from 'lucide-react'
 
 const PHONE_RAW = '917288876715'
 
-export default function WhatsAppButton() {
+export default function WhatsAppButton () {
   return (
     <motion.a
       href={`https://wa.me/${PHONE_RAW}?text=${encodeURIComponent('Hi, I would like to know more about NexDine.')}`}

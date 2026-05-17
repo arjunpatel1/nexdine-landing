@@ -1,12 +1,12 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import Link from 'next/link'
 import { ArrowRight, Sparkles } from 'lucide-react'
+import Link from 'next/link'
 
 import { DEMO_URL } from '@/lib/config'
 
-export default function CTA() {
+export default function CTA () {
   return (
     <section className="py-24 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-sky-950/40 via-sky-950/30 to-background" />
@@ -28,7 +28,8 @@ export default function CTA() {
           </div>
 
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-6">
-            Transform Your Restaurant Operations with{' '}
+            Transform Your Restaurant Operations with
+            {' '}
             <span className="gradient-text">NexDine</span>
           </h2>
 

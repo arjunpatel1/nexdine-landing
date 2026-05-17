@@ -1,6 +1,6 @@
 import PageWrapper from '@/components/PageWrapper'
 
-export default function TableMappingPage() {
+export default function TableMappingPage () {
   return (
     <PageWrapper>
       <div className="pt-24 pb-16">
@@ -17,19 +17,20 @@ export default function TableMappingPage() {
           <div className="rounded-2xl border border-border bg-card p-6 shadow-xl mb-12">
             <div className="grid grid-cols-6 gap-3">
               {Array.from({ length: 24 }).map((_, i) => {
-                const status = i % 5 === 0 ? 'occupied' : i % 7 === 0 ? 'reserved' : 'available'
+                const status = i % 5 === 0 ? 'occupied' : (i % 7 === 0 ? 'reserved' : 'available')
                 return (
                   <div
                     key={i}
                     className={`aspect-square rounded-xl flex items-center justify-center text-sm font-semibold border-2 ${
                       status === 'occupied'
                         ? 'border-red-500/30 bg-red-500/10 text-red-400'
-                        : status === 'reserved'
-                        ? 'border-yellow-500/30 bg-yellow-500/10 text-yellow-400'
-                        : 'border-green-500/30 bg-green-500/10 text-green-400'
+                        : (status === 'reserved'
+                            ? 'border-yellow-500/30 bg-yellow-500/10 text-yellow-400'
+                            : 'border-green-500/30 bg-green-500/10 text-green-400')
                     }`}
                   >
-                    T{i + 1}
+                    T
+                    {i + 1}
                   </div>
                 )
               })}
@@ -56,7 +57,7 @@ export default function TableMappingPage() {
               { title: 'Live Occupancy', desc: 'See table status update in real-time as orders are placed, served, and cleared.' },
               { title: 'Merge & Split', desc: 'Combine adjacent tables for large parties. Split bills automatically when tables separate.' },
               { title: 'Reservation Holds', desc: 'Block tables for upcoming reservations. Visual indicators show hold times.' },
-            ].map((f) => (
+            ].map(f => (
               <div key={f.title} className="rounded-xl border border-border bg-card p-6">
                 <h3 className="text-lg font-semibold mb-2">{f.title}</h3>
                 <p className="text-sm text-muted-foreground">{f.desc}</p>

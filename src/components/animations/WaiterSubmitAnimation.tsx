@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 
-export default function WaiterSubmitAnimation() {
+export default function WaiterSubmitAnimation () {
   return (
     <svg viewBox="0 0 240 180" className="w-full h-full">
       {/* Phone frame */}
@@ -35,7 +35,8 @@ export default function WaiterSubmitAnimation() {
             {item.name}
           </text>
           <text x="160" y={item.y + 5} textAnchor="end" fontSize="8" fontWeight="700" fill="#f97316">
-            {item.qty}x
+            {item.qty}
+            x
           </text>
         </motion.g>
       ))}

@@ -1,19 +1,19 @@
 import PageWrapper from '@/components/PageWrapper'
-import Hero from '@/components/sections/Hero'
-import TrustedBy from '@/components/sections/TrustedBy'
-import FeatureShowcase from '@/components/sections/FeatureShowcase'
-import ServiceExplainer from '@/components/sections/ServiceExplainer'
-import Workflow from '@/components/sections/Workflow'
 import BeforeAfter from '@/components/sections/BeforeAfter'
-import Stats from '@/components/sections/Stats'
-import Pricing from '@/components/sections/Pricing'
 import Comparison from '@/components/sections/Comparison'
-import FAQ from '@/components/sections/FAQ'
-import Newsletter from '@/components/sections/Newsletter'
 import CTA from '@/components/sections/CTA'
+import FAQ from '@/components/sections/FAQ'
+import FeatureShowcase from '@/components/sections/FeatureShowcase'
+import Hero from '@/components/sections/Hero'
 import Integrations from '@/components/sections/Integrations'
+import Newsletter from '@/components/sections/Newsletter'
+import Pricing from '@/components/sections/Pricing'
+import ServiceExplainer from '@/components/sections/ServiceExplainer'
+import Stats from '@/components/sections/Stats'
+import TrustedBy from '@/components/sections/TrustedBy'
+import Workflow from '@/components/sections/Workflow'
 
-export default function Home() {
+export default function Home () {
   return (
     <PageWrapper>
       <Hero />

@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 
-export default function TableSelectAnimation() {
+export default function TableSelectAnimation () {
   const tables = [
     { id: 1, x: 30, y: 30, w: 50, h: 50, status: 'available' },
     { id: 2, x: 100, y: 30, w: 50, h: 50, status: 'occupied' },
@@ -14,10 +14,14 @@ export default function TableSelectAnimation() {
 
   const getColor = (status: string) => {
     switch (status) {
-      case 'available': return '#22c55e'
-      case 'occupied': return '#ef4444'
-      case 'reserved': return '#f59e0b'
-      default: return '#6b7280'
+      case 'available': { return '#22c55e'
+      }
+      case 'occupied': { return '#ef4444'
+      }
+      case 'reserved': { return '#f59e0b'
+      }
+      default: { return '#6b7280'
+      }
     }
   }
 
@@ -72,7 +76,8 @@ export default function TableSelectAnimation() {
             fontWeight="600"
             fill={getColor(table.status)}
           >
-            T{table.id}
+            T
+            {table.id}
           </text>
 
           {/* Status dot */}

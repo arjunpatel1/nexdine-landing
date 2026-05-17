@@ -1,11 +1,11 @@
 'use client'
 
-import { useRef } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import {
-  Store, Globe, Truck, ChefHat, CreditCard, BarChart3,
-  ArrowRight, CircleDot
+  ArrowRight, BarChart3, ChefHat, CircleDot, CreditCard, Globe,
+  Store, Truck,
 } from 'lucide-react'
+import { useRef } from 'react'
 
 const workflowSteps = [
   {
@@ -52,7 +52,7 @@ const workflowSteps = [
   },
 ]
 
-export default function Workflow() {
+export default function Workflow () {
   const containerRef = useRef<HTMLDivElement>(null)
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -130,7 +130,7 @@ export default function Workflow() {
                   <h3 className="text-2xl font-bold mb-2">{step.title}</h3>
                   <p className="text-muted-foreground leading-relaxed mb-4">{step.desc}</p>
                   <div className="flex flex-wrap gap-2">
-                    {step.sources.map((source) => (
+                    {step.sources.map(source => (
                       <span key={source} className="rounded-full bg-muted px-3 py-1 text-xs font-medium text-muted-foreground">
                         {source}
                       </span>
@@ -155,17 +155,17 @@ export default function Workflow() {
   )
 }
 
-function WorkflowVisual({ step, color }: { step: number; color: string }) {
+function WorkflowVisual ({ step, color }: { step: number, color: string }) {
   const renderVisual = () => {
     switch (step) {
-      case 0:
+      case 0: {
         return (
           <div className="grid grid-cols-3 gap-3">
             {[
               { label: 'QR Scan', icon: 'QR' },
               { label: 'Website', icon: 'WEB' },
               { label: 'Mobile App', icon: 'APP' },
-            ].map((source) => (
+            ].map(source => (
               <div key={source.label} className="rounded-xl border border-border bg-card p-4 text-center">
                 <div className="h-10 w-10 mx-auto mb-2 rounded-lg bg-gradient-to-br from-blue-500/20 to-cyan-500/20 flex items-center justify-center text-xs font-bold text-blue-400">
                   {source.icon}
@@ -175,50 +175,62 @@ function WorkflowVisual({ step, color }: { step: number; color: string }) {
             ))}
           </div>
         )
-      case 1:
+      }
+      case 1: {
         return (
           <div className="space-y-2">
             {[
               { name: 'Swiggy', orders: '12', color: 'bg-orange-500/20 text-orange-400' },
               { name: 'Zomato', orders: '8', color: 'bg-red-500/20 text-red-400' },
               { name: 'UberEats', orders: '5', color: 'bg-green-500/20 text-green-400' },
-            ].map((platform) => (
+            ].map(platform => (
               <div key={platform.name} className="flex items-center justify-between rounded-lg border border-border bg-card p-3">
                 <span className="text-sm font-medium">{platform.name}</span>
                 <div className="flex items-center gap-2">
-                  <span className={`text-xs px-2 py-0.5 rounded-full ${platform.color}`}>{platform.orders} orders</span>
+                  <span className={`text-xs px-2 py-0.5 rounded-full ${platform.color}`}>
+                    {platform.orders}
+                    {' '}
+                    orders
+                  </span>
                   <ArrowRight className="h-4 w-4 text-muted-foreground" />
                 </div>
               </div>
             ))}
           </div>
         )
-      case 2:
+      }
+      case 2: {
         return (
           <div className="grid grid-cols-4 gap-2">
             {Array.from({ length: 12 }).map((_, i) => {
               const statuses = ['free', 'free', 'busy', 'free', 'reserved', 'free', 'busy', 'free', 'free', 'busy', 'free', 'reserved']
               const status = statuses[i]
               return (
-                <div key={i} className={`aspect-square rounded-lg flex items-center justify-center text-[10px] font-bold border-2 ${
-                  status === 'busy' ? 'border-red-500/30 bg-red-500/10 text-red-400' :
-                  status === 'reserved' ? 'border-yellow-500/30 bg-yellow-500/10 text-yellow-400' :
-                  'border-green-500/30 bg-green-500/10 text-green-400'
-                }`}>
+                <div
+                  key={i}
+                  className={`aspect-square rounded-lg flex items-center justify-center text-[10px] font-bold border-2 ${
+                    status === 'busy'
+                      ? 'border-red-500/30 bg-red-500/10 text-red-400'
+                      : (status === 'reserved'
+                          ? 'border-yellow-500/30 bg-yellow-500/10 text-yellow-400'
+                          : 'border-green-500/30 bg-green-500/10 text-green-400')
+                  }`}
+                >
                   {i + 1}
                 </div>
               )
             })}
           </div>
         )
-      case 3:
+      }
+      case 3: {
         return (
           <div className="space-y-2">
             {[
               { station: 'Grill Station', items: '4 items', time: 'Busy', color: 'text-orange-400' },
               { station: 'Fryer Station', items: '2 items', time: 'Moderate', color: 'text-yellow-400' },
               { station: 'Cold Station', items: '6 items', time: 'Available', color: 'text-green-400' },
-            ].map((s) => (
+            ].map(s => (
               <div key={s.station} className="flex items-center justify-between rounded-lg border border-border bg-card p-3">
                 <div>
                   <p className="text-sm font-medium">{s.station}</p>
@@ -229,14 +241,15 @@ function WorkflowVisual({ step, color }: { step: number; color: string }) {
             ))}
           </div>
         )
-      case 4:
+      }
+      case 4: {
         return (
           <div className="space-y-2">
             {[
               { method: 'Cash', count: '18%', active: false },
               { method: 'Card / UPI', count: '62%', active: true },
               { method: 'Wallet', count: '20%', active: false },
-            ].map((m) => (
+            ].map(m => (
               <div key={m.method} className="flex items-center gap-3">
                 <span className="text-xs w-20 text-muted-foreground">{m.method}</span>
                 <div className="flex-1 h-6 bg-muted rounded-full overflow-hidden">
@@ -253,14 +266,15 @@ function WorkflowVisual({ step, color }: { step: number; color: string }) {
             ))}
           </div>
         )
-      case 5:
+      }
+      case 5: {
         return (
           <div className="space-y-3">
             <div className="grid grid-cols-2 gap-2">
               {[
                 { label: 'Revenue', value: '$24.5K', change: '+12%' },
                 { label: 'Orders', value: '1,284', change: '+8%' },
-              ].map((stat) => (
+              ].map(stat => (
                 <div key={stat.label} className="rounded-lg border border-border bg-card p-3">
                   <p className="text-xs text-muted-foreground">{stat.label}</p>
                   <p className="text-lg font-bold">{stat.value}</p>
@@ -284,8 +298,10 @@ function WorkflowVisual({ step, color }: { step: number; color: string }) {
             </div>
           </div>
         )
-      default:
+      }
+      default: {
         return null
+      }
     }
   }
 

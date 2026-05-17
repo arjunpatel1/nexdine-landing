@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 
-export default function OrderServerAnimation() {
+export default function OrderServerAnimation () {
   const orders = [
     { id: 1, item: 'Burger', station: 'Grill', time: '04:32', color: '#f59e0b' },
     { id: 2, item: 'Salad', station: 'Cold', time: '01:15', color: '#22c55e' },
@@ -96,7 +96,9 @@ export default function OrderServerAnimation() {
 
           {/* Item name */}
           <text x="66" y={80 + i * 38} fontSize="9" fontWeight="500" fill="#e2e8f0">
-            2x {order.item}
+            2x
+            {' '}
+            {order.item}
           </text>
 
           {/* Timer */}

@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 
-export default function RestaurantMapAnimation() {
+export default function RestaurantMapAnimation () {
   const zones = [
     { name: 'Indoor', x: 20, y: 20, w: 100, h: 80, color: '#dbeafe' },
     { name: 'Bar', x: 130, y: 20, w: 80, h: 50, color: '#fef3c7' },
@@ -24,10 +24,14 @@ export default function RestaurantMapAnimation() {
 
   const getStatusColor = (status: string) => {
     switch (status) {
-      case 'available': return '#22c55e'
-      case 'occupied': return '#ef4444'
-      case 'reserved': return '#f59e0b'
-      default: return '#6b7280'
+      case 'available': { return '#22c55e'
+      }
+      case 'occupied': { return '#ef4444'
+      }
+      case 'reserved': { return '#f59e0b'
+      }
+      default: { return '#6b7280'
+      }
     }
   }
 

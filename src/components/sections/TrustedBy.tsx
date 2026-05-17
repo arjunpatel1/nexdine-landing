@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 
-export default function TrustedBy() {
+export default function TrustedBy () {
   return (
     <section className="py-16 border-y border-border overflow-hidden">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

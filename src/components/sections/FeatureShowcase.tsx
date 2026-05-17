@@ -1,19 +1,19 @@
 'use client'
 
-import { useRef } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import {
-  MonitorSmartphone, QrCode, ChefHat, Map, BarChart3,
-  Users, MessageCircle, Truck, Shield, Smartphone,
-  CalendarDays, Printer, ArrowRight, Zap, Clock, CreditCard,
-  Star, ClipboardList, RefreshCw, AlertTriangle, CheckCircle2,
+  AlertTriangle, ArrowRight, BarChart3, CalendarDays, CheckCircle2,
+  ChefHat, ClipboardList, Clock, CreditCard, Map,
+  MessageCircle, MonitorSmartphone, Printer, QrCode, RefreshCw, Shield,
+  Smartphone, Star, Truck, Users, Zap,
 } from 'lucide-react'
 import Link from 'next/link'
+import { useRef } from 'react'
+import OrderServerAnimation from '@/components/animations/OrderServerAnimation'
 import PosBillingAnimation from '@/components/animations/PosBillingAnimation'
 import QrOrderingAnimation from '@/components/animations/QrOrderingAnimation'
-import TableSelectAnimation from '@/components/animations/TableSelectAnimation'
 import RestaurantMapAnimation from '@/components/animations/RestaurantMapAnimation'
-import OrderServerAnimation from '@/components/animations/OrderServerAnimation'
+import TableSelectAnimation from '@/components/animations/TableSelectAnimation'
 import WaiterSubmitAnimation from '@/components/animations/WaiterSubmitAnimation'
 
 const features = [
@@ -211,18 +211,22 @@ const features = [
   },
 ]
 
-function Mockup({ type }: { type: string }) {
+function Mockup ({ type }: { type: string }) {
   const renderContent = () => {
     switch (type) {
-      case 'pos':
+      case 'pos': {
         return <PosBillingAnimation />
-      case 'qr':
+      }
+      case 'qr': {
         return <QrOrderingAnimation />
-      case 'kds':
+      }
+      case 'kds': {
         return <OrderServerAnimation />
-      case 'table':
+      }
+      case 'table': {
         return <RestaurantMapAnimation />
-      case 'analytics':
+      }
+      case 'analytics': {
         return (
           <div className="space-y-3">
             <div className="grid grid-cols-2 gap-2">
@@ -243,14 +247,15 @@ function Mockup({ type }: { type: string }) {
             </div>
           </div>
         )
-      case 'crm':
+      }
+      case 'crm': {
         return (
           <div className="space-y-2">
             {[
               { name: 'Sarah Chen', visits: '24', points: '1,240', tier: 'Gold' },
               { name: 'Marcus J.', visits: '18', points: '890', tier: 'Silver' },
               { name: 'Priya S.', visits: '31', points: '1,850', tier: 'Platinum' },
-            ].map((customer) => (
+            ].map(customer => (
               <div key={customer.name} className="flex items-center justify-between rounded-lg border border-border bg-muted/30 p-2">
                 <div className="flex items-center gap-2">
                   <div className="h-7 w-7 rounded-full bg-gradient-to-br from-rose-500/20 to-pink-500/20 flex items-center justify-center text-[10px] font-bold">
@@ -258,7 +263,11 @@ function Mockup({ type }: { type: string }) {
                   </div>
                   <div>
                     <p className="text-[10px] font-semibold">{customer.name}</p>
-                    <p className="text-[9px] text-muted-foreground">{customer.visits} visits</p>
+                    <p className="text-[9px] text-muted-foreground">
+                      {customer.visits}
+                      {' '}
+                      visits
+                    </p>
                   </div>
                 </div>
                 <div className="text-right">
@@ -269,7 +278,8 @@ function Mockup({ type }: { type: string }) {
             ))}
           </div>
         )
-      case 'whatsapp':
+      }
+      case 'whatsapp': {
         return (
           <div className="space-y-2">
             <div className="rounded-lg bg-green-500/10 border border-green-500/20 p-3 mb-3">
@@ -292,11 +302,12 @@ function Mockup({ type }: { type: string }) {
             ))}
           </div>
         )
-      case 'aggregator':
+      }
+      case 'aggregator': {
         return (
           <div className="space-y-2">
             <div className="flex gap-2 mb-2">
-              {['Swiggy', 'Zomato', 'UberEats'].map((platform) => (
+              {['Swiggy', 'Zomato', 'UberEats'].map(platform => (
                 <div key={platform} className={`px-2 py-1 rounded text-[10px] ${platform === 'Swiggy' ? 'bg-orange-500/20 text-orange-400' : 'bg-muted'}`}>{platform}</div>
               ))}
             </div>
@@ -304,26 +315,29 @@ function Mockup({ type }: { type: string }) {
               { id: '#SW-4412', platform: 'Swiggy', status: 'New', time: '2m ago' },
               { id: '#ZM-8821', platform: 'Zomato', status: 'Preparing', time: '5m ago' },
               { id: '#UE-1123', platform: 'UberEats', status: 'Ready', time: '8m ago' },
-            ].map((order) => (
+            ].map(order => (
               <div key={order.id} className="flex items-center justify-between rounded-lg border border-border bg-muted/30 p-2">
                 <div className="flex items-center gap-2">
                   <span className="text-[10px] font-mono">{order.id}</span>
                   <span className="text-[9px] text-muted-foreground">{order.platform}</span>
                 </div>
-                <span className={`text-[9px] px-1.5 py-0.5 rounded ${order.status === 'New' ? 'bg-orange-500/10 text-orange-400' : order.status === 'Ready' ? 'bg-green-500/10 text-green-400' : 'bg-blue-500/10 text-blue-400'}`}>{order.status}</span>
+                <span className={`text-[9px] px-1.5 py-0.5 rounded ${order.status === 'New' ? 'bg-orange-500/10 text-orange-400' : (order.status === 'Ready' ? 'bg-green-500/10 text-green-400' : 'bg-blue-500/10 text-blue-400')}`}>{order.status}</span>
               </div>
             ))}
           </div>
         )
-      case 'mobile':
+      }
+      case 'mobile': {
         return <WaiterSubmitAnimation />
-      case 'tableselect':
+      }
+      case 'tableselect': {
         return <TableSelectAnimation />
-      case 'feedback':
+      }
+      case 'feedback': {
         return (
           <div className="space-y-2">
             <div className="flex gap-2 mb-2">
-              {['Dine-in', 'QR', 'Delivery'].map((src) => (
+              {['Dine-in', 'QR', 'Delivery'].map(src => (
                 <div key={src} className={`px-2 py-1 rounded text-[10px] ${src === 'Dine-in' ? 'bg-yellow-500/20 text-yellow-400' : 'bg-muted'}`}>{src}</div>
               ))}
             </div>
@@ -347,7 +361,8 @@ function Mockup({ type }: { type: string }) {
             ))}
           </div>
         )
-      case 'printjobs':
+      }
+      case 'printjobs': {
         return (
           <div className="space-y-2">
             <div className="grid grid-cols-3 gap-2 mb-2">
@@ -355,7 +370,7 @@ function Mockup({ type }: { type: string }) {
                 { label: 'Total', val: '1,240', color: 'text-blue-400' },
                 { label: 'Success', val: '1,198', color: 'text-green-400' },
                 { label: 'Failed', val: '42', color: 'text-red-400' },
-              ].map((s) => (
+              ].map(s => (
                 <div key={s.label} className="rounded-lg border border-border bg-muted/30 p-2 text-center">
                   <p className={`text-sm font-bold ${s.color}`}>{s.val}</p>
                   <p className="text-[9px] text-muted-foreground">{s.label}</p>
@@ -377,8 +392,10 @@ function Mockup({ type }: { type: string }) {
             </div>
           </div>
         )
-      default:
+      }
+      default: {
         return null
+      }
     }
   }
 
@@ -390,7 +407,7 @@ function Mockup({ type }: { type: string }) {
   )
 }
 
-export default function FeatureShowcase() {
+export default function FeatureShowcase () {
   const containerRef = useRef<HTMLDivElement>(null)
   const { scrollYProgress } = useScroll({
     target: containerRef,

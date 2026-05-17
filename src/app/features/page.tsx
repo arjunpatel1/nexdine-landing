@@ -1,9 +1,9 @@
 import PageWrapper from '@/components/PageWrapper'
+import CTA from '@/components/sections/CTA'
 import Features from '@/components/sections/Features'
 import Stats from '@/components/sections/Stats'
-import CTA from '@/components/sections/CTA'
 
-export default function FeaturesPage() {
+export default function FeaturesPage () {
   return (
     <PageWrapper>
       <div className="pt-24 pb-12">

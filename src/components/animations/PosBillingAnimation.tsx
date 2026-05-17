@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 
-export default function PosBillingAnimation() {
+export default function PosBillingAnimation () {
   const menuItems = [
     { name: 'Burger', price: '₹249', active: true },
     { name: 'Pizza', price: '₹399', active: false },
@@ -81,12 +81,18 @@ export default function PosBillingAnimation() {
         transition={{ delay: 0.5, duration: 0.4 }}
       >
         <rect x="14" y="120" width="232" height="50" rx="10" fill="white" stroke="#e2e8f0" strokeWidth="1" />
-        <text x="26" y="135" fontSize="8" fontWeight="600" fill="#334155">Cart ({cartItems.length})</text>
+        <text x="26" y="135" fontSize="8" fontWeight="600" fill="#334155">
+          Cart (
+          {cartItems.length}
+          )
+        </text>
         <text x="230" y="135" textAnchor="end" fontSize="9" fontWeight="700" fill="#1e293b">₹597</text>
 
         {cartItems.map((item, i) => (
           <text key={item.name} x="26" y={148 + i * 10} fontSize="7" fill="#64748b">
-            {item.qty}x {item.name}
+            {item.qty}
+            x
+            {item.name}
           </text>
         ))}
 

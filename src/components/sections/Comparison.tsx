@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Check, X, Scale } from 'lucide-react'
+import { Check, Scale, X } from 'lucide-react'
 
 const competitors = ['Petpooja', 'POSist (Now Restroworks)']
 
@@ -20,7 +20,7 @@ const features = [
   { name: 'Transparent Pricing', nexdine: true, comp1: false, comp2: false },
 ]
 
-export default function Comparison() {
+export default function Comparison () {
   return (
     <section className="py-24 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent" />
@@ -37,7 +37,9 @@ export default function Comparison() {
             <span>Compare</span>
           </span>
           <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">
-            Why restaurants choose <span className="gradient-text">NexDine</span>
+            Why restaurants choose
+            {' '}
+            <span className="gradient-text">NexDine</span>
           </h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
             See how NexDine stacks up against other popular restaurant POS platforms in India.
@@ -72,7 +74,7 @@ export default function Comparison() {
             <div
               key={i}
               className={`grid grid-cols-4 gap-0 items-center ${
-                i !== features.length - 1 ? 'border-b border-border/50' : ''
+                i === features.length - 1 ? '' : 'border-b border-border/50'
               } ${i % 2 === 0 ? 'bg-transparent' : 'bg-card/30'}`}
             >
               <div className="px-4 py-3 sm:px-6 sm:py-4 text-sm text-foreground font-medium">
@@ -82,18 +84,22 @@ export default function Comparison() {
                 <Check className="h-5 w-5 text-primary" strokeWidth={2.5} />
               </div>
               <div className="px-4 py-3 sm:px-6 sm:py-4 flex justify-center">
-                {feat.comp1 ? (
-                  <Check className="h-5 w-5 text-emerald-500" strokeWidth={2} />
-                ) : (
-                  <X className="h-5 w-5 text-muted-foreground/40" strokeWidth={2} />
-                )}
+                {feat.comp1
+                  ? (
+                      <Check className="h-5 w-5 text-emerald-500" strokeWidth={2} />
+                    )
+                  : (
+                      <X className="h-5 w-5 text-muted-foreground/40" strokeWidth={2} />
+                    )}
               </div>
               <div className="px-4 py-3 sm:px-6 sm:py-4 flex justify-center">
-                {feat.comp2 ? (
-                  <Check className="h-5 w-5 text-emerald-500" strokeWidth={2} />
-                ) : (
-                  <X className="h-5 w-5 text-muted-foreground/40" strokeWidth={2} />
-                )}
+                {feat.comp2
+                  ? (
+                      <Check className="h-5 w-5 text-emerald-500" strokeWidth={2} />
+                    )
+                  : (
+                      <X className="h-5 w-5 text-muted-foreground/40" strokeWidth={2} />
+                    )}
               </div>
             </div>
           ))}

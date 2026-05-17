@@ -1,7 +1,7 @@
-import PageWrapper from '@/components/PageWrapper'
 import { motion } from 'framer-motion'
+import PageWrapper from '@/components/PageWrapper'
 
-export default function PosDemoPage() {
+export default function PosDemoPage () {
   return (
     <PageWrapper>
       <div className="pt-24 pb-16">
@@ -24,7 +24,7 @@ export default function PosDemoPage() {
                 <span className="ml-2 text-xs text-muted-foreground">nexdine-pos.local</span>
               </div>
               <div className="grid grid-cols-3 gap-3">
-                {['Burger', 'Pizza', 'Pasta', 'Salad', 'Steak', 'Sushi', 'Tacos', 'Dessert', 'Drinks'].map((item) => (
+                {['Burger', 'Pizza', 'Pasta', 'Salad', 'Steak', 'Sushi', 'Tacos', 'Dessert', 'Drinks'].map(item => (
                   <div key={item} className="rounded-xl border border-border bg-muted/30 p-4 text-center hover:bg-primary/5 transition-colors cursor-pointer">
                     <div className="h-8 w-8 mx-auto mb-2 rounded-lg bg-gradient-to-br from-orange-500/20 to-amber-500/20" />
                     <p className="text-sm font-medium">{item}</p>
@@ -50,7 +50,7 @@ export default function PosDemoPage() {
                 { title: 'Split & Merge Bills', desc: 'Split bills by item, by person, or evenly. Merge tables and transfer checks between servers seamlessly.' },
                 { title: 'Multi-Payment Support', desc: 'Accept cash, cards, UPI, wallets, and split payments across multiple methods in one transaction.' },
                 { title: 'Offline Resilience', desc: 'Keep taking orders even when the internet drops. All data syncs automatically when connectivity returns.' },
-              ].map((feature) => (
+              ].map(feature => (
                 <div key={feature.title} className="rounded-xl border border-border bg-card p-5">
                   <h3 className="text-lg font-semibold mb-1">{feature.title}</h3>
                   <p className="text-sm text-muted-foreground">{feature.desc}</p>

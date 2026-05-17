@@ -1,7 +1,7 @@
 'use client'
 
 import { motion, useInView } from 'framer-motion'
-import { useRef, useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 const stats = [
   { value: 2000, suffix: '+', label: 'Restaurants Served' },
@@ -10,13 +10,15 @@ const stats = [
   { value: 40, suffix: '%', label: 'Average Efficiency Gain' },
 ]
 
-function AnimatedCounter({ value, suffix }: { value: number; suffix: string }) {
+function AnimatedCounter ({ value, suffix }: { value: number, suffix: string }) {
   const [count, setCount] = useState(0)
   const ref = useRef(null)
   const inView = useInView(ref, { once: true })
 
   useEffect(() => {
-    if (!inView) return
+    if (!inView) {
+      return
+    }
     const duration = 2000
     const steps = 60
     const increment = value / steps
@@ -41,7 +43,7 @@ function AnimatedCounter({ value, suffix }: { value: number; suffix: string }) {
   )
 }
 
-export default function Stats() {
+export default function Stats () {
   return (
     <section className="py-16 border-y border-border">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

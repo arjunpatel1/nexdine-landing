@@ -7,7 +7,7 @@ interface LogoLoaderProps {
   fullScreen?: boolean
 }
 
-export default function LogoLoader({ size = 80, fullScreen = false }: LogoLoaderProps) {
+export default function LogoLoader ({ size = 80, fullScreen = false }: LogoLoaderProps) {
   const Wrapper = fullScreen
     ? ({ children }: { children: React.ReactNode }) => (
         <div className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-background">

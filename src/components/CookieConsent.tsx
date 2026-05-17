@@ -1,12 +1,12 @@
 'use client'
 
-import { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
 import { Cookie, X } from 'lucide-react'
+import { useEffect, useState } from 'react'
 
 const CONSENT_KEY = 'nexdine_cookie_consent'
 
-export default function CookieConsent() {
+export default function CookieConsent () {
   const [visible, setVisible] = useState(false)
 
   useEffect(() => {

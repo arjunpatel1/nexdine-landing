@@ -1,41 +1,41 @@
 'use client'
 
-import { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
-import { Quote, ChevronLeft, ChevronRight, Star } from 'lucide-react'
+import { AnimatePresence, motion } from 'framer-motion'
+import { ChevronLeft, ChevronRight, Quote, Star } from 'lucide-react'
+import { useEffect, useState } from 'react'
 
 const testimonials = [
   {
-    quote: "NexDine cut our order-to-table time significantly. The QR ordering and KDS integration works seamlessly.",
+    quote: 'NexDine cut our order-to-table time significantly. The QR ordering and KDS integration works seamlessly.',
     author: 'Restaurant Owner',
     role: 'Multi-location Chain, Mumbai',
     rating: 5,
   },
   {
-    quote: "We replaced multiple separate tools with NexDine. Having everything in one platform has been a game changer for our operations.",
+    quote: 'We replaced multiple separate tools with NexDine. Having everything in one platform has been a game changer for our operations.',
     author: 'General Manager',
     role: 'Fine Dining Restaurant, Bangalore',
     rating: 5,
   },
   {
-    quote: "The WhatsApp automation helped us reconnect with customers directly. Our repeat visits have noticeably improved.",
+    quote: 'The WhatsApp automation helped us reconnect with customers directly. Our repeat visits have noticeably improved.',
     author: 'Operations Director',
     role: 'Cafe Chain, Delhi NCR',
     rating: 5,
   },
   {
-    quote: "Managing multiple locations used to be chaotic. With NexDine, everything syncs in real-time across all our branches.",
+    quote: 'Managing multiple locations used to be chaotic. With NexDine, everything syncs in real-time across all our branches.',
     author: 'COO',
     role: 'Quick Service Restaurant, Hyderabad',
     rating: 5,
   },
 ]
 
-export default function Testimonials() {
+export default function Testimonials () {
   const [current, setCurrent] = useState(0)
 
   useEffect(() => {
-    const timer = setInterval(() => setCurrent((c) => (c + 1) % testimonials.length), 6000)
+    const timer = setInterval(() => setCurrent(c => (c + 1) % testimonials.length), 6000)
     return () => clearInterval(timer)
   }, [])
 
@@ -67,10 +67,12 @@ export default function Testimonials() {
             >
               <Quote className="mx-auto h-10 w-10 text-primary/30 mb-6" />
               <p className="text-xl sm:text-2xl md:text-3xl font-medium leading-relaxed mb-8">
-                &ldquo;{testimonials[current].quote}&rdquo;
+                &ldquo;
+                {testimonials[current].quote}
+                &rdquo;
               </p>
               <div className="flex items-center justify-center gap-1 mb-4">
-                {[...Array(testimonials[current].rating)].map((_, i) => (
+                {[...new Array(testimonials[current].rating)].map((_, i) => (
                   <Star key={i} className="h-5 w-5 fill-yellow-500 text-yellow-500" />
                 ))}
               </div>
@@ -81,7 +83,7 @@ export default function Testimonials() {
 
           <div className="flex items-center justify-center gap-4 mt-8">
             <button
-              onClick={() => setCurrent((c) => (c - 1 + testimonials.length) % testimonials.length)}
+              onClick={() => setCurrent(c => (c - 1 + testimonials.length) % testimonials.length)}
               className="rounded-full border border-border p-2 hover:bg-accent transition-colors"
             >
               <ChevronLeft className="h-5 w-5" />
@@ -98,7 +100,7 @@ export default function Testimonials() {
               ))}
             </div>
             <button
-              onClick={() => setCurrent((c) => (c + 1) % testimonials.length)}
+              onClick={() => setCurrent(c => (c + 1) % testimonials.length)}
               className="rounded-full border border-border p-2 hover:bg-accent transition-colors"
             >
               <ChevronRight className="h-5 w-5" />

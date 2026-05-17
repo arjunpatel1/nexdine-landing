@@ -1,20 +1,20 @@
 'use client'
 
 import { motion, useAnimationFrame } from 'framer-motion'
-import { useRef, useCallback, useState } from 'react'
 import {
-  ShoppingBag,
-  Package,
-  ClipboardList,
-  RefreshCw,
   ArrowRight,
-  Zap,
   ChefHat,
+  ClipboardList,
+  Package,
+  RefreshCw,
+  ShoppingBag,
   TabletSmartphone,
   Truck,
   UtensilsCrossed,
+  Zap,
 } from 'lucide-react'
 import Link from 'next/link'
+import { useCallback, useRef, useState } from 'react'
 
 /* ------------------------------------------------------------------ */
 /*  Brand Tree Data                                                    */
@@ -35,26 +35,26 @@ const platformBrands = [
 /*  Animated Data Particles along the tree paths                       */
 /* ------------------------------------------------------------------ */
 
-function useParticles(count: number, speed: number, paths: { start: number; end: number }[]) {
+function useParticles (count: number, speed: number, paths: { start: number, end: number }[]) {
   const [particles, setParticles] = useState(
     Array.from({ length: count }, (_, i) => ({
       id: i,
       pathIdx: i % paths.length,
       progress: (i / count) * 100,
-    }))
+    })),
   )
 
   useAnimationFrame((_, delta) => {
     const dt = delta * speed * 0.001
-    setParticles((prev) =>
-      prev.map((p) => {
+    setParticles(prev =>
+      prev.map(p => {
         let np = p.progress + dt
         if (np > 100) {
           np = 0
           return { ...p, progress: np, pathIdx: (p.pathIdx + 1) % paths.length }
         }
         return { ...p, progress: np }
-      })
+      }),
     )
   })
 
@@ -65,7 +65,7 @@ function useParticles(count: number, speed: number, paths: { start: number; end:
 /*  Connection Tree SVG                                                */
 /* ------------------------------------------------------------------ */
 
-function ConnectionTree() {
+function ConnectionTree () {
   const treeW = 420
   const treeH = 400
   const leftX = 30
@@ -73,7 +73,7 @@ function ConnectionTree() {
   const hubX = 360
   const hubY = 200
 
-  const pathDefs = platformBrands.map((b) => {
+  const pathDefs = platformBrands.map(b => {
     const y = b.y + 24
     const c1x = centerX - 30
     const c1y = y
@@ -110,7 +110,7 @@ function ConnectionTree() {
         </defs>
 
         {/* Connector paths */}
-        {pathDefs.map((p) => (
+        {pathDefs.map(p => (
           <motion.path
             key={p.name}
             d={p.d}
@@ -127,7 +127,7 @@ function ConnectionTree() {
         ))}
 
         {/* Flowing particles */}
-        {particles.map((pt) => {
+        {particles.map(pt => {
           const path = pathDefs[pt.pathIdx]
           return (
             <motion.circle
@@ -151,7 +151,7 @@ function ConnectionTree() {
         {platformBrands.map((b, i) => {
           const initials = b.name
             .split(/\s+/)
-            .map((w) => w[0])
+            .map(w => w[0])
             .join('')
             .toUpperCase()
           return (
@@ -261,7 +261,7 @@ function ConnectionTree() {
 /*  Waiter Service Visual                                              */
 /* ------------------------------------------------------------------ */
 
-function WaiterServiceVisual() {
+function WaiterServiceVisual () {
   const steps = [
     { icon: TabletSmartphone, label: 'Order Placed', color: '#F57C00' },
     { icon: ChefHat, label: 'Kitchen Fires', color: '#fb9411' },
@@ -354,7 +354,7 @@ const features = [
 /*  Main Section                                                       */
 /* ------------------------------------------------------------------ */
 
-export default function Integrations() {
+export default function Integrations () {
   return (
     <section className="py-24 relative overflow-hidden">
       {/* Background elements */}
@@ -377,7 +377,9 @@ export default function Integrations() {
             Aggregator Integrations
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight mb-6">
-            One Platform. <span className="gradient-text">Every Channel.</span>
+            One Platform.
+            {' '}
+            <span className="gradient-text">Every Channel.</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Connect Swiggy, Zomato, Uber Eats, Blinkit, and more. NexDine unifies orders,

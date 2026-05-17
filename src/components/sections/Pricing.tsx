@@ -1,8 +1,8 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import Link from 'next/link'
 import { Check, Sparkles } from 'lucide-react'
+import Link from 'next/link'
 
 import { DEMO_URL } from '@/lib/config'
 
@@ -58,7 +58,7 @@ const plans = [
   },
 ]
 
-export default function Pricing() {
+export default function Pricing () {
   return (
     <section className="py-24 relative">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent" />
@@ -111,7 +111,7 @@ export default function Pricing() {
               <p className="text-sm text-muted-foreground mb-6">{plan.desc}</p>
 
               <ul className="space-y-3 mb-8">
-                {plan.features.map((feature) => (
+                {plan.features.map(feature => (
                   <li key={feature} className="flex items-start gap-2 text-sm">
                     <Check className="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0" />
                     <span>{feature}</span>

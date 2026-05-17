@@ -2,15 +2,15 @@
 
 import { motion } from 'framer-motion'
 
-export default function QrOrderingAnimation() {
+export default function QrOrderingAnimation () {
   const qrModules = [
-    [1,0,1,1,1,0,1],
-    [1,0,0,0,0,0,1],
-    [1,0,1,1,1,0,1],
-    [1,0,1,0,0,0,0],
-    [1,0,1,1,1,0,1],
-    [1,0,0,0,0,0,1],
-    [1,0,1,1,1,0,1],
+    [1, 0, 1, 1, 1, 0, 1],
+    [1, 0, 0, 0, 0, 0, 1],
+    [1, 0, 1, 1, 1, 0, 1],
+    [1, 0, 1, 0, 0, 0, 0],
+    [1, 0, 1, 1, 1, 0, 1],
+    [1, 0, 0, 0, 0, 0, 1],
+    [1, 0, 1, 1, 1, 0, 1],
   ]
 
   return (
@@ -43,7 +43,7 @@ export default function QrOrderingAnimation() {
               rx="1"
               fill={cell ? '#059669' : 'white'}
             />
-          ))
+          )),
         )}
         {/* Corner markers */}
         <rect x="100" y="38" width="10" height="10" rx="2" fill="none" stroke="#059669" strokeWidth="1.5" />

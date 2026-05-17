@@ -1,9 +1,9 @@
 'use client'
 
-import { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
-import { Menu, X, ChevronDown } from 'lucide-react'
+import { AnimatePresence, motion } from 'framer-motion'
+import { ChevronDown, Menu, X } from 'lucide-react'
 import Link from 'next/link'
+import { useEffect, useState } from 'react'
 
 import Logo from '@/components/Logo'
 import { DEMO_URL } from '@/lib/config'
@@ -25,7 +25,7 @@ const navLinks = [
   { label: 'Contact', href: '/contact' },
 ]
 
-export default function Navbar() {
+export default function Navbar () {
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
   const [openDropdown, setOpenDropdown] = useState<string | null>(null)
@@ -57,49 +57,51 @@ export default function Navbar() {
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center gap-1">
-            {navLinks.map((link) =>
-              link.children ? (
-                <div
-                  key={link.label}
-                  className="relative"
-                  onMouseEnter={() => setOpenDropdown(link.label)}
-                  onMouseLeave={() => setOpenDropdown(null)}
-                >
-                  <button className="flex items-center gap-1 rounded-lg px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
-                    {link.label}
-                    <ChevronDown className="h-4 w-4" />
-                  </button>
-                  <AnimatePresence>
-                    {openDropdown === link.label && (
-                      <motion.div
-                        initial={{ opacity: 0, y: 8 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: 8 }}
-                        transition={{ duration: 0.2 }}
-                        className="absolute top-full left-0 mt-1 w-48 rounded-xl border border-border bg-card p-1 shadow-xl"
-                      >
-                        {link.children.map((child) => (
-                          <Link
-                            key={child.label}
-                            href={child.href}
-                            className="block rounded-lg px-3 py-2 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground transition-colors"
+            {navLinks.map(link =>
+              link.children
+                ? (
+                    <div
+                      key={link.label}
+                      className="relative"
+                      onMouseEnter={() => setOpenDropdown(link.label)}
+                      onMouseLeave={() => setOpenDropdown(null)}
+                    >
+                      <button className="flex items-center gap-1 rounded-lg px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+                        {link.label}
+                        <ChevronDown className="h-4 w-4" />
+                      </button>
+                      <AnimatePresence>
+                        {openDropdown === link.label && (
+                          <motion.div
+                            initial={{ opacity: 0, y: 8 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, y: 8 }}
+                            transition={{ duration: 0.2 }}
+                            className="absolute top-full left-0 mt-1 w-48 rounded-xl border border-border bg-card p-1 shadow-xl"
                           >
-                            {child.label}
-                          </Link>
-                        ))}
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </div>
-              ) : (
-                <Link
-                  key={link.label}
-                  href={link.href}
-                  className="rounded-lg px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  {link.label}
-                </Link>
-              )
+                            {link.children.map(child => (
+                              <Link
+                                key={child.label}
+                                href={child.href}
+                                className="block rounded-lg px-3 py-2 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground transition-colors"
+                              >
+                                {child.label}
+                              </Link>
+                            ))}
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </div>
+                  )
+                : (
+                    <Link
+                      key={link.label}
+                      href={link.href}
+                      className="rounded-lg px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                    >
+                      {link.label}
+                    </Link>
+                  ),
             )}
           </nav>
 
@@ -135,33 +137,35 @@ export default function Navbar() {
             className="md:hidden overflow-hidden border-b border-border bg-background/95 backdrop-blur-xl"
           >
             <div className="px-4 py-4 space-y-1">
-              {navLinks.map((link) =>
-                link.children ? (
-                  <div key={link.label} className="space-y-1">
-                    <span className="block px-3 py-2 text-sm font-semibold text-muted-foreground">
-                      {link.label}
-                    </span>
-                    {link.children.map((child) => (
+              {navLinks.map(link =>
+                link.children
+                  ? (
+                      <div key={link.label} className="space-y-1">
+                        <span className="block px-3 py-2 text-sm font-semibold text-muted-foreground">
+                          {link.label}
+                        </span>
+                        {link.children.map(child => (
+                          <Link
+                            key={child.label}
+                            href={child.href}
+                            onClick={() => setMobileOpen(false)}
+                            className="block rounded-lg px-6 py-2 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground transition-colors"
+                          >
+                            {child.label}
+                          </Link>
+                        ))}
+                      </div>
+                    )
+                  : (
                       <Link
-                        key={child.label}
-                        href={child.href}
+                        key={link.label}
+                        href={link.href}
                         onClick={() => setMobileOpen(false)}
-                        className="block rounded-lg px-6 py-2 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground transition-colors"
+                        className="block rounded-lg px-3 py-2 text-sm font-medium text-muted-foreground hover:bg-accent hover:text-accent-foreground transition-colors"
                       >
-                        {child.label}
+                        {link.label}
                       </Link>
-                    ))}
-                  </div>
-                ) : (
-                  <Link
-                    key={link.label}
-                    href={link.href}
-                    onClick={() => setMobileOpen(false)}
-                    className="block rounded-lg px-3 py-2 text-sm font-medium text-muted-foreground hover:bg-accent hover:text-accent-foreground transition-colors"
-                  >
-                    {link.label}
-                  </Link>
-                )
+                    ),
               )}
               <div className="pt-2">
                 <a
