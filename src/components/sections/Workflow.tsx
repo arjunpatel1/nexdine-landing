@@ -272,7 +272,7 @@ function WorkflowVisual ({ step, color }: { step: number, color: string }) {
           <div className="space-y-3">
             <div className="grid grid-cols-2 gap-2">
               {[
-                { label: 'Revenue', value: '$24.5K', change: '+12%' },
+                { label: 'Revenue', value: '₹24.5K', change: '+12%' },
                 { label: 'Orders', value: '1,284', change: '+8%' },
               ].map(stat => (
                 <div key={stat.label} className="rounded-lg border border-border bg-card p-3">

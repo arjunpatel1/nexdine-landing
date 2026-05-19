@@ -4,8 +4,8 @@ import { motion, useInView } from 'framer-motion'
 import { useEffect, useRef, useState } from 'react'
 
 const stats = [
-  { value: 2000, suffix: '+', label: 'Restaurants Served' },
-  { value: 15, suffix: 'M+', label: 'Orders Managed' },
+  { value: 50, suffix: '+', label: 'Restaurants Served' },
+  { value: 10, suffix: 'K+', label: 'Orders Managed' },
   { value: 99.9, suffix: '%', label: 'Platform Uptime' },
   { value: 40, suffix: '%', label: 'Average Efficiency Gain' },
 ]

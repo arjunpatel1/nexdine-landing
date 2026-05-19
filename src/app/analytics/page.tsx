@@ -16,9 +16,9 @@ export default function AnalyticsPage () {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
             {[
-              { label: 'Revenue', value: '$124,500', change: '+18%' },
+              { label: 'Revenue', value: '₹124,500', change: '+18%' },
               { label: 'Orders', value: '8,420', change: '+12%' },
-              { label: 'Avg Ticket', value: '$14.78', change: '+5%' },
+              { label: 'Avg Ticket', value: '₹14.78', change: '+5%' },
               { label: 'Stock Alert', value: '3 items', change: 'low' },
             ].map(stat => (
               <div key={stat.label} className="rounded-xl border border-border bg-card p-5">

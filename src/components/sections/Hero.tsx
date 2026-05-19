@@ -185,10 +185,10 @@ export default function Hero () {
                 {/* Stats Row */}
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
                   {[
-                    { label: 'Revenue', value: '$24.5K', change: '+12%' },
+                    { label: 'Revenue', value: '₹24.5K', change: '+12%' },
                     { label: 'Orders', value: '1,284', change: '+8%' },
                     { label: 'Customers', value: '892', change: '+15%' },
-                    { label: 'Avg Order', value: '$19.10', change: '+3%' },
+                    { label: 'Avg Order', value: '₹19.10', change: '+3%' },
                   ].map(stat => (
                     <div key={stat.label} className="rounded-xl border border-border bg-muted/30 p-3">
                       <p className="text-xs text-muted-foreground mb-1">{stat.label}</p>
@@ -267,7 +267,7 @@ export default function Hero () {
               </div>
               <div>
                 <p className="text-sm font-semibold">New Order Received</p>
-                <p className="text-xs text-muted-foreground">Table 12 · $47.50</p>
+                <p className="text-xs text-muted-foreground">Table 12 · ₹47.50</p>
               </div>
             </div>
           </div>

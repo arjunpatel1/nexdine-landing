@@ -28,14 +28,14 @@ export default function PosDemoPage () {
                   <div key={item} className="rounded-xl border border-border bg-muted/30 p-4 text-center hover:bg-primary/5 transition-colors cursor-pointer">
                     <div className="h-8 w-8 mx-auto mb-2 rounded-lg bg-gradient-to-br from-orange-500/20 to-amber-500/20" />
                     <p className="text-sm font-medium">{item}</p>
-                    <p className="text-xs text-muted-foreground">$12.99</p>
+                    <p className="text-xs text-muted-foreground">₹12.99</p>
                   </div>
                 ))}
               </div>
               <div className="mt-4 rounded-xl border border-border bg-muted/30 p-4">
                 <div className="flex justify-between items-center">
                   <span className="text-sm font-medium">Cart (4 items)</span>
-                  <span className="text-lg font-bold">$51.96</span>
+                  <span className="text-lg font-bold">₹51.96</span>
                 </div>
                 <div className="mt-3 flex gap-2">
                   <button className="flex-1 rounded-lg bg-primary py-2 text-sm font-semibold text-primary-foreground">Pay Now</button>

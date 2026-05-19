@@ -230,7 +230,7 @@ function Mockup ({ type }: { type: string }) {
         return (
           <div className="space-y-3">
             <div className="grid grid-cols-2 gap-2">
-              {['$12.4K', '+18%', '842', '$14.7'].map((val, i) => (
+              {['₹12.4K', '+18%', '842', '₹14.7'].map((val, i) => (
                 <div key={i} className="rounded-lg border border-border bg-muted/30 p-2">
                   <div className="h-2 w-8 bg-muted-foreground/20 rounded mb-1" />
                   <span className="text-sm font-bold">{val}</span>

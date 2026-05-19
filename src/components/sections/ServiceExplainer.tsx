@@ -211,7 +211,7 @@ function StepVisual ({ index }: { index: number }) {
             <div className="h-10 w-10 rounded-lg bg-gradient-to-br from-orange-500/20 to-amber-500/20" />
             <div className="flex-1">
               <p className="text-sm font-semibold">Truffle Burger</p>
-              <p className="text-xs text-muted-foreground">$14.99 · + Bacon $2</p>
+              <p className="text-xs text-muted-foreground">₹14.99 · + Bacon ₹2</p>
             </div>
             <div className="flex items-center gap-2">
               <button className="h-6 w-6 rounded bg-muted text-xs">-</button>
@@ -223,7 +223,7 @@ function StepVisual ({ index }: { index: number }) {
             <div className="h-10 w-10 rounded-lg bg-gradient-to-br from-green-500/20 to-emerald-500/20" />
             <div className="flex-1">
               <p className="text-sm font-semibold">Caesar Salad</p>
-              <p className="text-xs text-muted-foreground">$9.99 · No croutons</p>
+              <p className="text-xs text-muted-foreground">₹9.99 · No croutons</p>
             </div>
             <div className="flex items-center gap-2">
               <button className="h-6 w-6 rounded bg-muted text-xs">-</button>
@@ -285,7 +285,7 @@ function StepVisual ({ index }: { index: number }) {
       return (
         <div className="flex flex-col items-center py-4">
           <div className="w-full max-w-[220px] rounded-xl border border-border bg-card p-4">
-            <p className="text-sm font-semibold mb-3">Total: $47.97</p>
+            <p className="text-sm font-semibold mb-3">Total: ₹47.97</p>
             <div className="space-y-2">
               <button className="w-full rounded-lg bg-[#635BFF] py-2 text-xs font-semibold text-white">Pay with Stripe</button>
               <button className="w-full rounded-lg bg-[#00C853] py-2 text-xs font-semibold text-white">Pay with UPI</button>
