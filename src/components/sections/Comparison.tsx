@@ -6,18 +6,18 @@ import { Check, Scale, X } from 'lucide-react'
 const competitors = ['Petpooja', 'POSist (Now Restroworks)']
 
 const features = [
-  { name: 'All-in-One POS + Inventory + CRM', nexdine: true, comp1: false, comp2: false },
-  { name: 'QR Table Ordering', nexdine: true, comp1: true, comp2: true },
+  { name: 'POS + Inventory + CRM (All Built-in)', nexdine: true, comp1: false, comp2: false },
+  { name: 'QR Table Ordering (No App Needed)', nexdine: true, comp1: true, comp2: true },
   { name: 'Kitchen Display System (KDS)', nexdine: true, comp1: true, comp2: true },
-  { name: 'WhatsApp Automation', nexdine: true, comp1: false, comp2: false },
-  { name: 'Multi-Branch Management', nexdine: true, comp1: true, comp2: true },
-  { name: 'Table Mapping & Floor Plans', nexdine: true, comp1: false, comp2: true },
-  { name: 'Offline Mode Support', nexdine: true, comp1: false, comp2: false },
-  { name: 'GST Compliant Invoicing', nexdine: true, comp1: true, comp2: true },
-  { name: 'AI-Powered Insights', nexdine: true, comp1: false, comp2: false },
-  { name: 'No Long-Term Contract', nexdine: true, comp1: false, comp2: false },
-  { name: 'Dedicated Onboarding', nexdine: true, comp1: false, comp2: true },
-  { name: 'Transparent Pricing', nexdine: true, comp1: false, comp2: false },
+  { name: 'WhatsApp Automation (Built-in)', nexdine: true, comp1: false, comp2: false },
+  { name: 'Multi-Branch & Multi-Terminal', nexdine: true, comp1: true, comp2: true },
+  { name: 'Visual Table Mapping & Floor Plans', nexdine: true, comp1: false, comp2: true },
+  { name: 'Offline Mode with Auto-Sync', nexdine: true, comp1: true, comp2: false },
+  { name: 'Self-Ordering Kiosk Support', nexdine: true, comp1: true, comp2: false },
+  { name: 'AI-Powered Insights & Forecasting', nexdine: true, comp1: false, comp2: false },
+  { name: 'No Hidden Costs or Add-on Fees', nexdine: true, comp1: false, comp2: false },
+  { name: 'Free Dedicated Onboarding', nexdine: true, comp1: false, comp2: true },
+  { name: 'Transparent Flat-Rate Pricing', nexdine: true, comp1: false, comp2: false },
 ]
 
 export default function Comparison () {

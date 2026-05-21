@@ -209,6 +209,102 @@ const features = [
     bgGlow: 'bg-slate-500/10',
     mockup: 'printjobs',
   },
+  {
+    icon: ClipboardList,
+    title: 'Inventory Management',
+    shortDesc: 'Smart inventory with auto-deduction, low-stock alerts, and recipe costing.',
+    fullDesc: 'Put your inventory on autopilot. Track raw materials with item-wise auto deduction as orders are placed. Get instant low-stock alerts, generate purchase orders, analyze recipe costs, and view day-end consumption reports — all without manual counting.',
+    details: [
+      { icon: ClipboardList, label: 'Item-wise auto deduction linked to recipes and menu items' },
+      { icon: AlertTriangle, label: 'Low-stock alerts with configurable thresholds per item' },
+      { icon: BarChart3, label: 'Recipe costing: track cost-of-goods and profit margins' },
+      { icon: RefreshCw, label: 'Purchase orders and supplier management in one place' },
+    ],
+    stats: { label: 'Food waste reduction', value: '35%' },
+    color: 'from-violet-500 to-purple-500',
+    bgGlow: 'bg-violet-500/10',
+    mockup: 'inventory',
+  },
+  {
+    icon: Users,
+    title: 'Menu Management',
+    shortDesc: 'Create, customize, and control menus across all channels from one place.',
+    fullDesc: 'Design different menus for dine-in, delivery, and takeaway. Toggle items ON/OFF based on stock availability. Set time-based menus (breakfast, lunch, dinner), configure modifiers and add-ons, and push updates to all platforms simultaneously.',
+    details: [
+      { icon: Clock, label: 'Time-based menus: breakfast, lunch, dinner auto-switch' },
+      { icon: Zap, label: 'Toggle items ON/OFF instantly based on stock availability' },
+      { icon: Shield, label: 'Channel-specific menus: dine-in, delivery, QR each get their own' },
+      { icon: RefreshCw, label: 'Update once, publish everywhere — all platforms sync instantly' },
+    ],
+    stats: { label: 'Menu update speed', value: 'Instant' },
+    color: 'from-pink-500 to-rose-500',
+    bgGlow: 'bg-pink-500/10',
+    mockup: 'menu',
+  },
+  {
+    icon: MonitorSmartphone,
+    title: 'Multi-Terminal Billing',
+    shortDesc: 'Multiple billing counters synced with one master POS station.',
+    fullDesc: 'Need separate billing terminals for your bar, restaurant floor, and takeaway counter? Create unlimited billing stations, each with their own area and menu configuration. All sync with a master POS in real time so you never lose track of orders.',
+    details: [
+      { icon: MonitorSmartphone, label: 'Unlimited terminals with area-specific menu views' },
+      { icon: Zap, label: 'Real-time sync: all terminals update the master POS instantly' },
+      { icon: Shield, label: 'Station-level permissions: each counter sees only its scope' },
+      { icon: BarChart3, label: 'Terminal-wise sales reports and shift summaries' },
+    ],
+    stats: { label: 'Sync latency', value: '<1 second' },
+    color: 'from-indigo-500 to-blue-500',
+    bgGlow: 'bg-indigo-500/10',
+    mockup: 'multiterminal',
+  },
+  {
+    icon: MonitorSmartphone,
+    title: 'Self-Ordering Kiosk',
+    shortDesc: 'Touchscreen kiosks for customers to browse, customize, and place orders.',
+    fullDesc: 'Deploy self-service kiosks at your entrance or counter. Customers browse your visual menu, customize dishes with modifiers, choose order type, and pay — all without staff assistance. Reduces queues, increases order accuracy, and boosts average ticket size through smart upselling.',
+    details: [
+      { icon: MonitorSmartphone, label: 'Full-screen visual menu with images, prices, and modifiers' },
+      { icon: CreditCard, label: 'Integrated payment: UPI, cards, wallets, or pay-at-counter' },
+      { icon: Zap, label: 'Smart upselling suggestions based on item combinations' },
+      { icon: Users, label: 'Multi-language support for diverse customer base' },
+    ],
+    stats: { label: 'Average ticket increase', value: '22%' },
+    color: 'from-teal-500 to-cyan-500',
+    bgGlow: 'bg-teal-500/10',
+    mockup: 'kiosk',
+  },
+  {
+    icon: ClipboardList,
+    title: 'Token Management',
+    shortDesc: 'Display token numbers on screens for takeaway and delivery pickups.',
+    fullDesc: 'For QSR and takeaway-heavy outlets, display real-time token numbers on customer-facing screens. Tokens automatically advance as kitchen marks items ready. Customers see their order status without crowding the counter — reducing chaos during peak hours.',
+    details: [
+      { icon: MonitorSmartphone, label: 'Customer-facing display with live token status' },
+      { icon: Zap, label: 'Auto-advance tokens as kitchen bumps orders' },
+      { icon: Clock, label: 'Estimated wait time display per token' },
+      { icon: Shield, label: 'Audio announcements when tokens are ready' },
+    ],
+    stats: { label: 'Counter crowd reduction', value: '60%' },
+    color: 'from-sky-500 to-blue-400',
+    bgGlow: 'bg-sky-500/10',
+    mockup: 'token',
+  },
+  {
+    icon: Shield,
+    title: 'Tax & Discount Configuration',
+    shortDesc: 'Flexible tax rates, service charges, coupons, and discount rules.',
+    fullDesc: 'Configure GST, VAT, service charges, and custom taxes per region or service type. Create percentage or flat discounts, issue coupon codes, set happy-hour pricing, and define loyalty-based auto-discounts — all with audit trails for compliance.',
+    details: [
+      { icon: Shield, label: 'Multi-tax support: GST, VAT, service charge, cess' },
+      { icon: CreditCard, label: 'Coupons, promo codes, and auto-applied loyalty discounts' },
+      { icon: Clock, label: 'Happy-hour and time-based pricing rules' },
+      { icon: BarChart3, label: 'Complete audit trail for every discount applied' },
+    ],
+    stats: { label: 'Tax compliance', value: '100%' },
+    color: 'from-red-500 to-rose-500',
+    bgGlow: 'bg-red-500/10',
+    mockup: 'tax',
+  },
 ]
 
 function Mockup ({ type }: { type: string }) {
@@ -389,6 +485,152 @@ function Mockup ({ type }: { type: string }) {
             ))}
             <div className="rounded-lg bg-primary/10 p-2 text-center">
               <span className="text-[10px] font-semibold text-primary">Retry Failed Jobs</span>
+            </div>
+          </div>
+        )
+      }
+      case 'inventory': {
+        return (
+          <div className="space-y-2">
+            <div className="grid grid-cols-3 gap-2 mb-2">
+              {[
+                { label: 'Items', val: '248', color: 'text-violet-400' },
+                { label: 'Low Stock', val: '12', color: 'text-amber-400' },
+                { label: 'Out', val: '3', color: 'text-red-400' },
+              ].map(s => (
+                <div key={s.label} className="rounded-lg border border-border bg-muted/30 p-2 text-center">
+                  <p className={`text-sm font-bold ${s.color}`}>{s.val}</p>
+                  <p className="text-[9px] text-muted-foreground">{s.label}</p>
+                </div>
+              ))}
+            </div>
+            {[
+              { item: 'Basmati Rice', stock: '8 kg', status: 'Low', color: 'text-amber-400' },
+              { item: 'Chicken Breast', stock: '2 kg', status: 'Critical', color: 'text-red-400' },
+              { item: 'Olive Oil', stock: '15 L', status: 'OK', color: 'text-green-400' },
+            ].map((item, i) => (
+              <div key={i} className="flex items-center justify-between rounded-lg border border-border bg-muted/30 p-2">
+                <div>
+                  <p className="text-[10px] font-semibold">{item.item}</p>
+                  <p className="text-[9px] text-muted-foreground">{item.stock} remaining</p>
+                </div>
+                <span className={`text-[9px] font-semibold ${item.color}`}>{item.status}</span>
+              </div>
+            ))}
+          </div>
+        )
+      }
+      case 'menu': {
+        return (
+          <div className="space-y-2">
+            <div className="flex gap-2 mb-2">
+              {['Dine-in', 'Delivery', 'QR'].map((ch, i) => (
+                <div key={ch} className={`px-2 py-1 rounded text-[10px] ${i === 0 ? 'bg-pink-500/20 text-pink-400' : 'bg-muted'}`}>{ch}</div>
+              ))}
+            </div>
+            {[
+              { name: 'Butter Chicken', price: '₹380', active: true },
+              { name: 'Paneer Tikka', price: '₹280', active: true },
+              { name: 'Dal Makhani', price: '₹220', active: false },
+            ].map((item, i) => (
+              <div key={i} className="flex items-center justify-between rounded-lg border border-border bg-muted/30 p-2">
+                <div>
+                  <p className="text-[10px] font-semibold">{item.name}</p>
+                  <p className="text-[9px] text-muted-foreground">{item.price}</p>
+                </div>
+                <div className={`h-4 w-8 rounded-full ${item.active ? 'bg-green-500' : 'bg-muted-foreground/30'} relative`}>
+                  <div className={`absolute top-0.5 h-3 w-3 rounded-full bg-white transition-all ${item.active ? 'right-0.5' : 'left-0.5'}`} />
+                </div>
+              </div>
+            ))}
+          </div>
+        )
+      }
+      case 'multiterminal': {
+        return (
+          <div className="space-y-2">
+            <div className="grid grid-cols-2 gap-2 mb-2">
+              {[
+                { name: 'Bar Counter', orders: 12, color: 'bg-indigo-500/20' },
+                { name: 'Main Floor', orders: 28, color: 'bg-blue-500/20' },
+                { name: 'Takeaway', orders: 8, color: 'bg-cyan-500/20' },
+                { name: 'Outdoor', orders: 6, color: 'bg-teal-500/20' },
+              ].map(terminal => (
+                <div key={terminal.name} className={`rounded-lg border border-border ${terminal.color} p-2 text-center`}>
+                  <p className="text-[10px] font-semibold">{terminal.name}</p>
+                  <p className="text-[9px] text-muted-foreground">{terminal.orders} orders</p>
+                </div>
+              ))}
+            </div>
+            <div className="rounded-lg bg-indigo-500/10 border border-indigo-500/20 p-2 text-center">
+              <p className="text-[10px] font-semibold text-indigo-400">All Synced</p>
+              <p className="text-[9px] text-muted-foreground">Master POS up to date</p>
+            </div>
+          </div>
+        )
+      }
+      case 'kiosk': {
+        return (
+          <div className="space-y-2">
+            <div className="rounded-lg border border-border bg-muted/30 p-3 text-center mb-2">
+              <p className="text-[11px] font-bold mb-1">Welcome! Tap to Order</p>
+              <p className="text-[9px] text-muted-foreground">Browse menu • Customize • Pay</p>
+            </div>
+            <div className="grid grid-cols-2 gap-2">
+              {['Burgers', 'Pizza', 'Drinks', 'Desserts'].map(cat => (
+                <div key={cat} className="rounded-lg border border-border bg-teal-500/10 p-2 text-center">
+                  <p className="text-[10px] font-semibold">{cat}</p>
+                </div>
+              ))}
+            </div>
+            <div className="rounded-lg bg-teal-500/20 border border-teal-500/30 p-2 flex items-center justify-between">
+              <span className="text-[10px] font-semibold">2 items • ₹540</span>
+              <span className="text-[9px] bg-teal-500 text-white px-2 py-0.5 rounded">Pay Now</span>
+            </div>
+          </div>
+        )
+      }
+      case 'token': {
+        return (
+          <div className="space-y-2">
+            <div className="text-center mb-2">
+              <p className="text-[11px] font-bold">Now Serving</p>
+            </div>
+            <div className="grid grid-cols-3 gap-2">
+              {[
+                { num: '042', status: 'ready', color: 'bg-green-500/20 border-green-500/30' },
+                { num: '043', status: 'preparing', color: 'bg-amber-500/20 border-amber-500/30' },
+                { num: '044', status: 'preparing', color: 'bg-amber-500/20 border-amber-500/30' },
+                { num: '045', status: 'queued', color: 'bg-muted/30 border-border' },
+                { num: '046', status: 'queued', color: 'bg-muted/30 border-border' },
+                { num: '047', status: 'queued', color: 'bg-muted/30 border-border' },
+              ].map(token => (
+                <div key={token.num} className={`rounded-lg border ${token.color} p-2 text-center`}>
+                  <p className="text-sm font-bold">{token.num}</p>
+                  <p className="text-[8px] text-muted-foreground capitalize">{token.status}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        )
+      }
+      case 'tax': {
+        return (
+          <div className="space-y-2">
+            {[
+              { label: 'CGST 2.5%', amount: '₹45.00', type: 'tax' },
+              { label: 'SGST 2.5%', amount: '₹45.00', type: 'tax' },
+              { label: 'Service Charge 10%', amount: '₹180.00', type: 'tax' },
+              { label: 'WELCOME20 coupon', amount: '-₹200.00', type: 'discount' },
+            ].map((item, i) => (
+              <div key={i} className="flex items-center justify-between rounded-lg border border-border bg-muted/30 p-2">
+                <span className="text-[10px]">{item.label}</span>
+                <span className={`text-[10px] font-semibold ${item.type === 'discount' ? 'text-green-400' : 'text-muted-foreground'}`}>{item.amount}</span>
+              </div>
+            ))}
+            <div className="rounded-lg bg-red-500/10 border border-red-500/20 p-2 flex items-center justify-between">
+              <span className="text-[10px] font-bold">Net Total</span>
+              <span className="text-[11px] font-bold text-red-400">₹1,870.00</span>
             </div>
           </div>
         )

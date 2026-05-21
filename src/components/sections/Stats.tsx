@@ -4,10 +4,10 @@ import { motion, useInView } from 'framer-motion'
 import { useEffect, useRef, useState } from 'react'
 
 const stats = [
-  { value: 50, suffix: '+', label: 'Restaurants Served' },
-  { value: 10, suffix: 'K+', label: 'Orders Managed' },
+  { value: 500, suffix: '+', label: 'Restaurants Powered' },
+  { value: 150, suffix: '+', label: 'Integrations Available' },
   { value: 99.9, suffix: '%', label: 'Platform Uptime' },
-  { value: 40, suffix: '%', label: 'Average Efficiency Gain' },
+  { value: 45, suffix: '%', label: 'Average Efficiency Gain' },
 ]
 
 function AnimatedCounter ({ value, suffix }: { value: number, suffix: string }) {

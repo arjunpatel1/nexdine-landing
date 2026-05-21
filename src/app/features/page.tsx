@@ -1,4 +1,5 @@
 import PageWrapper from '@/components/PageWrapper'
+import BusinessTypes from '@/components/sections/BusinessTypes'
 import CTA from '@/components/sections/CTA'
 import Features from '@/components/sections/Features'
 import Stats from '@/components/sections/Stats'
@@ -17,6 +18,7 @@ export default function FeaturesPage () {
         </div>
       </div>
       <Features />
+      <BusinessTypes />
       <Stats />
       <CTA />
     </PageWrapper>

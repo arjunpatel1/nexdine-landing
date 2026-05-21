@@ -90,21 +90,24 @@ export default function Hero () {
         >
           NexDine unifies
           {' '}
-          <strong className="text-foreground">POS</strong>
+          <strong className="text-foreground">POS & Billing</strong>
           ,
           {' '}
-          <strong className="text-foreground">QR Ordering</strong>
+          <strong className="text-foreground">KOT & Kitchen Display</strong>
           ,
           {' '}
-          <strong className="text-foreground">Kitchen Display</strong>
+          <strong className="text-foreground">Inventory</strong>
+          ,
+          {' '}
+          <strong className="text-foreground">Online Orders</strong>
           ,
           {' '}
           <strong className="text-foreground">CRM</strong>
           , and
           {' '}
-          <strong className="text-foreground">Analytics</strong>
+          <strong className="text-foreground">150+ Integrations</strong>
           {' '}
-          into one powerful platform trusted by thousands of restaurants worldwide.
+          into one powerful platform — built for every type of food business.
         </motion.p>
 
         {/* Quick Stats */}
@@ -115,8 +118,8 @@ export default function Hero () {
           className="flex flex-wrap items-center justify-center gap-6 mb-10"
         >
           {[
-            { icon: TrendingUp, label: '2,000+ Restaurants' },
-            { icon: Users, label: '15M+ Orders Processed' },
+            { icon: TrendingUp, label: '500+ Restaurants' },
+            { icon: Users, label: '150+ Integrations' },
             { icon: Clock, label: '99.9% Uptime' },
           ].map(stat => (
             <div key={stat.label} className="flex items-center gap-2 text-sm text-muted-foreground">

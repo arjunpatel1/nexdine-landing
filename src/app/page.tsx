@@ -1,5 +1,6 @@
 import PageWrapper from '@/components/PageWrapper'
 import BeforeAfter from '@/components/sections/BeforeAfter'
+import BusinessTypes from '@/components/sections/BusinessTypes'
 import Comparison from '@/components/sections/Comparison'
 import CTA from '@/components/sections/CTA'
 import FAQ from '@/components/sections/FAQ'
@@ -20,6 +21,7 @@ export default function Home () {
       <TrustedBy />
       <Integrations />
       <FeatureShowcase />
+      <BusinessTypes />
       <ServiceExplainer />
       <Workflow />
       <BeforeAfter />
