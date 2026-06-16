@@ -10,6 +10,7 @@ import LiveChat from './LiveChat'
 import LogoLoader from './LogoLoader'
 import Navbar from './Navbar'
 import WhatsAppButton from './WhatsAppButton'
+import { trackPageView } from '@/lib/analytics'
 
 export default function PageWrapper ({ children }: { children: React.ReactNode }) {
   const [loading, setLoading] = useState(true)
@@ -41,6 +42,13 @@ export default function PageWrapper ({ children }: { children: React.ReactNode }
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: prefersReducedMotion ? 'auto' : 'smooth' })
   }, [pathname, prefersReducedMotion])
+
+  // Track page view on route change
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      trackPageView(window.location.href, document.title)
+    }
+  }, [pathname])
 
   // Scroll progress + back-to-top visibility
   useEffect(() => {

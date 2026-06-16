@@ -1,8 +1,10 @@
 'use client'
 
 import { CheckCircle, Clock, Loader2, Mail, MapPin, MessageCircle, Phone, Send } from 'lucide-react'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import PageWrapper from '@/components/PageWrapper'
+import { generateBreadcrumbSchema } from '@/lib/schema'
+import { trackContactFormSubmit } from '@/lib/analytics'
 
 const CONTACT = {
   email: 'info@myteknoland.net',
@@ -12,6 +14,16 @@ const CONTACT = {
 }
 
 export default function ContactPage () {
+  // Update document title for client component
+  useEffect(() => {
+    document.title = 'Contact Us - Book a Demo | NexDine Restaurant Management'
+  }, [])
+
+  const breadcrumbs = [
+    { name: 'Home', item: 'https://nexdine.myteknoland.com' },
+    { name: 'Contact', item: 'https://nexdine.myteknoland.com/contact' },
+  ]
+
   const [form, setForm] = useState({
     firstName: '',
     lastName: '',
@@ -63,6 +75,7 @@ export default function ContactPage () {
         })
         if (res.ok) {
           setStatus('sent')
+          trackContactFormSubmit()
           setForm({ firstName: '', lastName: '', email: '', restaurant: '', locations: '1', message: '' })
           return
         }
@@ -75,6 +88,7 @@ export default function ContactPage () {
     const waUrl = `https://wa.me/${CONTACT.phoneRaw}?text=${encodeURIComponent(msgBody)}`
     window.open(waUrl, '_blank')
     setStatus('sent')
+    trackContactFormSubmit()
     setForm({ firstName: '', lastName: '', email: '', restaurant: '', locations: '1', message: '' })
   }
 
@@ -111,6 +125,10 @@ export default function ContactPage () {
 
   return (
     <PageWrapper>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: generateBreadcrumbSchema(breadcrumbs) }}
+      />
       <div className="pt-24 pb-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">

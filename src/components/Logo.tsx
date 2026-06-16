@@ -12,6 +12,8 @@ export default function Logo ({ size = 36, className = '' }: LogoProps) {
       className={className}
       xmlns="http://www.w3.org/2000/svg"
       style={{ display: 'block' }}
+      aria-label="NexDine Logo"
+      role="img"
     >
       <defs>
         <linearGradient id="logoGrad" x1="0" y1="0" x2="1" y2="1">

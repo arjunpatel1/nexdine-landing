@@ -130,13 +130,7 @@ export default function RestaurantMapAnimation () {
         initial={{ offsetDistance: '0%' }}
         animate={{ offsetDistance: ['0%', '100%'] }}
         transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
-      >
-        <animateMotion
-          dur="2s"
-          repeatCount="indefinite"
-          path="M 85 45 Q 120 60 155 40"
-        />
-      </motion.circle>
+      />
 
       {/* Drag ghost - showing drag and drop */}
       <motion.g

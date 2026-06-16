@@ -1,9 +1,40 @@
+import type { Metadata } from 'next'
 import { motion } from 'framer-motion'
 import PageWrapper from '@/components/PageWrapper'
+import { generateBreadcrumbSchema } from '@/lib/schema'
+
+export const metadata: Metadata = {
+  title: 'POS System Demo - Lightning-Fast Restaurant Checkout | NexDine',
+  description: 'Experience NexDine POS system with lightning-fast checkout, customizable menus, split bills, and multi-payment support for restaurants.',
+  keywords: ['restaurant POS demo', 'POS system features', 'restaurant checkout', 'split bill POS', 'NexDine POS'],
+  openGraph: {
+    title: 'POS System Demo - Lightning-Fast Restaurant Checkout | NexDine',
+    description: 'Experience NexDine POS system with lightning-fast checkout, customizable menus, split bills.',
+    type: 'website',
+    url: 'https://nexdine.myteknoland.com/pos-demo',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'POS System Demo - Lightning-Fast Restaurant Checkout | NexDine',
+    description: 'Experience NexDine POS system with lightning-fast checkout, customizable menus, split bills.',
+  },
+  alternates: {
+    canonical: 'https://nexdine.myteknoland.com/pos-demo',
+  },
+}
 
 export default function PosDemoPage () {
+  const breadcrumbs = [
+    { name: 'Home', item: 'https://nexdine.myteknoland.com' },
+    { name: 'POS Demo', item: 'https://nexdine.myteknoland.com/pos-demo' },
+  ]
+
   return (
     <PageWrapper>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: generateBreadcrumbSchema(breadcrumbs) }}
+      />
       <div className="pt-24 pb-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">

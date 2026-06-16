@@ -1,8 +1,39 @@
+import type { Metadata } from 'next'
 import PageWrapper from '@/components/PageWrapper'
+import { generateBreadcrumbSchema } from '@/lib/schema'
+
+export const metadata: Metadata = {
+  title: 'Analytics & Inventory - NexDine Restaurant Management',
+  description: 'Real-time insights into sales, stock levels, staff performance, and customer behavior with NexDine analytics dashboard.',
+  keywords: ['restaurant analytics', 'inventory management', 'sales tracking', 'restaurant reporting', 'NexDine analytics'],
+  openGraph: {
+    title: 'Analytics & Inventory - NexDine Restaurant Management',
+    description: 'Real-time insights into sales, stock levels, staff performance, and customer behavior.',
+    type: 'website',
+    url: 'https://nexdine.myteknoland.com/analytics',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Analytics & Inventory - NexDine Restaurant Management',
+    description: 'Real-time insights into sales, stock levels, staff performance, and customer behavior.',
+  },
+  alternates: {
+    canonical: 'https://nexdine.myteknoland.com/analytics',
+  },
+}
 
 export default function AnalyticsPage () {
+  const breadcrumbs = [
+    { name: 'Home', item: 'https://nexdine.myteknoland.com' },
+    { name: 'Analytics', item: 'https://nexdine.myteknoland.com/analytics' },
+  ]
+
   return (
     <PageWrapper>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: generateBreadcrumbSchema(breadcrumbs) }}
+      />
       <div className="pt-24 pb-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
