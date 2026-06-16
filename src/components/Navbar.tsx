@@ -50,13 +50,13 @@ export default function Navbar () {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2.5">
+          <Link href="/" className="flex items-center gap-2.5" aria-label="NexDine Home">
             <Logo size={36} />
             <span className="text-xl font-bold tracking-tight">NexDine</span>
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center gap-1">
+          <nav className="hidden md:flex items-center gap-1" aria-label="Main navigation">
             {navLinks.map(link =>
               link.children
                 ? (
@@ -66,7 +66,7 @@ export default function Navbar () {
                       onMouseEnter={() => setOpenDropdown(link.label)}
                       onMouseLeave={() => setOpenDropdown(null)}
                     >
-                      <button className="flex items-center gap-1 rounded-lg px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+                      <button className="flex items-center gap-1 rounded-lg px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors" aria-expanded={openDropdown === link.label} aria-haspopup="true">
                         {link.label}
                         <ChevronDown className="h-4 w-4" />
                       </button>
@@ -112,6 +112,7 @@ export default function Navbar () {
               target="_blank"
               rel="noopener noreferrer"
               className="rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground hover:opacity-90 transition-opacity shadow-lg shadow-primary/25"
+              aria-label="Book a demo with NexDine"
             >
               Book a Demo
             </a>
@@ -121,6 +122,8 @@ export default function Navbar () {
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
             className="md:hidden rounded-lg p-2 text-muted-foreground hover:text-foreground"
+            aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
+            aria-expanded={mobileOpen}
           >
             {mobileOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>

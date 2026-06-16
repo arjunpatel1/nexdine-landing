@@ -2,10 +2,15 @@
 
 import { motion } from 'framer-motion'
 import { MessageCircle } from 'lucide-react'
+import { trackWhatsAppClick } from '@/lib/analytics'
 
 const PHONE_RAW = '917288876715'
 
 export default function WhatsAppButton () {
+  const handleClick = () => {
+    trackWhatsAppClick()
+  }
+
   return (
     <motion.a
       href={`https://wa.me/${PHONE_RAW}?text=${encodeURIComponent('Hi, I would like to know more about NexDine.')}`}
@@ -17,8 +22,10 @@ export default function WhatsAppButton () {
       transition={{ delay: 1, type: 'spring', stiffness: 200 }}
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
+      aria-label="Chat with NexDine on WhatsApp"
+      onClick={handleClick}
     >
-      <MessageCircle className="h-5 w-5" />
+      <MessageCircle className="h-5 w-5" aria-hidden="true" />
       <span className="text-sm font-semibold hidden sm:inline">Chat on WhatsApp</span>
     </motion.a>
   )

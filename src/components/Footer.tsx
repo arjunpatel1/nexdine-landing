@@ -49,7 +49,7 @@ export default function Footer () {
         <div className="grid grid-cols-2 md:grid-cols-6 gap-8">
           {/* Brand */}
           <div className="col-span-2">
-            <Link href="/" className="flex items-center gap-2.5 mb-4">
+            <Link href="/" className="flex items-center gap-2.5 mb-4" aria-label="NexDine Home">
               <Logo size={36} />
               <span className="text-xl font-bold">NexDine</span>
             </Link>
@@ -57,15 +57,20 @@ export default function Footer () {
               The enterprise restaurant management platform trusted by thousands of restaurants worldwide.
             </p>
             <div className="flex items-center gap-3">
-              {[Twitter, Linkedin, Github, Youtube].map((Icon, i) => (
-                <a
-                  key={i}
-                  href="#"
-                  className="flex h-9 w-9 items-center justify-center rounded-lg bg-muted text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-colors"
-                >
-                  <Icon className="h-4 w-4" />
-                </a>
-              ))}
+              {[Twitter, Linkedin, Github, Youtube].map((Icon, i) => {
+                const socialNames = ['Twitter', 'LinkedIn', 'GitHub', 'YouTube']
+                return (
+                  <a
+                    key={i}
+                    href="#"
+                    className="flex h-9 w-9 items-center justify-center rounded-lg bg-muted text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-colors"
+                    aria-label={`Follow NexDine on ${socialNames[i]}`}
+                    rel="noopener noreferrer"
+                  >
+                    <Icon className="h-4 w-4" />
+                  </a>
+                )
+              })}
             </div>
           </div>
 
@@ -73,18 +78,20 @@ export default function Footer () {
           {footerGroups.map(group => (
             <div key={group.title}>
               <h3 className="text-sm font-semibold mb-3">{group.title}</h3>
-              <ul className="space-y-2">
-                {group.links.map(link => (
-                  <li key={link.label}>
-                    <Link
-                      href={link.href}
-                      className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-                    >
-                      {link.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
+              <nav aria-label={`${group.title} links`}>
+                <ul className="space-y-2" role="list">
+                  {group.links.map(link => (
+                    <li key={link.label}>
+                      <Link
+                        href={link.href}
+                        className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                      >
+                        {link.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </nav>
             </div>
           ))}
         </div>

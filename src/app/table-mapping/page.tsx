@@ -1,8 +1,39 @@
+import type { Metadata } from 'next'
 import PageWrapper from '@/components/PageWrapper'
+import { generateBreadcrumbSchema } from '@/lib/schema'
+
+export const metadata: Metadata = {
+  title: 'Table Mapping - Visual Floor Plan Management | NexDine',
+  description: 'Visual drag-and-drop floor plans with live occupancy, reservations, and merge/split operations. Smart table management for restaurants.',
+  keywords: ['table management system', 'restaurant floor plan', 'table mapping software', 'restaurant reservation system', 'NexDine tables'],
+  openGraph: {
+    title: 'Table Mapping - Visual Floor Plan Management | NexDine',
+    description: 'Visual drag-and-drop floor plans with live occupancy, reservations, and merge/split operations.',
+    type: 'website',
+    url: 'https://nexdine.myteknoland.com/table-mapping',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Table Mapping - Visual Floor Plan Management | NexDine',
+    description: 'Visual drag-and-drop floor plans with live occupancy, reservations, and merge/split operations.',
+  },
+  alternates: {
+    canonical: 'https://nexdine.myteknoland.com/table-mapping',
+  },
+}
 
 export default function TableMappingPage () {
+  const breadcrumbs = [
+    { name: 'Home', item: 'https://nexdine.myteknoland.com' },
+    { name: 'Table Mapping', item: 'https://nexdine.myteknoland.com/table-mapping' },
+  ]
+
   return (
     <PageWrapper>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: generateBreadcrumbSchema(breadcrumbs) }}
+      />
       <div className="pt-24 pb-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
