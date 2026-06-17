@@ -1,7 +1,7 @@
 {
-  "name": "NexDine - Restaurant Management Platform",
+  "name": "NexDine - Restaurant POS Software",
   "short_name": "NexDine",
-  "description": "The all-in-one POS, inventory, CRM, and operations platform for modern restaurants. QR ordering, KDS, WhatsApp automation, and multi-branch management.",
+  "description": "NexDine is an all-in-one restaurant management platform with POS billing, QR ordering, kitchen display system, inventory management, CRM, loyalty programs and delivery integrations.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#030712",
