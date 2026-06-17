@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Link from 'next/link'
 import {
   BarChart3,
   Bell,
@@ -34,6 +35,7 @@ const features = [
     icon: MonitorSmartphone,
     title: 'POS & Billing',
     desc: 'Quick 3-click billing with customizable menus, split bills, merge tables, and multi-payment support.',
+    link: '/restaurant-billing-software',
   },
   {
     icon: Package,
@@ -84,6 +86,7 @@ const features = [
     icon: Users,
     title: 'CRM & Loyalty',
     desc: 'Customer profiles, reward points, automated promotions, birthday campaigns, and feedback loops.',
+    link: '/restaurant-crm-software',
   },
   {
     icon: MessageCircle,
@@ -179,23 +182,31 @@ export default function Features () {
         </motion.div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {features.map((feature, i) => (
-            <motion.div
-              key={feature.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.05 }}
-              whileHover={{ y: -4 }}
-              className="group relative rounded-2xl border border-border bg-card p-6 hover:border-primary/30 transition-colors"
-            >
-              <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
-                <feature.icon className="h-6 w-6" />
-              </div>
-              <h3 className="text-lg font-semibold mb-2">{feature.title}</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">{feature.desc}</p>
-            </motion.div>
-          ))}
+          {features.map((feature, i) => {
+            const FeatureCard = (
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.05 }}
+                whileHover={{ y: -4 }}
+                className="group relative rounded-2xl border border-border bg-card p-6 hover:border-primary/30 transition-colors"
+              >
+                <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                  <feature.icon className="h-6 w-6" />
+                </div>
+                <h3 className="text-lg font-semibold mb-2">{feature.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">{feature.desc}</p>
+              </motion.div>
+            )
+            return feature.link ? (
+              <Link key={feature.title} href={feature.link}>
+                {FeatureCard}
+              </Link>
+            ) : (
+              <div key={feature.title}>{FeatureCard}</div>
+            )
+          })}
         </div>
       </div>
     </section>

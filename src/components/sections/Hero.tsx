@@ -74,11 +74,9 @@ export default function Hero () {
           transition={{ duration: 0.8, delay: 0.15, ease: 'easeOut' }}
           className="text-4xl sm:text-5xl md:text-7xl font-bold tracking-tight text-balance mb-6"
         >
-          The Future of
+          Restaurant POS Software & Complete
           {' '}
-          <span className="gradient-text">Restaurant</span>
-          <br />
-          Management is Here
+          <span className="gradient-text">Restaurant Management System</span>
         </motion.h1>
 
         {/* Subtitle */}

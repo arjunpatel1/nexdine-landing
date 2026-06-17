@@ -17,12 +17,12 @@ import Workflow from '@/components/sections/Workflow'
 import { generateFAQSchema, HOME_FAQS } from '@/lib/schema'
 
 export const metadata: Metadata = {
-  title: 'NexDine - Enterprise Restaurant Management Platform',
-  description: 'The all-in-one POS, inventory, CRM, and operations platform for modern restaurants. QR ordering, KDS, WhatsApp automation, and multi-branch management.',
-  keywords: ['restaurant POS', 'restaurant management', 'QR ordering', 'kitchen display system', 'restaurant SaaS', 'NexDine'],
+  title: 'Restaurant POS Software | QR Ordering, Billing & Inventory Management | NexDine',
+  description: 'NexDine is an all-in-one restaurant management platform with POS billing, QR ordering, kitchen display system, inventory management, CRM, loyalty programs and delivery integrations.',
+  keywords: ['restaurant POS software', 'restaurant billing software', 'restaurant management system', 'QR ordering software', 'cloud kitchen software', 'restaurant software India'],
   openGraph: {
-    title: 'NexDine - Enterprise Restaurant Management Platform',
-    description: 'Transform your restaurant operations with the most advanced POS and management ecosystem.',
+    title: 'Restaurant POS Software | QR Ordering, Billing & Inventory Management | NexDine',
+    description: 'NexDine is an all-in-one restaurant management platform with POS billing, QR ordering, kitchen display system, inventory management, CRM, loyalty programs and delivery integrations.',
     type: 'website',
     url: 'https://nexdine.myteknoland.com',
     images: [
@@ -36,8 +36,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'NexDine - Enterprise Restaurant Management Platform',
-    description: 'Transform your restaurant operations with the most advanced POS and management ecosystem.',
+    title: 'Restaurant POS Software | QR Ordering, Billing & Inventory Management | NexDine',
+    description: 'NexDine is an all-in-one restaurant management platform with POS billing, QR ordering, kitchen display system, inventory management, CRM, loyalty programs and delivery integrations.',
     images: ['https://nexdine.myteknoland.com/og-image.png'],
   },
   alternates: {

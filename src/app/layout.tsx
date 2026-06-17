@@ -9,7 +9,11 @@ const structuredData = {
       '@type': 'SoftwareApplication',
       'name': 'NexDine',
       'applicationCategory': 'BusinessApplication',
-      'operatingSystem': 'Any',
+      'operatingSystem': 'Web',
+      'description':
+        'Restaurant POS and Management Software - All-in-one restaurant management platform with POS billing, QR ordering, kitchen display system, inventory management, CRM, loyalty programs and delivery integrations.',
+      'url': 'https://nexdine.myteknoland.com',
+      'image': 'https://nexdine.myteknoland.com/og-image.png',
       'offers': {
         '@type': 'Offer',
         'price': '3999',
@@ -21,16 +25,23 @@ const structuredData = {
         'ratingValue': '4.8',
         'reviewCount': '124',
       },
-      'description':
-        'The all-in-one POS, inventory, CRM, and operations platform for modern restaurants. QR ordering, KDS, WhatsApp automation, and multi-branch management.',
-      'url': 'https://nexdine.myteknoland.com',
-      'image': 'https://nexdine.myteknoland.com/og-image.png',
+      'featureList': [
+        'POS Billing System',
+        'QR Ordering',
+        'Kitchen Display System',
+        'Inventory Management',
+        'CRM and Loyalty Programs',
+        'Delivery Integrations',
+        'Multi-branch Management',
+        'WhatsApp Automation',
+      ],
     },
     {
       '@type': 'Organization',
       'name': 'NexDine',
       'url': 'https://nexdine.myteknoland.com',
       'logo': 'https://nexdine.myteknoland.com/favicon.svg',
+      'description': 'Restaurant POS and Management Software Provider',
       'sameAs': [
         'https://twitter.com/nexdine',
         'https://linkedin.com/company/nexdine',
@@ -40,12 +51,15 @@ const structuredData = {
         'telephone': '+91-72888 76715',
         'contactType': 'sales',
         'email': 'info@myteknoland.net',
+        'areaServed': 'IN',
+        'availableLanguage': 'English',
       },
       'address': {
         '@type': 'PostalAddress',
         'streetAddress': '1/1, Bangalore Main Road, Rayachoty',
         'addressLocality': 'Rayachoty',
         'addressRegion': 'Andhra Pradesh',
+        'postalCode': '516269',
         'addressCountry': 'IN',
       },
       'parentOrganization': {
@@ -58,30 +72,75 @@ const structuredData = {
       '@type': 'WebSite',
       'name': 'NexDine',
       'url': 'https://nexdine.myteknoland.com',
-      'description': 'Enterprise Restaurant Management Platform',
+      'description': 'Restaurant POS Software | QR Ordering, Billing & Inventory Management',
+      'publisher': {
+        '@type': 'Organization',
+        'name': 'NexDine',
+        'logo': {
+          '@type': 'ImageObject',
+          'url': 'https://nexdine.myteknoland.com/favicon.svg',
+        },
+      },
       'potentialAction': {
         '@type': 'SearchAction',
         'target': 'https://nexdine.myteknoland.com/search?q={search_term_string}',
         'query-input': 'required name=search_term_string',
       },
     },
+    {
+      '@type': 'FAQPage',
+      'mainEntity': [
+        {
+          '@type': 'Question',
+          'name': 'What is NexDine Restaurant POS Software?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'NexDine is an all-in-one restaurant management platform with POS billing, QR ordering, kitchen display system, inventory management, CRM, loyalty programs and delivery integrations.',
+          },
+        },
+        {
+          '@type': 'Question',
+          'name': 'Does NexDine support QR ordering?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Yes, NexDine includes a comprehensive QR ordering system that allows customers to scan QR codes at their tables and place orders directly from their smartphones.',
+          },
+        },
+        {
+          '@type': 'Question',
+          'name': 'What features does NexDine offer for inventory management?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'NexDine provides real-time inventory tracking, low stock alerts, recipe management, supplier integration, and automated purchase order generation to help restaurants manage their inventory efficiently.',
+          },
+        },
+        {
+          '@type': 'Question',
+          'name': 'Is NexDine suitable for multi-branch restaurants?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Yes, NexDine is designed for multi-branch management with centralized control, real-time sync across locations, consolidated reporting, and branch-specific customization options.',
+          },
+        },
+      ],
+    },
   ],
 }
 
 export const metadata: Metadata = {
   title: {
-    default: 'NexDine - Enterprise Restaurant Management Platform',
+    default: 'Restaurant POS Software | QR Ordering, Billing & Inventory Management | NexDine',
     template: '%s | NexDine',
   },
   description:
-    'The all-in-one POS, inventory, CRM, and operations platform for modern restaurants. QR ordering, KDS, WhatsApp automation, and multi-branch management.',
+    'NexDine is an all-in-one restaurant management platform with POS billing, QR ordering, kitchen display system, inventory management, CRM, loyalty programs and delivery integrations.',
   keywords: [
-    'restaurant POS',
-    'restaurant management',
-    'QR ordering',
-    'kitchen display system',
-    'restaurant SaaS',
-    'NexDine',
+    'restaurant POS software',
+    'restaurant billing software',
+    'restaurant management system',
+    'QR ordering software',
+    'cloud kitchen software',
+    'restaurant software India',
   ],
   authors: [{ name: 'NexDine' }],
   icons: {
@@ -98,9 +157,9 @@ export const metadata: Metadata = {
     },
   }),
   openGraph: {
-    title: 'NexDine - Enterprise Restaurant Management Platform',
+    title: 'Restaurant POS Software | QR Ordering, Billing & Inventory Management | NexDine',
     description:
-      'Transform your restaurant operations with the most advanced POS and management ecosystem.',
+      'NexDine is an all-in-one restaurant management platform with POS billing, QR ordering, kitchen display system, inventory management, CRM, loyalty programs and delivery integrations.',
     type: 'website',
     url: 'https://nexdine.myteknoland.com',
     siteName: 'NexDine',
@@ -115,9 +174,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'NexDine - Enterprise Restaurant Management Platform',
+    title: 'Restaurant POS Software | QR Ordering, Billing & Inventory Management | NexDine',
     description:
-      'Transform your restaurant operations with the most advanced POS and management ecosystem.',
+      'NexDine is an all-in-one restaurant management platform with POS billing, QR ordering, kitchen display system, inventory management, CRM, loyalty programs and delivery integrations.',
     images: ['https://nexdine.myteknoland.com/og-image.png'],
   },
   alternates: {
@@ -152,6 +211,7 @@ export default function RootLayout ({
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}

@@ -10,9 +10,10 @@ const footerGroups = [
     title: 'Product',
     links: [
       { label: 'POS System', href: '/pos-demo' },
+      { label: 'Restaurant Billing', href: '/restaurant-billing-software' },
+      { label: 'Restaurant CRM', href: '/restaurant-crm-software' },
       { label: 'QR Ordering', href: '/qr-ordering' },
       { label: 'Table Mapping', href: '/table-mapping' },
-      { label: 'Analytics', href: '/analytics' },
       { label: 'Pricing', href: '/pricing' },
     ],
   },
