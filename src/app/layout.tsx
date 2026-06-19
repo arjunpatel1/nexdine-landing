@@ -179,9 +179,6 @@ export const metadata: Metadata = {
       'NexDine is an all-in-one restaurant management platform with POS billing, QR ordering, kitchen display system, inventory management, CRM, loyalty programs and delivery integrations.',
     images: ['https://nexdine.myteknoland.com/og-image.png'],
   },
-  alternates: {
-    canonical: 'https://nexdine.myteknoland.com',
-  },
   robots: {
     index: true,
     follow: true,
