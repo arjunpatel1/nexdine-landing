@@ -1,0 +1,43 @@
+{
+  "name": "NexDine - Restaurant POS Software",
+  "short_name": "NexDine",
+  "description": "NexDine is an all-in-one restaurant management platform with POS billing, QR ordering, kitchen display system, inventory management, CRM, loyalty programs and delivery integrations.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#030712",
+  "theme_color": "#030712",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "productivity"],
+  "screenshots": [],
+  "shortcuts": [
+    {
+      "name": "View Features",
+      "short_name": "Features",
+      "description": "Explore NexDine features",
+      "url": "/features",
+      "icons": [{ "src": "/favicon.svg", "sizes": "any" }]
+    },
+    {
+      "name": "View Pricing",
+      "short_name": "Pricing",
+      "description": "View NexDine pricing plans",
+      "url": "/pricing",
+      "icons": [{ "src": "/favicon.svg", "sizes": "any" }]
+    },
+    {
+      "name": "Contact Us",
+      "short_name": "Contact",
+      "description": "Get in touch with NexDine",
+      "url": "/contact",
+      "icons": [{ "src": "/favicon.svg", "sizes": "any" }]
+    }
+  ]
+}
