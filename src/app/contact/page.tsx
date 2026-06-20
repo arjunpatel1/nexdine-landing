@@ -1,7 +1,7 @@
 'use client'
 
 import { CheckCircle, Clock, Loader2, Mail, MapPin, MessageCircle, Phone, Send } from 'lucide-react'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import PageWrapper from '@/components/PageWrapper'
 import { generateBreadcrumbSchema } from '@/lib/schema'
 import { trackContactFormSubmit } from '@/lib/analytics'
@@ -14,10 +14,6 @@ const CONTACT = {
 }
 
 export default function ContactPage () {
-  // Update document title for client component
-  useEffect(() => {
-    document.title = 'Contact Us - Book a Demo | NexDine Restaurant Management'
-  }, [])
 
   const breadcrumbs = [
     { name: 'Home', item: 'https://nexdine.myteknoland.com' },

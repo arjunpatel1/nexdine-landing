@@ -5,6 +5,25 @@ import { generateAuditReport } from '@/lib/seo-audit'
 export const metadata: Metadata = {
   title: 'SEO Monitoring Report | NexDine',
   description: 'Internal SEO monitoring and indexing report for NexDine website.',
+  keywords: ['SEO report', 'website audit', 'indexing report', 'NexDine SEO'],
+  openGraph: {
+    title: 'SEO Monitoring Report | NexDine',
+    description: 'Internal SEO monitoring and indexing report for NexDine website.',
+    type: 'website',
+    url: 'https://nexdine.myteknoland.com/admin/seo-report',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'SEO Monitoring Report | NexDine',
+    description: 'Internal SEO monitoring and indexing report for NexDine website.',
+  },
+  alternates: {
+    canonical: 'https://nexdine.myteknoland.com/admin/seo-report',
+  },
+  robots: {
+    index: false,
+    follow: false,
+  },
 }
 
 export default function SEOReportPage() {

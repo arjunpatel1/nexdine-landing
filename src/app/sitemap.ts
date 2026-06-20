@@ -95,6 +95,42 @@ export default function sitemap (): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
+      url: `${baseUrl}/kitchen-display-system`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/restaurant-loyalty-program`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/petpooja-vs-nexdine`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/restroworks-vs-nexdine`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/posist-vs-nexdine`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/best-restaurant-pos-software-india`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
       url: `${baseUrl}/blog`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
@@ -127,6 +163,30 @@ export default function sitemap (): MetadataRoute.Sitemap {
     {
       url: `${baseUrl}/blog/complete-guide-to-kot-software`,
       lastModified: new Date('2023-12-28'),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/blog/restaurant-gst-billing-guide`,
+      lastModified: new Date('2024-06-20'),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/blog/how-to-start-a-cloud-kitchen`,
+      lastModified: new Date('2024-06-20'),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/blog/petpooja-vs-nexdine`,
+      lastModified: new Date('2024-06-20'),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/blog/restroworks-vs-nexdine`,
+      lastModified: new Date('2024-06-20'),
       changeFrequency: 'monthly',
       priority: 0.7,
     },

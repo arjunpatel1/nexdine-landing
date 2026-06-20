@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Github, Linkedin, Twitter, Youtube } from 'lucide-react'
+import { Facebook, Globe, Instagram, Linkedin } from 'lucide-react'
 import Link from 'next/link'
 import Logo from '@/components/Logo'
 
@@ -58,20 +58,23 @@ export default function Footer () {
               The enterprise restaurant management platform trusted by thousands of restaurants worldwide.
             </p>
             <div className="flex items-center gap-3">
-              {[Twitter, Linkedin, Github, Youtube].map((Icon, i) => {
-                const socialNames = ['Twitter', 'LinkedIn', 'GitHub', 'YouTube']
-                return (
-                  <a
-                    key={i}
-                    href="#"
-                    className="flex h-9 w-9 items-center justify-center rounded-lg bg-muted text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-colors"
-                    aria-label={`Follow NexDine on ${socialNames[i]}`}
-                    rel="noopener noreferrer"
-                  >
-                    <Icon className="h-4 w-4" />
-                  </a>
-                )
-              })}
+              {[
+                { Icon: Linkedin, name: 'LinkedIn', href: 'https://www.linkedin.com/company/my-teknoland-software-pvt-ltd' },
+                { Icon: Instagram, name: 'Instagram', href: 'https://www.instagram.com/mtl.nexdine' },
+                { Icon: Facebook, name: 'Facebook', href: 'https://www.facebook.com/share/1DBj9dsDj3/' },
+                { Icon: Globe, name: 'Website', href: 'https://nexdine.myteknoland.com' },
+              ].map((social, i) => (
+                <a
+                  key={i}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex h-9 w-9 items-center justify-center rounded-lg bg-muted text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-colors"
+                  aria-label={`Follow NexDine on ${social.name}`}
+                >
+                  <social.Icon className="h-4 w-4" />
+                </a>
+              ))}
             </div>
           </div>
 
