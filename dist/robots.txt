@@ -1,8 +1,0 @@
-User-Agent: *
-Allow: /
-Disallow: /api/
-Disallow: /admin/
-Disallow: /_next/
-
-Host: https://nexdine.myteknoland.com
-Sitemap: https://nexdine.myteknoland.com/sitemap.xml
