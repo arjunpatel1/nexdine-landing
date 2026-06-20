@@ -12,6 +12,7 @@ import Newsletter from '@/components/sections/Newsletter'
 import Pricing from '@/components/sections/Pricing'
 import ServiceExplainer from '@/components/sections/ServiceExplainer'
 import Stats from '@/components/sections/Stats'
+import Testimonials from '@/components/sections/Testimonials'
 import TrustedBy from '@/components/sections/TrustedBy'
 import Workflow from '@/components/sections/Workflow'
 import { generateFAQSchema, HOME_FAQS } from '@/lib/schema'
@@ -61,6 +62,7 @@ export default function Home () {
       <Workflow />
       <BeforeAfter />
       <Stats />
+      <Testimonials />
       <Pricing />
       <Comparison />
       <FAQ />

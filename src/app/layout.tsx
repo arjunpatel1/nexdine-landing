@@ -35,9 +35,19 @@ const structuredData = {
           },
           'author': {
             '@type': 'Person',
-            'name': 'Rajesh Kumar',
+            'name': 'Ravindara',
           },
-          'reviewBody': 'NexDine transformed our restaurant operations. The POS system is intuitive, and the QR ordering feature has increased our table turnover by 30%. Excellent support team.',
+          'reviewBody': 'NexDine has significantly improved our restaurant operations. Billing is faster, order management is smoother, and inventory tracking has become much easier. The platform helps our staff work efficiently even during busy hours.',
+          'itemReviewed': {
+            '@type': 'LocalBusiness',
+            'name': 'Krishna Mayuri',
+            'address': {
+              '@type': 'PostalAddress',
+              'addressLocality': 'Rayachoty',
+              'addressRegion': 'Andhra Pradesh',
+              'addressCountry': 'IN',
+            },
+          },
         },
         {
           '@type': 'Review',
@@ -48,22 +58,65 @@ const structuredData = {
           },
           'author': {
             '@type': 'Person',
-            'name': 'Priya Sharma',
+            'name': 'Salam',
           },
-          'reviewBody': 'Best restaurant software we\'ve used. Inventory management alone has saved us thousands in reduced food waste. The WhatsApp automation is a game-changer for customer engagement.',
+          'reviewBody': 'NexDine made it easy to manage billing, orders, and daily restaurant operations from a single platform. The system is simple to use and has improved our customer service experience.',
+          'itemReviewed': {
+            '@type': 'LocalBusiness',
+            'name': 'Ghee Dosa',
+            'address': {
+              '@type': 'PostalAddress',
+              'addressLocality': 'Rayachoty',
+              'addressRegion': 'Andhra Pradesh',
+              'addressCountry': 'IN',
+            },
+          },
         },
         {
           '@type': 'Review',
           'reviewRating': {
             '@type': 'Rating',
-            'ratingValue': '4',
+            'ratingValue': '5',
             'bestRating': '5',
           },
           'author': {
             '@type': 'Person',
-            'name': 'Amit Patel',
+            'name': 'Restaurant Owner',
           },
-          'reviewBody': 'Great value for money. All features included in one subscription. Implementation was quick and the team was very helpful with training.',
+          'reviewBody': 'NexDine cut our order-to-table time significantly. The QR ordering and KDS integration works seamlessly.',
+          'itemReviewed': {
+            '@type': 'LocalBusiness',
+            'name': 'Multi-location Chain',
+            'address': {
+              '@type': 'PostalAddress',
+              'addressLocality': 'Mumbai',
+              'addressRegion': 'Maharashtra',
+              'addressCountry': 'IN',
+            },
+          },
+        },
+        {
+          '@type': 'Review',
+          'reviewRating': {
+            '@type': 'Rating',
+            'ratingValue': '5',
+            'bestRating': '5',
+          },
+          'author': {
+            '@type': 'Person',
+            'name': 'General Manager',
+          },
+          'reviewBody': 'We replaced multiple separate tools with NexDine. Having everything in one platform has been a game changer for our operations.',
+          'itemReviewed': {
+            '@type': 'LocalBusiness',
+            'name': 'Fine Dining Restaurant',
+            'address': {
+              '@type': 'PostalAddress',
+              'addressLocality': 'Bangalore',
+              'addressRegion': 'Karnataka',
+              'addressCountry': 'IN',
+            },
+          },
         },
       ],
       'featureList': [
