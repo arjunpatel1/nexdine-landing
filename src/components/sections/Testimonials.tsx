@@ -6,6 +6,18 @@ import { useEffect, useState } from 'react'
 
 const testimonials = [
   {
+    quote: 'NexDine has significantly improved our restaurant operations. Billing is faster, order management is smoother, and inventory tracking has become much easier. The platform helps our staff work efficiently even during busy hours.',
+    author: 'Ravindara',
+    role: 'Krishna Mayuri, Rayachoty, Andhra Pradesh',
+    rating: 5,
+  },
+  {
+    quote: 'NexDine made it easy to manage billing, orders, and daily restaurant operations from a single platform. The system is simple to use and has improved our customer service experience.',
+    author: 'Salam',
+    role: 'Ghee Dosa, Rayachoty, Andhra Pradesh',
+    rating: 5,
+  },
+  {
     quote: 'NexDine cut our order-to-table time significantly. The QR ordering and KDS integration works seamlessly.',
     author: 'Restaurant Owner',
     role: 'Multi-location Chain, Mumbai',
@@ -15,18 +27,6 @@ const testimonials = [
     quote: 'We replaced multiple separate tools with NexDine. Having everything in one platform has been a game changer for our operations.',
     author: 'General Manager',
     role: 'Fine Dining Restaurant, Bangalore',
-    rating: 5,
-  },
-  {
-    quote: 'The WhatsApp automation helped us reconnect with customers directly. Our repeat visits have noticeably improved.',
-    author: 'Operations Director',
-    role: 'Cafe Chain, Delhi NCR',
-    rating: 5,
-  },
-  {
-    quote: 'Managing multiple locations used to be chaotic. With NexDine, everything syncs in real-time across all our branches.',
-    author: 'COO',
-    role: 'Quick Service Restaurant, Hyderabad',
     rating: 5,
   },
 ]
