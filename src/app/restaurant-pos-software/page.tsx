@@ -5,19 +5,19 @@ import CTA from '@/components/sections/CTA'
 import { generateFAQSchema, generateBreadcrumbSchema } from '@/lib/schema'
 
 export const metadata: Metadata = {
-  title: 'Restaurant POS Software - Best Billing System for Restaurants | NexDine',
-  description: 'Transform your restaurant operations with NexDine restaurant POS software. Fast billing, inventory management, QR ordering, and multi-branch support. Try free for 14 days.',
-  keywords: ['restaurant POS software', 'restaurant billing software', 'POS system for restaurants', 'restaurant management software', 'NexDine POS'],
+  title: 'Restaurant POS Software India - Best Billing System for Restaurants | NexDine',
+  description: 'Transform your restaurant operations with NexDine restaurant POS software India. Fast billing, inventory management, QR ordering, and multi-branch support. Try free for 14 days.',
+  keywords: ['restaurant POS software India', 'restaurant billing software India', 'POS system for restaurants India', 'restaurant management software India', 'NexDine POS India', 'restaurant POS Hyderabad', 'restaurant POS Bangalore', 'restaurant POS Chennai', 'restaurant software Andhra Pradesh'],
   openGraph: {
-    title: 'Restaurant POS Software - Best Billing System for Restaurants | NexDine',
-    description: 'Transform your restaurant operations with NexDine restaurant POS software. Fast billing, inventory management, QR ordering.',
+    title: 'Restaurant POS Software India - Best Billing System for Restaurants | NexDine',
+    description: 'Transform your restaurant operations with NexDine restaurant POS software India. Fast billing, inventory management, QR ordering.',
     type: 'website',
     url: 'https://nexdine.myteknoland.com/restaurant-pos-software',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Restaurant POS Software - Best Billing System for Restaurants | NexDine',
-    description: 'Transform your restaurant operations with NexDine restaurant POS software.',
+    title: 'Restaurant POS Software India - Best Billing System for Restaurants | NexDine',
+    description: 'Transform your restaurant operations with NexDine restaurant POS software India.',
   },
   alternates: {
     canonical: 'https://nexdine.myteknoland.com/restaurant-pos-software',

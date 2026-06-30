@@ -5,19 +5,19 @@ import CTA from '@/components/sections/CTA'
 import { generateFAQSchema, generateBreadcrumbSchema } from '@/lib/schema'
 
 export const metadata: Metadata = {
-  title: 'Restaurant CRM Software | Customer Loyalty & Retention System | NexDine',
-  description: 'Improve customer retention with NexDine Restaurant CRM Software. Manage customer profiles, loyalty programs, rewards, feedback and marketing campaigns.',
-  keywords: ['restaurant CRM software', 'restaurant customer management software', 'restaurant loyalty software', 'customer retention software for restaurants', 'restaurant rewards program'],
+  title: 'Restaurant CRM Software India | Customer Loyalty & Retention System | NexDine',
+  description: 'Improve customer retention with NexDine Restaurant CRM Software India. Manage customer profiles, loyalty programs, rewards, feedback and marketing campaigns.',
+  keywords: ['restaurant CRM software India', 'restaurant customer management software India', 'restaurant loyalty software India', 'customer retention software for restaurants India', 'restaurant rewards program India', 'restaurant POS software India', 'restaurant billing software India', 'restaurant software Andhra Pradesh', 'restaurant POS Hyderabad', 'restaurant POS Bangalore', 'restaurant POS Chennai'],
   openGraph: {
-    title: 'Restaurant CRM Software | Customer Loyalty & Retention System | NexDine',
-    description: 'Improve customer retention with NexDine Restaurant CRM Software. Manage customer profiles, loyalty programs, rewards, feedback and marketing campaigns.',
+    title: 'Restaurant CRM Software India | Customer Loyalty & Retention System | NexDine',
+    description: 'Improve customer retention with NexDine Restaurant CRM Software India. Manage customer profiles, loyalty programs, rewards, feedback and marketing campaigns.',
     type: 'website',
     url: 'https://nexdine.myteknoland.com/restaurant-crm-software',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Restaurant CRM Software | Customer Loyalty & Retention System | NexDine',
-    description: 'Improve customer retention with NexDine Restaurant CRM Software. Manage customer profiles, loyalty programs, rewards, feedback and marketing campaigns.',
+    title: 'Restaurant CRM Software India | Customer Loyalty & Retention System | NexDine',
+    description: 'Improve customer retention with NexDine Restaurant CRM Software India. Manage customer profiles, loyalty programs, rewards, feedback and marketing campaigns.',
   },
   alternates: {
     canonical: 'https://nexdine.myteknoland.com/restaurant-crm-software',

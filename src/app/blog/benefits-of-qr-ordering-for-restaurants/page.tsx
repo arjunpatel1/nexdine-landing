@@ -4,12 +4,12 @@ import PageWrapper from '@/components/PageWrapper'
 import { generateFAQSchema, generateBreadcrumbSchema, generateArticleSchema, generateAuthorSchema } from '@/lib/schema'
 
 export const metadata: Metadata = {
-  title: 'Benefits of QR Ordering for Restaurants: Transform Your Service | NexDine',
-  description: 'Explore how QR ordering systems revolutionize restaurant operations. Improve efficiency, reduce costs, and enhance customer experience with contactless dining.',
-  keywords: ['benefits of QR ordering for restaurants', 'QR menu ordering advantages', 'contactless restaurant ordering', 'digital menu benefits', 'NexDine QR'],
+  title: 'Benefits of QR Ordering for Restaurants India: Transform Your Service | NexDine',
+  description: 'Explore how QR ordering systems revolutionize restaurant operations in India. Improve efficiency, reduce costs, and enhance customer experience with contactless dining.',
+  keywords: ['benefits of QR ordering for restaurants India', 'QR menu ordering advantages India', 'contactless restaurant ordering India', 'digital menu benefits India', 'NexDine QR', 'restaurant POS software India', 'restaurant billing software India', 'restaurant software Andhra Pradesh', 'restaurant POS Hyderabad', 'restaurant POS Bangalore', 'restaurant POS Chennai'],
   openGraph: {
-    title: 'Benefits of QR Ordering for Restaurants: Transform Your Service | NexDine',
-    description: 'Explore how QR ordering systems revolutionize restaurant operations.',
+    title: 'Benefits of QR Ordering for Restaurants India: Transform Your Service | NexDine',
+    description: 'Explore how QR ordering systems revolutionize restaurant operations in India.',
     type: 'article',
     url: 'https://nexdine.myteknoland.com/blog/benefits-of-qr-ordering-for-restaurants',
     publishedTime: '2024-01-01T00:00:00Z',
@@ -18,8 +18,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Benefits of QR Ordering for Restaurants: Transform Your Service | NexDine',
-    description: 'Explore how QR ordering systems revolutionize restaurant operations.',
+    title: 'Benefits of QR Ordering for Restaurants India: Transform Your Service | NexDine',
+    description: 'Explore how QR ordering systems revolutionize restaurant operations in India.',
   },
   alternates: {
     canonical: 'https://nexdine.myteknoland.com/blog/benefits-of-qr-ordering-for-restaurants',

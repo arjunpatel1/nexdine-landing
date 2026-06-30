@@ -5,19 +5,19 @@ import CTA from '@/components/sections/CTA'
 import { generateFAQSchema, generateBreadcrumbSchema } from '@/lib/schema'
 
 export const metadata: Metadata = {
-  title: 'Restaurant Billing Software | GST Billing System for Restaurants | NexDine',
-  description: 'Manage restaurant billing, GST invoices, split payments, UPI payments and customer transactions with NexDine Restaurant Billing Software.',
-  keywords: ['restaurant billing software', 'GST billing software', 'billing software for restaurants', 'restaurant invoice software', 'restaurant payment management'],
+  title: 'Restaurant Billing Software India | GST Billing System for Restaurants | NexDine',
+  description: 'Manage restaurant billing, GST invoices, split payments, UPI payments and customer transactions with NexDine Restaurant Billing Software India.',
+  keywords: ['restaurant billing software India', 'GST billing software India', 'billing software for restaurants India', 'restaurant invoice software India', 'restaurant payment management India', 'restaurant POS software India', 'restaurant software Andhra Pradesh', 'restaurant POS Hyderabad', 'restaurant POS Bangalore', 'restaurant POS Chennai'],
   openGraph: {
-    title: 'Restaurant Billing Software | GST Billing System for Restaurants | NexDine',
-    description: 'Manage restaurant billing, GST invoices, split payments, UPI payments and customer transactions with NexDine Restaurant Billing Software.',
+    title: 'Restaurant Billing Software India | GST Billing System for Restaurants | NexDine',
+    description: 'Manage restaurant billing, GST invoices, split payments, UPI payments and customer transactions with NexDine Restaurant Billing Software India.',
     type: 'website',
     url: 'https://nexdine.myteknoland.com/restaurant-billing-software',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Restaurant Billing Software | GST Billing System for Restaurants | NexDine',
-    description: 'Manage restaurant billing, GST invoices, split payments, UPI payments and customer transactions with NexDine Restaurant Billing Software.',
+    title: 'Restaurant Billing Software India | GST Billing System for Restaurants | NexDine',
+    description: 'Manage restaurant billing, GST invoices, split payments, UPI payments and customer transactions with NexDine Restaurant Billing Software India.',
   },
   alternates: {
     canonical: 'https://nexdine.myteknoland.com/restaurant-billing-software',

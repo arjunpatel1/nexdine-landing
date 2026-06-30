@@ -5,19 +5,19 @@ import CTA from '@/components/sections/CTA'
 import { generateFAQSchema, generateBreadcrumbSchema } from '@/lib/schema'
 
 export const metadata: Metadata = {
-  title: 'Restaurant Inventory Management Software - Reduce Food Waste | NexDine',
-  description: 'NexDine restaurant inventory management software tracks stock in real-time, reduces waste, optimizes costs, and prevents stockouts. Automatic deductions, low-stock alerts, and detailed reporting.',
-  keywords: ['restaurant inventory management software', 'food inventory system', 'restaurant stock management', 'kitchen inventory software', 'NexDine inventory'],
+  title: 'Restaurant Inventory Management Software India - Reduce Food Waste | NexDine',
+  description: 'NexDine restaurant inventory management software India tracks stock in real-time, reduces waste, optimizes costs, and prevents stockouts. Automatic deductions, low-stock alerts, and detailed reporting.',
+  keywords: ['restaurant inventory management software India', 'food inventory system India', 'restaurant stock management India', 'kitchen inventory software India', 'NexDine inventory', 'restaurant POS software India', 'restaurant billing software India', 'restaurant software Andhra Pradesh', 'restaurant POS Hyderabad', 'restaurant POS Bangalore', 'restaurant POS Chennai'],
   openGraph: {
-    title: 'Restaurant Inventory Management Software - Reduce Food Waste | NexDine',
-    description: 'NexDine restaurant inventory management software tracks stock in real-time, reduces waste, optimizes costs.',
+    title: 'Restaurant Inventory Management Software India - Reduce Food Waste | NexDine',
+    description: 'NexDine restaurant inventory management software India tracks stock in real-time, reduces waste, optimizes costs.',
     type: 'website',
     url: 'https://nexdine.myteknoland.com/restaurant-inventory-management',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Restaurant Inventory Management Software - Reduce Food Waste | NexDine',
-    description: 'NexDine restaurant inventory management software tracks stock in real-time.',
+    title: 'Restaurant Inventory Management Software India - Reduce Food Waste | NexDine',
+    description: 'NexDine restaurant inventory management software India tracks stock in real-time.',
   },
   alternates: {
     canonical: 'https://nexdine.myteknoland.com/restaurant-inventory-management',

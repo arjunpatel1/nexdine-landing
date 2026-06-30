@@ -5,19 +5,19 @@ import CTA from '@/components/sections/CTA'
 import { generateFAQSchema, generateBreadcrumbSchema } from '@/lib/schema'
 
 export const metadata: Metadata = {
-  title: 'Kitchen Display System - KDS Software for Restaurants | NexDine',
-  description: 'Streamline kitchen operations with NexDine Kitchen Display System. Digital KDS replaces paper tickets, reduces errors, speeds up food preparation, and improves order accuracy. Try free for 14 days.',
-  keywords: ['kitchen display system', 'KDS software', 'restaurant KDS', 'digital kitchen display', 'kitchen order ticket system', 'NexDine KDS'],
+  title: 'Kitchen Display System India - KDS Software for Restaurants | NexDine',
+  description: 'Streamline kitchen operations with NexDine Kitchen Display System India. Digital KDS replaces paper tickets, reduces errors, speeds up food preparation, and improves order accuracy. Try free for 14 days.',
+  keywords: ['kitchen display system India', 'KDS software India', 'restaurant KDS India', 'digital kitchen display India', 'kitchen order ticket system India', 'NexDine KDS', 'restaurant POS software India', 'restaurant billing software India', 'restaurant software Andhra Pradesh', 'restaurant POS Hyderabad', 'restaurant POS Bangalore', 'restaurant POS Chennai'],
   openGraph: {
-    title: 'Kitchen Display System - KDS Software for Restaurants | NexDine',
-    description: 'Streamline kitchen operations with NexDine Kitchen Display System. Digital KDS replaces paper tickets, reduces errors, speeds up food preparation.',
+    title: 'Kitchen Display System India - KDS Software for Restaurants | NexDine',
+    description: 'Streamline kitchen operations with NexDine Kitchen Display System India. Digital KDS replaces paper tickets, reduces errors, speeds up food preparation.',
     type: 'website',
     url: 'https://nexdine.myteknoland.com/kitchen-display-system',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Kitchen Display System - KDS Software for Restaurants | NexDine',
-    description: 'Streamline kitchen operations with NexDine Kitchen Display System.',
+    title: 'Kitchen Display System India - KDS Software for Restaurants | NexDine',
+    description: 'Streamline kitchen operations with NexDine Kitchen Display System India.',
   },
   alternates: {
     canonical: 'https://nexdine.myteknoland.com/kitchen-display-system',

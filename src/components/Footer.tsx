@@ -54,9 +54,15 @@ export default function Footer () {
               <Logo size={36} />
               <span className="text-xl font-bold">NexDine</span>
             </Link>
-            <p className="text-sm text-muted-foreground max-w-xs mb-6">
-              The enterprise restaurant management platform trusted by thousands of restaurants worldwide.
+            <p className="text-sm text-muted-foreground max-w-xs mb-4">
+              The enterprise restaurant management platform trusted by thousands of restaurants in India.
             </p>
+            <address className="text-sm text-muted-foreground max-w-xs mb-6 not-italic">
+              <strong>Head Office:</strong><br />
+              1/1, Bangalore Main Road<br />
+              Rayachoty, Andhra Pradesh 516269<br />
+              India
+            </address>
             <div className="flex items-center gap-3">
               {[
                 { Icon: Linkedin, name: 'LinkedIn', href: 'https://www.linkedin.com/company/my-teknoland-software-pvt-ltd' },
@@ -113,7 +119,7 @@ export default function Footer () {
               Myteknoland
             </a>
             {' '}
-            Product.
+            Product. Serving restaurants across India including Hyderabad, Bangalore, Chennai, Mumbai, Delhi, and Andhra Pradesh.
           </p>
           <div className="flex items-center gap-6">
             <Link href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">

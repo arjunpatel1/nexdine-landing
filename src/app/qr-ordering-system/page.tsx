@@ -5,19 +5,19 @@ import CTA from '@/components/sections/CTA'
 import { generateFAQSchema, generateBreadcrumbSchema } from '@/lib/schema'
 
 export const metadata: Metadata = {
-  title: 'QR Ordering System - Contactless Restaurant Menu | NexDine',
-  description: 'NexDine QR ordering system enables contactless dining. Customers scan, browse, and order from their phones. No app needed. Integrates with POS and KDS. Start free trial.',
-  keywords: ['QR ordering system', 'QR menu ordering software', 'contactless restaurant ordering', 'digital menu QR code', 'NexDine QR'],
+  title: 'QR Ordering System India - Contactless Restaurant Menu | NexDine',
+  description: 'NexDine QR ordering system India enables contactless dining. Customers scan, browse, and order from their phones. No app needed. Integrates with POS and KDS. Start free trial.',
+  keywords: ['QR ordering system India', 'QR menu ordering software India', 'contactless restaurant ordering India', 'digital menu QR code India', 'NexDine QR', 'restaurant POS software India', 'restaurant billing software India', 'restaurant software Andhra Pradesh', 'restaurant POS Hyderabad', 'restaurant POS Bangalore', 'restaurant POS Chennai'],
   openGraph: {
-    title: 'QR Ordering System - Contactless Restaurant Menu | NexDine',
-    description: 'NexDine QR ordering system enables contactless dining. Customers scan, browse, and order from their phones.',
+    title: 'QR Ordering System India - Contactless Restaurant Menu | NexDine',
+    description: 'NexDine QR ordering system India enables contactless dining. Customers scan, browse, and order from their phones.',
     type: 'website',
     url: 'https://nexdine.myteknoland.com/qr-ordering-system',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'QR Ordering System - Contactless Restaurant Menu | NexDine',
-    description: 'NexDine QR ordering system enables contactless dining.',
+    title: 'QR Ordering System India - Contactless Restaurant Menu | NexDine',
+    description: 'NexDine QR ordering system India enables contactless dining.',
   },
   alternates: {
     canonical: 'https://nexdine.myteknoland.com/qr-ordering-system',

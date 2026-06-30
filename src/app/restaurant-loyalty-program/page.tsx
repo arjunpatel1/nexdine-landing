@@ -5,19 +5,19 @@ import CTA from '@/components/sections/CTA'
 import { generateFAQSchema, generateBreadcrumbSchema } from '@/lib/schema'
 
 export const metadata: Metadata = {
-  title: 'Restaurant Loyalty Program - Customer Retention Software | NexDine',
-  description: 'Build customer loyalty with NexDine restaurant loyalty program. Reward points, personalized offers, and retention strategies to increase repeat business and lifetime value. Try free for 14 days.',
-  keywords: ['restaurant loyalty program', 'customer retention software', 'restaurant rewards program', 'loyalty management system', 'NexDine loyalty'],
+  title: 'Restaurant Loyalty Program India - Customer Retention Software | NexDine',
+  description: 'Build customer loyalty with NexDine restaurant loyalty program India. Reward points, personalized offers, and retention strategies to increase repeat business and lifetime value. Try free for 14 days.',
+  keywords: ['restaurant loyalty program India', 'customer retention software India', 'restaurant rewards program India', 'loyalty management system India', 'NexDine loyalty', 'restaurant POS software India', 'restaurant billing software India', 'restaurant software Andhra Pradesh', 'restaurant POS Hyderabad', 'restaurant POS Bangalore', 'restaurant POS Chennai'],
   openGraph: {
-    title: 'Restaurant Loyalty Program - Customer Retention Software | NexDine',
-    description: 'Build customer loyalty with NexDine restaurant loyalty program. Reward points, personalized offers, and retention strategies.',
+    title: 'Restaurant Loyalty Program India - Customer Retention Software | NexDine',
+    description: 'Build customer loyalty with NexDine restaurant loyalty program India. Reward points, personalized offers, and retention strategies.',
     type: 'website',
     url: 'https://nexdine.myteknoland.com/restaurant-loyalty-program',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Restaurant Loyalty Program - Customer Retention Software | NexDine',
-    description: 'Build customer loyalty with NexDine restaurant loyalty program.',
+    title: 'Restaurant Loyalty Program India - Customer Retention Software | NexDine',
+    description: 'Build customer loyalty with NexDine restaurant loyalty program India.',
   },
   alternates: {
     canonical: 'https://nexdine.myteknoland.com/restaurant-loyalty-program',

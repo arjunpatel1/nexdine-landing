@@ -7,19 +7,19 @@ import Stats from '@/components/sections/Stats'
 import { generateFAQSchema, FEATURES_FAQS, generateBreadcrumbSchema } from '@/lib/schema'
 
 export const metadata: Metadata = {
-  title: 'Features - Complete Restaurant Management Suite | NexDine',
-  description: 'Explore every capability NexDine offers to modernize your restaurant operations including POS, inventory, CRM, QR ordering, and more.',
-  keywords: ['restaurant POS features', 'QR ordering system', 'kitchen display system', 'restaurant CRM', 'NexDine features'],
+  title: 'Features - Restaurant POS Software India | Complete Management Suite | NexDine',
+  description: 'Explore every capability NexDine restaurant POS software India offers to modernize your restaurant operations including POS, inventory, CRM, QR ordering, and more.',
+  keywords: ['restaurant POS features India', 'QR ordering system India', 'kitchen display system India', 'restaurant CRM India', 'NexDine features', 'restaurant POS software India', 'restaurant billing software India', 'restaurant software Andhra Pradesh', 'restaurant POS Hyderabad', 'restaurant POS Bangalore', 'restaurant POS Chennai'],
   openGraph: {
-    title: 'Features - Complete Restaurant Management Suite | NexDine',
-    description: 'Explore every capability NexDine offers to modernize your restaurant operations.',
+    title: 'Features - Restaurant POS Software India | Complete Management Suite | NexDine',
+    description: 'Explore every capability NexDine restaurant POS software India offers to modernize your restaurant operations.',
     type: 'website',
     url: 'https://nexdine.myteknoland.com/features',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Features - Complete Restaurant Management Suite | NexDine',
-    description: 'Explore every capability NexDine offers to modernize your restaurant operations.',
+    title: 'Features - Restaurant POS Software India | Complete Management Suite | NexDine',
+    description: 'Explore every capability NexDine restaurant POS software India offers to modernize your restaurant operations.',
   },
   alternates: {
     canonical: 'https://nexdine.myteknoland.com/features',
