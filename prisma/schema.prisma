@@ -1,0 +1,133 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+
+
+model categories {
+  id                    BigInt                  @id @default(autoincrement()) @db.UnsignedBigInt
+  name                  String                  @db.VarChar(255)
+  slug                  String                  @unique(map: "categories_slug_unique") @db.VarChar(255)
+  status                categories_status       @default(active)
+  created_at            DateTime?               @db.Timestamp(0)
+  updated_at            DateTime?               @db.Timestamp(0)
+  restaurant_categories restaurant_categories[]
+  votes                 votes[]
+  winners               winners[]
+}
+
+
+
+
+
+model otp_verifications {
+  id          BigInt    @id @default(autoincrement()) @db.UnsignedBigInt
+  mobile      String    @db.VarChar(255)
+  otp         String    @db.VarChar(255)
+  expires_at  DateTime  @default(now()) @db.Timestamp(0)
+  is_verified Boolean   @default(false)
+  created_at  DateTime? @db.Timestamp(0)
+  updated_at  DateTime? @db.Timestamp(0)
+
+  @@index([mobile], map: "otp_verifications_mobile_index")
+}
+
+
+
+model restaurant_categories {
+  id            BigInt      @id @default(autoincrement()) @db.UnsignedBigInt
+  restaurant_id BigInt      @db.UnsignedBigInt
+  category_id   BigInt      @db.UnsignedBigInt
+  created_at    DateTime?   @db.Timestamp(0)
+  updated_at    DateTime?   @db.Timestamp(0)
+  categories    categories  @relation(fields: [category_id], references: [id], onDelete: Cascade, onUpdate: Restrict, map: "restaurant_categories_category_id_foreign")
+  restaurants   restaurants @relation(fields: [restaurant_id], references: [id], onDelete: Cascade, onUpdate: Restrict, map: "restaurant_categories_restaurant_id_foreign")
+
+  @@index([category_id], map: "restaurant_categories_category_id_foreign")
+  @@index([restaurant_id], map: "restaurant_categories_restaurant_id_foreign")
+}
+
+model restaurants {
+  id                    BigInt                  @id @default(autoincrement()) @db.UnsignedBigInt
+  user_id               BigInt?                 @db.UnsignedBigInt
+  restaurant_name       String                  @db.VarChar(255)
+  owner_name            String                  @db.VarChar(255)
+  logo                  String?                 @db.LongText
+  location              String                  @db.VarChar(255)
+  address               String?                 @db.Text
+  description           String                  @db.Text
+  status                restaurants_status      @default(pending)
+  slug                  String                  @unique(map: "restaurants_slug_unique") @db.VarChar(255)
+  created_at            DateTime?               @db.Timestamp(0)
+  updated_at            DateTime?               @db.Timestamp(0)
+  restaurant_categories restaurant_categories[]
+  users                 users?                  @relation(fields: [user_id], references: [id], onDelete: Cascade, onUpdate: Restrict, map: "restaurants_user_id_foreign")
+  votes                 votes[]
+  winners               winners[]
+
+  @@index([user_id], map: "restaurants_user_id_foreign")
+}
+
+
+
+model users {
+  id          BigInt        @id @default(autoincrement()) @db.UnsignedBigInt
+  mobile      String        @unique(map: "users_mobile_unique") @db.VarChar(255)
+  name        String?       @db.VarChar(255)
+  role        users_role    @default(voter)
+  password    String?       @db.VarChar(255)
+  is_verified Boolean       @default(false)
+  created_at  DateTime?     @db.Timestamp(0)
+  updated_at  DateTime?     @db.Timestamp(0)
+  restaurants restaurants[]
+}
+
+model votes {
+  id            BigInt      @id @default(autoincrement()) @db.UnsignedBigInt
+  user_id       BigInt      @unique(map: "votes_user_unique") @db.UnsignedBigInt
+  restaurant_id BigInt      @db.UnsignedBigInt
+  category_id   BigInt      @db.UnsignedBigInt
+  created_at    DateTime?   @db.Timestamp(0)
+  updated_at    DateTime?   @db.Timestamp(0)
+  categories    categories  @relation(fields: [category_id], references: [id], onDelete: Cascade, onUpdate: Restrict, map: "votes_category_id_foreign")
+  restaurants   restaurants @relation(fields: [restaurant_id], references: [id], onDelete: Cascade, onUpdate: Restrict, map: "votes_restaurant_id_foreign")
+
+  @@index([category_id], map: "votes_category_id_foreign")
+  @@index([restaurant_id], map: "votes_restaurant_id_foreign")
+}
+
+model winners {
+  id            BigInt      @id @default(autoincrement()) @db.UnsignedBigInt
+  restaurant_id BigInt      @db.UnsignedBigInt
+  category_id   BigInt      @db.UnsignedBigInt
+  award_year    Int
+  created_at    DateTime?   @db.Timestamp(0)
+  updated_at    DateTime?   @db.Timestamp(0)
+  categories    categories  @relation(fields: [category_id], references: [id], onDelete: Cascade, onUpdate: Restrict, map: "winners_category_id_foreign")
+  restaurants   restaurants @relation(fields: [restaurant_id], references: [id], onDelete: Cascade, onUpdate: Restrict, map: "winners_restaurant_id_foreign")
+
+  @@unique([category_id, award_year], map: "winners_category_id_award_year_unique")
+  @@index([restaurant_id], map: "winners_restaurant_id_foreign")
+}
+
+enum categories_status {
+  active
+  inactive
+}
+
+enum users_role {
+  admin
+  owner
+  voter
+}
+
+enum restaurants_status {
+  pending
+  approved
+  rejected
+}

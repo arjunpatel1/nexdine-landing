@@ -1,3 +1,8 @@
 {
-  "/page": "app/page.js"
+  "/admin/restaurants/report/page": "app/admin/restaurants/report/page.js",
+  "/admin/votes/page": "app/admin/votes/page.js",
+  "/admin/winners/page": "app/admin/winners/page.js",
+  "/admin/dashboard/page": "app/admin/dashboard/page.js",
+  "/admin/categories/page": "app/admin/categories/page.js",
+  "/admin/restaurants/page": "app/admin/restaurants/page.js"
 }

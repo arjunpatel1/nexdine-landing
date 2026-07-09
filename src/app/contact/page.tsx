@@ -7,9 +7,9 @@ import { generateBreadcrumbSchema } from '@/lib/schema'
 import { trackContactFormSubmit } from '@/lib/analytics'
 
 const CONTACT = {
-  email: 'info@myteknoland.net',
-  phone: '91-72888 76715',
-  phoneRaw: '917288876715',
+  email: 'nexdine@myteknoland.com',
+  phone: '91-70327 83283',
+  phoneRaw: '917032783283',
   address: '1/1, Bangalore Main Road, Rayachoty',
 }
 

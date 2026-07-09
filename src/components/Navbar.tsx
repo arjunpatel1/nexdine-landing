@@ -22,6 +22,15 @@ const navLinks = [
     ],
   },
   { label: 'Pricing', href: '/pricing' },
+  {
+    label: 'Award',
+    href: '#',
+    children: [
+      { label: 'About', href: '/about' },
+      { label: 'Categories', href: '/categories' },
+      { label: 'Restaurant', href: '/restaurant' },
+    ],
+  },
   { label: 'Contact', href: '/contact' },
 ]
 

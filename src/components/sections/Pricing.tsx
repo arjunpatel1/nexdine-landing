@@ -15,11 +15,10 @@ const plans = [
     features: [
       '1 Branch',
       '2 POS Terminals',
-      'Basic QR Ordering',
       'Standard Reports',
       'Email Support',
     ],
-    cta: 'Start Free Trial',
+    cta: 'Book a Demo',
     popular: false,
   },
   {
@@ -36,7 +35,7 @@ const plans = [
       'WhatsApp Automation',
       'Priority Support',
     ],
-    cta: 'Start Free Trial',
+    cta: 'Book a Demo',
     popular: true,
   },
   {
@@ -76,7 +75,7 @@ export default function Pricing () {
             Simple, Transparent Pricing
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Start free for 14 days. No credit card required. Scale as you grow.
+            Start free for 3 months. No credit card required. Scale as you grow.
           </p>
         </motion.div>
 
