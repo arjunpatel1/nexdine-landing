@@ -18,12 +18,12 @@ import Workflow from '@/components/sections/Workflow'
 import { generateFAQSchema, HOME_FAQS } from '@/lib/schema'
 
 export const metadata: Metadata = {
-  title: 'Restaurant POS & Management Software in India | NexDine',
-  description: 'NexDine is India\'s all-in-one restaurant management software with POS billing, QR ordering, KDS, inventory management, CRM, WhatsApp automation and multi-branch control. Book a free demo today.',
-  keywords: ['restaurant POS software India', 'restaurant billing software India', 'restaurant POS Hyderabad', 'restaurant POS Bangalore', 'restaurant POS Chennai', 'restaurant POS Mumbai', 'restaurant POS Delhi', 'restaurant POS Telangana', 'restaurant POS Karnataka', 'restaurant POS Tamil Nadu', 'restaurant POS Andhra Pradesh'],
+  title: 'Restaurant Management Software India - All-in-One POS & Billing System | NexDine',
+  description: 'NexDine is India\'s leading restaurant management software with POS billing, QR ordering, KDS, inventory management, CRM, WhatsApp automation and multi-branch control. Book a free demo today.',
+  keywords: ['restaurant management software India', 'restaurant management system', 'restaurant POS software India', 'restaurant POS system India', 'restaurant software for small restaurants', 'cloud restaurant management software'],
   openGraph: {
-    title: 'Restaurant POS & Management Software in India | NexDine',
-    description: 'NexDine is India\'s all-in-one restaurant management software with POS billing, QR ordering, KDS, inventory management, CRM, WhatsApp automation and multi-branch control. Book a free demo today.',
+    title: 'Restaurant Management Software India - All-in-One POS & Billing System | NexDine',
+    description: 'NexDine is India\'s leading restaurant management software with POS billing, QR ordering, KDS, inventory management, CRM, WhatsApp automation and multi-branch control. Book a free demo today.',
     type: 'website',
     url: 'https://nexdine.myteknoland.com',
     images: [
@@ -37,8 +37,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Restaurant POS & Management Software in India | NexDine',
-    description: 'NexDine is India\'s all-in-one restaurant management software with POS billing, QR ordering, KDS, inventory management, CRM, WhatsApp automation and multi-branch control. Book a free demo today.',
+    title: 'Restaurant Management Software India - All-in-One POS & Billing System | NexDine',
+    description: 'NexDine is India\'s leading restaurant management software with POS billing, QR ordering, KDS, inventory management, CRM, WhatsApp automation and multi-branch control. Book a free demo today.',
     images: ['https://nexdine.myteknoland.com/og-image.png'],
   },
   alternates: {

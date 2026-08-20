@@ -7,7 +7,7 @@ import { generateFAQSchema, generateBreadcrumbSchema } from '@/lib/schema'
 export const metadata: Metadata = {
   title: 'Restaurant Inventory Management Software India - Reduce Food Waste | NexDine',
   description: 'NexDine restaurant inventory management software India tracks stock in real-time, reduces waste, optimizes costs, and prevents stockouts. Automatic deductions, low-stock alerts, and detailed reporting.',
-  keywords: ['restaurant inventory management software India', 'food inventory system India', 'restaurant stock management India', 'kitchen inventory software India', 'NexDine inventory', 'restaurant POS software India', 'restaurant billing software India', 'restaurant software Andhra Pradesh', 'restaurant POS Hyderabad', 'restaurant POS Bangalore', 'restaurant POS Chennai'],
+  keywords: ['restaurant inventory management software', 'restaurant inventory software India', 'restaurant inventory management', 'restaurant stock management software', 'food inventory management software', 'restaurant inventory tracking software', 'restaurant stock management system', 'restaurant food cost management software'],
   openGraph: {
     title: 'Restaurant Inventory Management Software India - Reduce Food Waste | NexDine',
     description: 'NexDine restaurant inventory management software India tracks stock in real-time, reduces waste, optimizes costs.',

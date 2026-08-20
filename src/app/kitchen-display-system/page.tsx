@@ -7,7 +7,7 @@ import { generateFAQSchema, generateBreadcrumbSchema } from '@/lib/schema'
 export const metadata: Metadata = {
   title: 'Kitchen Display System India - KDS Software for Restaurants | NexDine',
   description: 'Streamline kitchen operations with NexDine Kitchen Display System India. Digital KDS replaces paper tickets, reduces errors, speeds up food preparation, and improves order accuracy. Try free for 14 days.',
-  keywords: ['kitchen display system India', 'KDS software India', 'restaurant KDS India', 'digital kitchen display India', 'kitchen order ticket system India', 'NexDine KDS', 'restaurant POS software India', 'restaurant billing software India', 'restaurant software Andhra Pradesh', 'restaurant POS Hyderabad', 'restaurant POS Bangalore', 'restaurant POS Chennai'],
+  keywords: ['restaurant kitchen display system India', 'KDS software for restaurants', 'restaurant kitchen management software', 'digital kitchen display system', 'restaurant KDS', 'kitchen order management software'],
   openGraph: {
     title: 'Kitchen Display System India - KDS Software for Restaurants | NexDine',
     description: 'Streamline kitchen operations with NexDine Kitchen Display System India. Digital KDS replaces paper tickets, reduces errors, speeds up food preparation.',

@@ -7,7 +7,7 @@ import { generateFAQSchema, generateBreadcrumbSchema } from '@/lib/schema'
 export const metadata: Metadata = {
   title: 'QR Ordering System India - Contactless Restaurant Menu | NexDine',
   description: 'NexDine QR ordering system India enables contactless dining. Customers scan, browse, and order from their phones. No app needed. Integrates with POS and KDS. Start free trial.',
-  keywords: ['QR ordering system India', 'QR menu ordering software India', 'contactless restaurant ordering India', 'digital menu QR code India', 'NexDine QR', 'restaurant POS software India', 'restaurant billing software India', 'restaurant software Andhra Pradesh', 'restaurant POS Hyderabad', 'restaurant POS Bangalore', 'restaurant POS Chennai'],
+  keywords: ['restaurant QR ordering system India', 'QR menu ordering system', 'QR code ordering for restaurants', 'restaurant online ordering system', 'digital menu and ordering system', 'contactless restaurant ordering system'],
   openGraph: {
     title: 'QR Ordering System India - Contactless Restaurant Menu | NexDine',
     description: 'NexDine QR ordering system India enables contactless dining. Customers scan, browse, and order from their phones.',

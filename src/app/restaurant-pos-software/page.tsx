@@ -7,7 +7,7 @@ import { generateFAQSchema, generateBreadcrumbSchema } from '@/lib/schema'
 export const metadata: Metadata = {
   title: 'Restaurant POS Software India - Best Billing System for Restaurants | NexDine',
   description: 'Transform your restaurant operations with NexDine restaurant POS software India. Fast billing, inventory management, QR ordering, and multi-branch support. Try free for 14 days.',
-  keywords: ['restaurant POS software India', 'restaurant billing software India', 'POS system for restaurants India', 'restaurant management software India', 'NexDine POS India', 'restaurant POS Hyderabad', 'restaurant POS Bangalore', 'restaurant POS Chennai', 'restaurant software Andhra Pradesh'],
+  keywords: ['restaurant POS software India', 'restaurant POS system India', 'restaurant POS software', 'POS software for restaurants in India', 'POS system for restaurants in India', 'restaurant point of sale software India', 'restaurant POS billing system', 'restaurant POS with GST billing'],
   openGraph: {
     title: 'Restaurant POS Software India - Best Billing System for Restaurants | NexDine',
     description: 'Transform your restaurant operations with NexDine restaurant POS software India. Fast billing, inventory management, QR ordering.',

@@ -7,7 +7,7 @@ import { generateFAQSchema, generateBreadcrumbSchema } from '@/lib/schema'
 export const metadata: Metadata = {
   title: 'Restaurant Billing Software India | GST Billing System for Restaurants | NexDine',
   description: 'Manage restaurant billing, GST invoices, split payments, UPI payments and customer transactions with NexDine Restaurant Billing Software India.',
-  keywords: ['restaurant billing software India', 'GST billing software India', 'billing software for restaurants India', 'restaurant invoice software India', 'restaurant payment management India', 'restaurant POS software India', 'restaurant software Andhra Pradesh', 'restaurant POS Hyderabad', 'restaurant POS Bangalore', 'restaurant POS Chennai'],
+  keywords: ['restaurant billing software India', 'restaurant billing software', 'restaurant billing system India', 'GST billing software for restaurants', 'GST restaurant billing software', 'GST compliant restaurant billing software', 'restaurant GST billing system', 'restaurant invoice software India', 'restaurant billing software with GST', 'restaurant billing software with inventory'],
   openGraph: {
     title: 'Restaurant Billing Software India | GST Billing System for Restaurants | NexDine',
     description: 'Manage restaurant billing, GST invoices, split payments, UPI payments and customer transactions with NexDine Restaurant Billing Software India.',

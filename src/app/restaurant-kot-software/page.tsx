@@ -7,7 +7,7 @@ import { generateFAQSchema, generateBreadcrumbSchema } from '@/lib/schema'
 export const metadata: Metadata = {
   title: 'KOT Software - Kitchen Order Ticket System | NexDine',
   description: 'NexDine KOT software replaces paper tickets with digital kitchen displays. Real-time order routing, course sequencing, priority management, and reduced errors. Start free trial.',
-  keywords: ['KOT software', 'kitchen order ticket software', 'kitchen display system', 'digital KOT system', 'NexDine KOT'],
+  keywords: ['restaurant KOT software India', 'KOT billing software', 'kitchen order ticket software', 'digital KOT software', 'restaurant kitchen management software'],
   openGraph: {
     title: 'KOT Software - Kitchen Order Ticket System | NexDine',
     description: 'NexDine KOT software replaces paper tickets with digital kitchen displays. Real-time order routing.',

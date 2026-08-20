@@ -7,7 +7,7 @@ import { generateFAQSchema, generateBreadcrumbSchema } from '@/lib/schema'
 export const metadata: Metadata = {
   title: 'Restaurant Loyalty Program India - Customer Retention Software | NexDine',
   description: 'Build customer loyalty with NexDine restaurant loyalty program India. Reward points, personalized offers, and retention strategies to increase repeat business and lifetime value. Try free for 14 days.',
-  keywords: ['restaurant loyalty program India', 'customer retention software India', 'restaurant rewards program India', 'loyalty management system India', 'NexDine loyalty', 'restaurant POS software India', 'restaurant billing software India', 'restaurant software Andhra Pradesh', 'restaurant POS Hyderabad', 'restaurant POS Bangalore', 'restaurant POS Chennai'],
+  keywords: ['restaurant loyalty program software', 'restaurant loyalty software India', 'restaurant customer loyalty program', 'restaurant customer retention software', 'restaurant rewards software', 'restaurant loyalty management system'],
   openGraph: {
     title: 'Restaurant Loyalty Program India - Customer Retention Software | NexDine',
     description: 'Build customer loyalty with NexDine restaurant loyalty program India. Reward points, personalized offers, and retention strategies.',

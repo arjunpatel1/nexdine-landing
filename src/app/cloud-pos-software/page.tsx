@@ -7,7 +7,7 @@ import { generateFAQSchema, generateBreadcrumbSchema } from '@/lib/schema'
 export const metadata: Metadata = {
   title: 'Cloud POS Software - Modern Restaurant Management System | NexDine',
   description: 'NexDine cloud POS software enables restaurant management from anywhere. Real-time sync, multi-location support, automatic backups, and 24/7 access. Start free trial.',
-  keywords: ['cloud POS software', 'cloud restaurant management software', 'web-based POS', 'online restaurant POS', 'NexDine cloud'],
+  keywords: ['cloud POS software India', 'cloud restaurant POS software', 'cloud POS for restaurants', 'cloud based restaurant POS', 'online restaurant management software', 'restaurant POS cloud software'],
   openGraph: {
     title: 'Cloud POS Software - Modern Restaurant Management System | NexDine',
     description: 'NexDine cloud POS software enables restaurant management from anywhere. Real-time sync, multi-location support.',

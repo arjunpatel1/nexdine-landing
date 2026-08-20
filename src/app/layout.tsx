@@ -247,6 +247,7 @@ const structuredData = {
 }
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://nexdine.myteknoland.com'),
   title: {
     default: 'Restaurant POS Software | QR Ordering, Billing & Inventory Management | NexDine',
     template: '%s | NexDine',

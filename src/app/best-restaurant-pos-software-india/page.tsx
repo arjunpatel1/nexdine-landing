@@ -7,7 +7,7 @@ import { generateFAQSchema, generateBreadcrumbSchema } from '@/lib/schema'
 export const metadata: Metadata = {
   title: 'Best Restaurant POS Software in India 2024 - Complete Guide',
   description: 'Discover the best restaurant POS software in India. Compare features, pricing, and reviews of top POS systems including NexDine, Petpooja, Posist, and more. Find the right POS for your restaurant.',
-  keywords: ['best restaurant POS software India', 'restaurant POS comparison India', 'top POS systems India', 'restaurant billing software India', 'NexDine POS India'],
+  keywords: ['best restaurant POS software India', 'best POS system for restaurants in India', 'restaurant POS software India', 'restaurant POS system India', 'restaurant management software India', 'cloud restaurant POS software'],
   openGraph: {
     title: 'Best Restaurant POS Software in India 2024 - Complete Guide',
     description: 'Discover the best restaurant POS software in India. Compare features, pricing, and reviews.',
