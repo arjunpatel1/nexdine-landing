@@ -36,7 +36,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     question: 'Is NexDine a good alternative to Petpooja for small restaurants?',
-    answer: 'Yes, NexDine is an excellent alternative to Petpooja for small to medium restaurants. NexDine offers transparent pricing starting at ₹3,999/month with all features included, while Petpooja has complex pricing with hidden costs. NexDine also works on any device without hardware requirements, making it more accessible for smaller restaurants.',
+    answer: 'Yes, NexDine is an excellent alternative to Petpooja for small to medium restaurants. NexDine offers transparent pricing with a Free Starter plan and Professional at ₹580/month, while Petpooja has complex pricing with hidden costs. NexDine also works on any device without hardware requirements, making it more accessible for smaller restaurants.',
   },
   {
     question: 'Can I switch from Petpooja to NexDine easily?',
@@ -265,7 +265,7 @@ export default function PetpoojaVsNexDineBlogPage() {
 
             <h3 className="text-xl font-semibold mb-3 mt-6">NexDine Pricing Model</h3>
             <p className="mb-4">
-              NexDine offers transparent, all-inclusive pricing starting at ₹3,999/month. This includes:
+              NexDine offers transparent, all-inclusive pricing with a Free Starter plan and Professional at ₹580/month. This includes:
             </p>
             <ul className="list-disc pl-6 mb-4">
               <li>All core features (POS, inventory, QR ordering, KDS)</li>

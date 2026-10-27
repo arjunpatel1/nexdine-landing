@@ -27,7 +27,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     question: 'Which is better for small restaurants - Petpooja or NexDine?',
-    answer: 'For small restaurants, NexDine offers better value with transparent pricing starting at ₹3,999/month, no hidden fees, and all essential features included. Petpooja often requires additional hardware and has complex pricing tiers. NexDine also works on any device, while Petpooja may require specific hardware.',
+    answer: 'For small restaurants, NexDine offers better value with transparent pricing with a Free Starter plan and Professional at ₹580/month, no hidden fees, and all essential features included. Petpooja often requires additional hardware and has complex pricing tiers. NexDine also works on any device, while Petpooja may require specific hardware.',
   },
   {
     question: 'Does NexDine offer the same features as Petpooja?',
@@ -35,7 +35,7 @@ const faqs = [
   },
   {
     question: 'How does pricing compare between Petpooja and NexDine?',
-    answer: 'NexDine offers transparent pricing starting at ₹3,999/month with no hidden fees. Petpooja\'s pricing is often quoted per outlet and may include additional costs for hardware, implementation, and support. NexDine provides clear, all-inclusive pricing with no surprises.',
+    answer: 'NexDine offers transparent pricing with a Free Starter plan and Professional at ₹580/month with no hidden fees. Petpooja\'s pricing is often quoted per outlet and may include additional costs for hardware, implementation, and support. NexDine provides clear, all-inclusive pricing with no surprises.',
   },
   {
     question: 'Can I switch from Petpooja to NexDine easily?',
@@ -181,7 +181,7 @@ export default function PetpoojaVsNexDinePage() {
 
             <h3 className="text-xl font-semibold mb-3 mt-6">NexDine Pricing</h3>
             <p className="mb-4">
-              NexDine offers transparent, all-inclusive pricing starting at ₹3,999/month. This includes:
+              NexDine offers transparent, all-inclusive pricing with a Free Starter plan and Professional at ₹580/month. This includes:
             </p>
             <ul className="list-disc pl-6 mb-4">
               <li>All core features (POS, inventory, QR ordering, KDS)</li>

@@ -181,7 +181,7 @@ export default function RestroworksVsNexDinePage() {
 
             <h3 className="text-xl font-semibold mb-3 mt-6">NexDine Pricing</h3>
             <p className="mb-4">
-              NexDine offers transparent, straightforward pricing starting at ₹3,999/month:
+              NexDine offers transparent, straightforward pricing with a Free Starter plan and Professional at ₹580/month:
             </p>
             <ul className="list-disc pl-6 mb-4">
               <li>All features included (no add-on costs)</li>

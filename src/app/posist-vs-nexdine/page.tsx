@@ -27,7 +27,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     question: 'Which is better for small restaurants - Posist or NexDine?',
-    answer: 'For small restaurants, NexDine offers better value with transparent pricing starting at ₹3,999/month and no hidden fees. Posist often requires higher minimum commitments and complex pricing tiers. NexDine also works on any device, while Posist may require specific hardware investments.',
+    answer: 'For small restaurants, NexDine offers better value with transparent pricing with a Free Starter plan and Professional at ₹580/month and no hidden fees. Posist often requires higher minimum commitments and complex pricing tiers. NexDine also works on any device, while Posist may require specific hardware investments.',
   },
   {
     question: 'Does NexDine offer the same features as Posist?',
@@ -35,7 +35,7 @@ const faqs = [
   },
   {
     question: 'How does pricing compare between Posist and NexDine?',
-    answer: 'NexDine offers transparent pricing starting at ₹3,999/month with all features included. Posist pricing is often complex with per-outlet fees, hardware costs, implementation charges, and annual maintenance contracts. NexDine provides clear, all-inclusive pricing with no surprises.',
+    answer: 'NexDine offers transparent pricing with a Free Starter plan and Professional at ₹580/month. Posist pricing is often complex with per-outlet fees, hardware costs, implementation charges, and annual maintenance contracts. NexDine provides clear, all-inclusive pricing with no surprises.',
   },
   {
     question: 'Can I switch from Posist to NexDine easily?',
@@ -182,7 +182,7 @@ export default function PosistVsNexDinePage() {
 
             <h3 className="text-xl font-semibold mb-3 mt-6">NexDine Pricing</h3>
             <p className="mb-4">
-              NexDine offers transparent, all-inclusive pricing starting at ₹3,999/month:
+              NexDine offers transparent, all-inclusive pricing with a Free Starter plan and Professional at ₹580/month:
             </p>
             <ul className="list-disc pl-6 mb-4">
               <li>All core features (POS, inventory, QR ordering, KDS)</li>

@@ -27,11 +27,11 @@ export const metadata: Metadata = {
 const faqs = [
   {
     question: 'What is the best restaurant POS software in India?',
-    answer: 'The best restaurant POS software depends on your specific needs. For small to medium restaurants, NexDine offers excellent value with transparent pricing starting at ₹3,999/month and all features included. For large enterprise chains, Petpooja or Posist may be suitable despite higher costs. Consider your restaurant size, budget, and required features when choosing.',
+    answer: 'The best restaurant POS software depends on your specific needs. For small to medium restaurants, NexDine offers excellent value with a Free Starter plan and Professional at ₹580/month. For large enterprise chains, Petpooja or Posist may be suitable despite higher costs. Consider your restaurant size, budget, and required features when choosing.',
   },
   {
     question: 'How much does restaurant POS software cost in India?',
-    answer: 'Restaurant POS software pricing in India varies significantly. NexDine offers transparent pricing starting at ₹3,999/month with all features included. Other platforms like Petpooja and Posist often charge per outlet with additional costs for hardware, implementation, and advanced features. Total cost can range from ₹3,000 to ₹15,000+ per month depending on the provider and features.',
+    answer: 'Restaurant POS software pricing in India varies significantly. NexDine offers transparent pricing with a Free Starter plan and Professional at ₹580/month. Other platforms like Petpooja and Posist often charge per outlet with additional costs for hardware, implementation, and advanced features. Total cost can range from ₹3,000 to ₹15,000+ per month depending on the provider and features.',
   },
   {
     question: 'Do I need special hardware for restaurant POS software?',
@@ -90,7 +90,7 @@ export default function BestRestaurantPOSSoftwareIndiaPage() {
               <strong>Best For:</strong> Small to medium-sized restaurants, cafes, cloud kitchens, and multi-location restaurants seeking transparent pricing and comprehensive features.
             </p>
             <p className="mb-4">
-              <strong>Pricing:</strong> Starts at ₹3,999/month with all features included.
+              <strong>Pricing:</strong> Free Starter plan; Professional at ₹580/month.
             </p>
             <p className="mb-4">
               <strong>Key Features:</strong> POS billing, inventory management, QR ordering, kitchen display system, CRM & loyalty, WhatsApp automation, multi-branch management, delivery integrations, offline mode.
@@ -181,7 +181,7 @@ export default function BestRestaurantPOSSoftwareIndiaPage() {
                 <tbody>
                   <tr>
                     <td className="border border-border p-4 font-semibold">Starting Price</td>
-                    <td className="border border-border p-4 text-center">₹3,999/mo</td>
+                    <td className="border border-border p-4 text-center">Free / ₹580 (Professional)</td>
                     <td className="border border-border p-4 text-center">Custom</td>
                     <td className="border border-border p-4 text-center">Custom</td>
                     <td className="border border-border p-4 text-center">Custom</td>
@@ -303,7 +303,7 @@ export default function BestRestaurantPOSSoftwareIndiaPage() {
               <li><strong>Transaction Fees:</strong> Charges per order or transaction (some providers)</li>
             </ul>
             <p className="mb-4">
-              NexDine offers transparent pricing starting at ₹3,999/month with all features included and no hidden fees. Other providers may have lower advertised prices but additional costs can significantly increase the total.
+              NexDine offers transparent pricing with a Free Starter plan and Professional at ₹580/month and no hidden fees. Other providers may have lower advertised prices but additional costs can significantly increase the total.
             </p>
 
             <h2 className="text-2xl font-bold mb-4 mt-8">Conclusion</h2>

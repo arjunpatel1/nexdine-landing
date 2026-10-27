@@ -20,15 +20,15 @@ const quickReplies = [
 
 const botResponses: Record<string, string> = {
   'pricing details':
-    'Our plans start at ₹3,999/month for the Starter plan. Professional is ₹9,999/month and Enterprise is custom-priced. You can view all details on our Pricing page.',
+    'Starter is Free. Professional is ₹580/month and Enterprise is custom-priced. You can view all details on our Pricing page.',
   'book a demo':
     'I can help with that! Click the "Book a Demo" button on our site or tell me your preferred time and our team will reach out.',
   'free trial':
-    'Yes! Every plan includes a 14-day free trial with full feature access. No credit card required. Would you like me to connect you with the team to get started?',
+    'Starter is Free. Professional is ₹580/month. Contact our team for a demo and help choosing the right plan.',
   'talk to sales':
     'Our sales team is available. You can reach them directly on WhatsApp using the green chat button, or leave your email and we will contact you within 24 hours.',
   'default':
-    'Thanks for reaching out! For detailed assistance, please use the WhatsApp button or email us at support@myteknoland.com. Our team typically responds within a few hours.',
+    'Thanks for reaching out! For detailed assistance, please use the WhatsApp button or email us at info@myteknoland.com. Our team typically responds within a few hours.',
 }
 
 function getBotReply (text: string): string {

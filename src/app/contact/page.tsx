@@ -6,12 +6,7 @@ import PageWrapper from '@/components/PageWrapper'
 import { generateBreadcrumbSchema } from '@/lib/schema'
 import { trackContactFormSubmit } from '@/lib/analytics'
 
-const CONTACT = {
-  email: 'info@myteknoland.net',
-  phone: '91-72888 76715',
-  phoneRaw: '917288876715',
-  address: '1/1, Bangalore Main Road, Rayachoty',
-}
+import { CONTACT } from '@/lib/config'
 
 export default function ContactPage () {
 
@@ -27,7 +22,9 @@ export default function ContactPage () {
     restaurant: '',
     locations: '1',
     message: '',
+    website: '',
   })
+  const [errorMessage, setErrorMessage] = useState('')
   const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle')
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -36,56 +33,34 @@ export default function ContactPage () {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+    if (status === 'sending') return
     setStatus('sending')
 
-    const fullName = `${form.firstName} ${form.lastName}`.trim()
-    const msgBody = `New Demo Request from NexDine Website\n\nName: ${fullName}\nEmail: ${form.email}\nRestaurant: ${form.restaurant}\nLocations: ${form.locations}\n\nMessage:\n${form.message || 'N/A'}`
-
-    const authKey = process.env.NEXT_PUBLIC_MSG91_AUTHKEY
-    const templateId = process.env.NEXT_PUBLIC_MSG91_TEMPLATE_ID
-
-    if (authKey && templateId) {
-      try {
-        const res = await fetch('https://api.msg91.com/api/v5/whatsapp/send', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'authkey': authKey,
-          },
-          body: JSON.stringify({
-            to: CONTACT.phoneRaw,
-            template_id: templateId,
-            components: [
-              {
-                type: 'body',
-                parameters: [
-                  { type: 'text', text: fullName },
-                  { type: 'text', text: form.email },
-                  { type: 'text', text: form.restaurant },
-                  { type: 'text', text: form.locations },
-                  { type: 'text', text: form.message || 'N/A' },
-                ],
-              },
-            ],
-          }),
-        })
-        if (res.ok) {
-          setStatus('sent')
-          trackContactFormSubmit()
-          setForm({ firstName: '', lastName: '', email: '', restaurant: '', locations: '1', message: '' })
-          return
-        }
-      } catch {
-        // fall through to WhatsApp deep link
+    setErrorMessage('')
+    const controller = new AbortController()
+    const timeout = window.setTimeout(() => controller.abort(), 25000)
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        signal: controller.signal,
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify(form),
+      })
+      const result = await response.json()
+      if (!response.ok || result.ok !== true) {
+        throw new Error(result.message || 'Your request could not be sent. Please try again or email us directly.')
       }
+      setStatus('sent')
+      trackContactFormSubmit()
+      setForm({ firstName: '', lastName: '', email: '', restaurant: '', locations: '1', message: '', website: '' })
+    } catch (error) {
+      setStatus('error')
+      setErrorMessage(error instanceof Error && error.name === 'AbortError'
+        ? 'The request timed out. Please try again or email info@myteknoland.com directly.'
+        : error instanceof Error ? error.message : 'Your request could not be sent. Please try again.')
+    } finally {
+      window.clearTimeout(timeout)
     }
-
-    // Fallback: WhatsApp deep link
-    const waUrl = `https://wa.me/${CONTACT.phoneRaw}?text=${encodeURIComponent(msgBody)}`
-    window.open(waUrl, '_blank')
-    setStatus('sent')
-    trackContactFormSubmit()
-    setForm({ firstName: '', lastName: '', email: '', restaurant: '', locations: '1', message: '' })
   }
 
   const contactCards = [
@@ -101,7 +76,7 @@ export default function ContactPage () {
       title: 'Call Us',
       desc: CONTACT.phone,
       sub: 'Mon-Sat, 9am-7pm IST',
-      href: `tel:${CONTACT.phone}`,
+      href: `tel:+${CONTACT.phoneRaw}`,
     },
     {
       icon: MapPin,
@@ -141,11 +116,14 @@ export default function ContactPage () {
             <div className="rounded-2xl border border-border bg-card p-8">
               <h2 className="text-2xl font-bold mb-6">Request a Demo</h2>
               <form onSubmit={handleSubmit} className="space-y-4">
+                <div className="hidden" aria-hidden="true">
+                  <label>Leave this field empty<input name="website" value={form.website} onChange={handleChange} tabIndex={-1} autoComplete="off" /></label>
+                </div>
                 <div className="grid grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-medium mb-1">First Name</label>
                     <input
-                      name="firstName"
+                      name="firstName" maxLength={80}
                       value={form.firstName}
                       onChange={handleChange}
                       required
@@ -157,7 +135,7 @@ export default function ContactPage () {
                   <div>
                     <label className="block text-sm font-medium mb-1">Last Name</label>
                     <input
-                      name="lastName"
+                      name="lastName" maxLength={80}
                       value={form.lastName}
                       onChange={handleChange}
                       required
@@ -170,7 +148,7 @@ export default function ContactPage () {
                 <div>
                   <label className="block text-sm font-medium mb-1">Email</label>
                   <input
-                    name="email"
+                    name="email" maxLength={254}
                     value={form.email}
                     onChange={handleChange}
                     required
@@ -182,7 +160,7 @@ export default function ContactPage () {
                 <div>
                   <label className="block text-sm font-medium mb-1">Restaurant Name</label>
                   <input
-                    name="restaurant"
+                    name="restaurant" maxLength={160}
                     value={form.restaurant}
                     onChange={handleChange}
                     required
@@ -208,7 +186,7 @@ export default function ContactPage () {
                 <div>
                   <label className="block text-sm font-medium mb-1">Message</label>
                   <textarea
-                    name="message"
+                    name="message" maxLength={3000}
                     value={form.message}
                     onChange={handleChange}
                     rows={4}
@@ -242,6 +220,7 @@ export default function ContactPage () {
                             </>
                           ))}
                 </button>
+                {status === 'error' && <p role="alert" className="text-center text-sm text-red-500">{errorMessage}</p>}
                 {status === 'sent' && (
                   <p className="text-center text-sm text-green-500">
                     Your request has been sent. We will reach out shortly.
@@ -260,14 +239,14 @@ export default function ContactPage () {
                     </div>
                     <div>
                       <h3 className="text-lg font-semibold">{item.title}</h3>
-                      <p className="text-foreground">{item.desc}</p>
+                      <p className="text-foreground break-words">{item.desc}</p>
                       <p className="text-sm text-muted-foreground">{item.sub}</p>
                     </div>
                   </div>
                 )
                 return item.href
                   ? (
-                      <a key={item.title} href={item.href} target={item.href.startsWith('http') ? '_blank' : undefined} rel="noopener noreferrer">
+                      <a className="block" key={item.title} href={item.href} target={item.href.startsWith('http') ? '_blank' : undefined} rel="noopener noreferrer">
                         {Card}
                       </a>
                     )

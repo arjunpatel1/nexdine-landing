@@ -9,8 +9,8 @@ import { DEMO_URL } from '@/lib/config'
 const plans = [
   {
     name: 'Starter',
-    price: '₹3,999',
-    period: '/month',
+    price: 'Free',
+    period: '',
     desc: 'Perfect for single-location cafes and food trucks.',
     features: [
       '1 Branch',
@@ -19,12 +19,12 @@ const plans = [
       'Standard Reports',
       'Email Support',
     ],
-    cta: 'Start Free Trial',
+    cta: 'Get Started Free',
     popular: false,
   },
   {
     name: 'Professional',
-    price: '₹9,999',
+    price: '₹580',
     period: '/month',
     desc: 'For growing restaurants with multiple stations.',
     features: [
@@ -76,7 +76,7 @@ export default function Pricing () {
             Simple, Transparent Pricing
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Start free for 14 days. No credit card required. Scale as you grow.
+            Start with Starter for free. Professional is ₹580/month. Scale as you grow.
           </p>
         </motion.div>
 

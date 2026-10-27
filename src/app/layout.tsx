@@ -16,7 +16,8 @@ const structuredData = {
       'image': 'https://nexdine.myteknoland.com/og-image.png',
       'offers': {
         '@type': 'Offer',
-        'price': '3999',
+        'price': '0',
+        'name': 'Starter — Free',
         'priceCurrency': 'INR',
         'priceValidUntil': '2026-12-31',
       },
@@ -143,7 +144,8 @@ const structuredData = {
       },
       'offers': {
         '@type': 'Offer',
-        'price': '3999',
+        'price': '0',
+        'name': 'Starter — Free',
         'priceCurrency': 'INR',
         'availability': 'https://schema.org/InStock',
         'url': 'https://nexdine.myteknoland.com',
@@ -167,9 +169,9 @@ const structuredData = {
       ],
       'contactPoint': {
         '@type': 'ContactPoint',
-        'telephone': '+91-72888 76715',
+        'telephone': '+91-9182378253',
         'contactType': 'sales',
-        'email': 'info@myteknoland.net',
+        'email': 'info@myteknoland.com',
         'areaServed': 'IN',
         'availableLanguage': 'English',
       },

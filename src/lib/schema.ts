@@ -127,8 +127,8 @@ export const FEATURES_FAQS = [
 
 export const PRICING_FAQS = [
   {
-    question: 'What is included in the free trial?',
-    answer: 'The 14-day free trial includes full access to all features including POS, QR ordering, KDS, inventory, CRM, and analytics. No credit card required.',
+    question: 'What is included in the Free Starter plan?',
+    answer: 'Starter is free and includes 1 branch, 2 POS terminals, basic QR ordering, standard reports and email support. Professional is ₹580/month.',
   },
   {
     question: 'Are there any hidden fees?',

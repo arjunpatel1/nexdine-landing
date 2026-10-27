@@ -36,7 +36,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     question: 'How much does it cost to start a cloud kitchen in India?',
-    answer: 'Starting a cloud kitchen in India typically costs ₹5-15 lakhs depending on scale, location, and equipment. Key costs include kitchen setup (₹2-5 lakhs), equipment (₹1-3 lakhs), licensing (₹50,000-1 lakh), initial inventory (₹1-2 lakhs), and marketing (₹50,000-1 lakh). Restaurant POS software like NexDine costs ₹3,999/month, making technology affordable.',
+    answer: 'Starting a cloud kitchen in India typically costs ₹5-15 lakhs depending on scale, location, and equipment. Key costs include kitchen setup (₹2-5 lakhs), equipment (₹1-3 lakhs), licensing (₹50,000-1 lakh), initial inventory (₹1-2 lakhs), and marketing (₹50,000-1 lakh). Restaurant POS software like NexDine costs ₹580/month, making technology affordable.',
   },
   {
     question: 'What licenses are required for a cloud kitchen in India?',

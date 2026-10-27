@@ -6,18 +6,18 @@ import { generateFAQSchema, PRICING_FAQS, generateBreadcrumbSchema } from '@/lib
 
 export const metadata: Metadata = {
   title: 'Pricing - Transparent Restaurant Management Pricing | NexDine',
-  description: 'Start free for 14 days. Scale up or down anytime. No hidden fees. Transparent pricing for NexDine restaurant management platform.',
+  description: 'Start with Starter for free. Professional is ₹580/month. Enterprise plans are custom-priced. Transparent pricing for NexDine restaurant management platform.',
   keywords: ['restaurant POS pricing', 'restaurant software cost', 'NexDine pricing', 'restaurant management pricing', 'affordable POS'],
   openGraph: {
     title: 'Pricing - Transparent Restaurant Management Pricing | NexDine',
-    description: 'Start free for 14 days. Scale up or down anytime. No hidden fees.',
+    description: 'Start with Starter for free. Professional is ₹580/month. Enterprise plans are custom-priced.',
     type: 'website',
     url: 'https://nexdine.myteknoland.com/pricing',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Pricing - Transparent Restaurant Management Pricing | NexDine',
-    description: 'Start free for 14 days. Scale up or down anytime. No hidden fees.',
+    description: 'Start with Starter for free. Professional is ₹580/month. Enterprise plans are custom-priced.',
   },
   alternates: {
     canonical: 'https://nexdine.myteknoland.com/pricing',
@@ -46,7 +46,7 @@ export default function PricingPage () {
             Transparent Pricing
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Start free for 14 days. Scale up or down anytime. No hidden fees.
+            Start with Starter for free. Professional is ₹580/month. Enterprise plans are custom-priced.
           </p>
         </div>
       </div>

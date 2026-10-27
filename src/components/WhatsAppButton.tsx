@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 import { MessageCircle } from 'lucide-react'
 import { trackWhatsAppClick } from '@/lib/analytics'
 
-const PHONE_RAW = '917288876715'
+const PHONE_RAW = '919182378253'
 
 export default function WhatsAppButton () {
   const handleClick = () => {
