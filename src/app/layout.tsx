@@ -337,6 +337,7 @@ export default function RootLayout ({
       </head>
       <body className="min-h-screen bg-background text-foreground antialiased">
         {children}
+        <Script id="public-support-chat" src="/support-chat.js" strategy="lazyOnload" />
         {process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID && (
           <>
             <Script
